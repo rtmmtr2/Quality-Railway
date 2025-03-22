@@ -1,0 +1,9 @@
+{
+  "parent": "item/generated",
+  "loader": "forge:obj",
+  "model": "qr:models/item/qr_item.obj",
+  "textures": {
+    "particle": "qr:item/qr_item",
+    "texture0": "qr:item/qr_item"
+  }
+}
