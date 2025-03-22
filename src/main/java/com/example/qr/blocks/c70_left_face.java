@@ -1,30 +1,82 @@
 package com.example.qr.blocks;
-import net.minecraft.world.level.block.state.BlockState; // 导入 BlockState
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.level.BlockGetter; // 导入 BlockGetter
-import net.minecraft.world.phys.shapes.CollisionContext; // 导入 CollisionContext
-import net.minecraft.core.BlockPos; // 导入 BlockPos
+import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
+
+/**
+ * 自定义方块类，支持：
+ * 1. OBJ 模型和贴图
+ * 2. 碰撞箱
+ * 3. 根据玩家放置方向旋转
+ */
 public class c70_left_face extends Block {
-    // 自定义碰撞箱（1x1x1）
-    private static final VoxelShape SHAPE = Shapes.or(
-            // 底部平板（占满XZ平面，高度0-0.25）
-            Shapes.box(0.0, 0.0, 0.0, 1.0, 0.25, 1.0),
+    // 方向属性（水平方向）
+    public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
-            // 中部立方体（XZ方向0.25-0.75，高度0.25-0.75）
-            Shapes.box(0.25, 0.25, 0.25, 0.75, 0.75, 0.75),
+    // 定义碰撞箱
+    private static final VoxelShape SHAPE_NORTH = Block.box(2, 0, 2, 14, 16, 14); // 朝北时的碰撞箱
+    private static final VoxelShape SHAPE_EAST = Block.box(2, 0, 2, 14, 16, 14); // 朝东时的碰撞箱
+    private static final VoxelShape SHAPE_SOUTH = Block.box(2, 0, 2, 14, 16, 14); // 朝南时的碰撞箱
+    private static final VoxelShape SHAPE_WEST = Block.box(2, 0, 2, 14, 16, 14); // 朝西时的碰撞箱
 
-            // 顶部平板（占满XZ平面，高度0.75-1.0）
-            Shapes.box(0.0, 0.75, 0.0, 1.0, 1.0, 1.0)
-    );
-
+    /**
+     * 构造函数
+     * @param properties 方块属性
+     */
     public c70_left_face(Properties properties) {
         super(properties);
+        // 设置默认方块状态（朝北）
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(FACING, Direction.NORTH));
     }
 
+    /**
+     * 获取方块的碰撞箱形状
+     * @param state 方块状态
+     * @param world 世界对象
+     * @param pos 方块位置
+     * @param context 碰撞上下文
+     * @return 对应方向的碰撞箱形状
+     */
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return SHAPE;
+        // 根据方块方向返回对应的碰撞箱形状
+        return switch (state.getValue(FACING)) {
+            case NORTH -> SHAPE_NORTH;
+            case EAST -> SHAPE_EAST;
+            case SOUTH -> SHAPE_SOUTH;
+            case WEST -> SHAPE_WEST;
+            default -> SHAPE_NORTH; // 默认返回完整方块形状
+        };
+    }
+
+    /**
+     * 获取方块放置时的状态
+     * @param context 放置上下文
+     * @return 方块状态
+     */
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        // 获取玩家水平朝向的逆方向，使方块正面朝向玩家
+        return this.defaultBlockState()
+                .setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    /**
+     * 注册方块状态属性
+     * @param builder 状态定义构建器
+     */
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING);
     }
 }
