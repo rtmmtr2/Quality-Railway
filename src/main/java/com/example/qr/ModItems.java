@@ -18,6 +18,6 @@ public class ModItems {
 
 
     // 注册自定义物品
-    public static final RegistryObject<Item> qr_item = ITEMS.register("qr",
-            () -> new qr_item(new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
+            () -> new qr_item(new Item.Properties()));
 }
