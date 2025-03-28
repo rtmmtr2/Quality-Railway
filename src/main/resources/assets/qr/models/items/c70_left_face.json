@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "particle": "qr:item/c70_left_face"
+    "particle": "qr:items/c70_left_face"
   }
 }

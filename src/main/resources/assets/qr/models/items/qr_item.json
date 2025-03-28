@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "particle": "qr:item/qr_item"
+    "particle": "qr:items/qr_item"
   }
 }
