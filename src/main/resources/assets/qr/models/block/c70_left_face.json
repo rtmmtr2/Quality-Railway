@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "loader": "forge:obj",
-  "model": "qr:models/block/c70_left_face.obj",
-  "textures": {
-    "particle": "qr:block/c70_left_face"
-  }
-}

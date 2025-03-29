@@ -1,4 +1,4 @@
-package com.example.qr.items;
+package com.qualityrailway.qr.items;
 
 import net.minecraft.world.item.Item;
 

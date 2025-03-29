@@ -1,19 +1,19 @@
 {
   "variants": {
     "facing=north": {
-      "model": "qr:block/c70_left_face",
+      "model": "qr:block/c70/c70_left_face",
       "y": 180
     },
     "facing=south": {
-      "model": "qr:block/c70_left_face",
+      "model": "qr:block/c70/c70_left_face",
       "y": 0
     },
     "facing=east": {
-      "model": "qr:block/c70_left_face",
+      "model": "qr:block/c70/c70_left_face",
       "y": 270
     },
     "facing=west": {
-      "model": "qr:block/c70_left_face",
+      "model": "qr:block/c70/c70_left_face",
       "y": 90
     }
   }

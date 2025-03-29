@@ -1,6 +1,6 @@
-package com.example.qr;
+package com.qualityrailway.qr;
 
-import com.example.qr.blocks.c70_left_face;
+import com.qualityrailway.qr.blocks.c70.c70_left_face;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

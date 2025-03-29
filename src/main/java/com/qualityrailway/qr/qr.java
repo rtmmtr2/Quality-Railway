@@ -1,4 +1,4 @@
-package com.example.qr;
+package com.qualityrailway.qr;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

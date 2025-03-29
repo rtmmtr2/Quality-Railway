@@ -1,4 +1,4 @@
-package com.example.qr.blocks;
+package com.qualityrailway.qr.blocks.c70;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

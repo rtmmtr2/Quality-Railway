@@ -1,4 +1,4 @@
-package com.example.qr;
+package com.qualityrailway.qr;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

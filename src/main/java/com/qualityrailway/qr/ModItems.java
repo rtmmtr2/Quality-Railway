@@ -1,6 +1,6 @@
-package com.example.qr;
+package com.qualityrailway.qr;
 
-import com.example.qr.items.qr_item;
+import com.qualityrailway.qr.items.qr_item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
