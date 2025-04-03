@@ -1,2 +1,2 @@
 # Quality Railway
- Just a minecraft mod.
+ Just a minecraft train mod.
