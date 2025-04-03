@@ -15,6 +15,8 @@ public class ModItems {
     public static final RegistryObject<Item> c70_left_face = ITEMS.register("c70_left_face",
             () -> new BlockItem(ModBlocks.c70_left_face.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> c70_right_face = ITEMS.register("c70_right_face",
+            () -> new BlockItem(ModBlocks.c70_right_face.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
 
     // 注册自定义物品

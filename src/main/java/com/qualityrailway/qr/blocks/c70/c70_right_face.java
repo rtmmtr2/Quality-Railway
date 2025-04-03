@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 /**
@@ -19,7 +20,7 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
  * 2. 碰撞箱
  * 3. 根据玩家放置方向旋转
  */
-public class c70_left_face extends Block {
+public class c70_right_face extends Block {
     // 方向属性（水平方向）
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
@@ -37,7 +38,7 @@ public class c70_left_face extends Block {
      * 构造函数
      * @param properties 方块属性
      */
-    public c70_left_face(Properties properties) {
+    public c70_right_face(Properties properties) {
         super(properties);
         // 设置默认方块状态（朝北）
         this.registerDefaultState(this.stateDefinition.any()
