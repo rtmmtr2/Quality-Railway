@@ -6,6 +6,7 @@ import net.minecraftforge.registries.RegistryObject;
 //import block.java
 import com.qualityrailway.qr.blocks.c70.c70_left_face;
 import com.qualityrailway.qr.blocks.c70.c70_right_face;
+import com.qualityrailway.qr.blocks.c70.c70_front;
 
 
 public class ModBlocks {
@@ -19,6 +20,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> c70_right_face = BLOCKS.register("c70_right_face",
             () -> new c70_right_face(Block.Properties.of(net.minecraft.world.level.material.Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> c70_front = BLOCKS.register("c70_front",
+            () -> new c70_front(Block.Properties.of(net.minecraft.world.level.material.Material.STONE)
                     .strength(2.0f)));
 
 

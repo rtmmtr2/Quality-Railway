@@ -1,6 +1,7 @@
 {
   "block.qr.c70_left_face": "C70 left face",
   "block.qr.c70_right_face": "C70 right face",
+  "block.qr.c70_front": "C70 front",
   "item.qr.qr_item": "qr_item",
   "itemGroup.trains": "Trains"
 }
