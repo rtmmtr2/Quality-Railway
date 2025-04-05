@@ -11,7 +11,7 @@ loaderVersion="[38,)" #mandatory This is typically bumped every Minecraft versio
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="MIT"
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway" #optional
+issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway/issues" #optional
 # If your mod is purely client-side and has no multiplayer functionality (be it dedicated servers or Open to LAN),
 # set this to true, and Forge will set the correct displayTest for you and skip loading your mod on dedicated servers.
 #clientSideOnly=true #optional - defaults to false if absent
@@ -20,7 +20,7 @@ issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway" #optional
 # The modid of the mod
 modId="qr" #mandatory
 # The version number of the mod
-version="1.0_beta" #mandatory
+version="1.0-beta" #mandatory
 # A display name for the mod
 displayName="Quality Railway" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/

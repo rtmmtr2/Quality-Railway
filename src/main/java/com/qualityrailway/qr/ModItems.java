@@ -21,6 +21,12 @@ public class ModItems {
     public static final RegistryObject<Item> c70_front = ITEMS.register("c70_front",
             () -> new BlockItem(ModBlocks.c70_front.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> c70_door = ITEMS.register("c70_door",
+            () -> new BlockItem(ModBlocks.c70_door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> c70_fool = ITEMS.register("c70_fool",
+            () -> new BlockItem(ModBlocks.c70_fool.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
 
     // 注册自定义物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
