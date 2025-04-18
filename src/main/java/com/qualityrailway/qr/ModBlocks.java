@@ -24,6 +24,10 @@ public class ModBlocks {
             () -> new c70_front(Block.Properties.of(net.minecraft.world.level.material.Material.STONE)
                     .strength(2.0f)));
 
+    public static final RegistryObject<Block> c70_left = BLOCKS.register("c70_left",
+            () -> new c70_left(Block.Properties.of(net.minecraft.world.level.material.Material.STONE)
+                    .strength(2.0f)));
+
     public static final RegistryObject<Block> c70_door = BLOCKS.register("c70_door",
             () -> new c70_door(Block.Properties.of(net.minecraft.world.level.material.Material.STONE)
                     .strength(2.0f)));

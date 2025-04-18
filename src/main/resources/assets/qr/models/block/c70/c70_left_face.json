@@ -1,8 +1,9 @@
 {
   "parent": "block/cube_all",
   "loader": "forge:obj",
+  "flip-v": true,
   "model": "qr:models/block/c70/c70_left_face.obj",
   "textures": {
-    "particle": "qr:block/c70/c70"
+    "particle": "qr:block/c70/c70_left_face"
   }
 }

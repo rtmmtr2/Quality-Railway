@@ -21,6 +21,9 @@ public class ModItems {
     public static final RegistryObject<Item> c70_front = ITEMS.register("c70_front",
             () -> new BlockItem(ModBlocks.c70_front.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> c70_left = ITEMS.register("c70_left",
+            () -> new BlockItem(ModBlocks.c70_left.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
     public static final RegistryObject<Item> c70_door = ITEMS.register("c70_door",
             () -> new BlockItem(ModBlocks.c70_door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 

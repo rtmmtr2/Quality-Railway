@@ -2,7 +2,7 @@ import shutil
 import os
 
 
-name = "c70_fool"  # 示例名称
+name = "c70_left"  # 示例名称
 
 # 定义源文件路径
 src_paths = [
