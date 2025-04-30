@@ -18,4 +18,17 @@ public class ModCreativeTab {
             return new TranslatableComponent("itemGroup.trains");
         }
     };
+    public static final CreativeModeTab spanner = new CreativeModeTab("spanner") {
+        @Override
+        public ItemStack makeIcon() {
+            // 使用自定义物品作为图标（需要先注册图标物品）
+            return new ItemStack(ModItems.spanner.get());
+        }
+
+        @Override
+        public TranslatableComponent getDisplayName() {
+            // 使用 TranslatableComponent 代替 Component.translatable
+            return new TranslatableComponent("itemGroup.spanner");
+        }
+    };
 }

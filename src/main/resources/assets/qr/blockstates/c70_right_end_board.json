@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "qr:block/c70/c70_right_end_board",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/c70/c70_right_end_board",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "qr:block/c70/c70_right_end_board",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "qr:block/c70/c70_right_end_board",
+      "y": 90
+    }
+  }
+}

@@ -1,6 +1,6 @@
 package com.qualityrailway.qr;
 
-import com.qualityrailway.qr.items.qr_item;
+import com.qualityrailway.qr.items.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,17 +12,17 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, qr.MODID);
 
     // 注册方块对应的物品
-    public static final RegistryObject<Item> c70_left_face = ITEMS.register("c70_left_face",
-            () -> new BlockItem(ModBlocks.c70_left_face.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> c70_left_end_board = ITEMS.register("c70_left_end_board",
+            () -> new BlockItem(ModBlocks.c70_left_end_board.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> c70_right_face = ITEMS.register("c70_right_face",
-            () -> new BlockItem(ModBlocks.c70_right_face.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> c70_right_end_board = ITEMS.register("c70_right_end_board",
+            () -> new BlockItem(ModBlocks.c70_right_end_board.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> c70_front = ITEMS.register("c70_front",
-            () -> new BlockItem(ModBlocks.c70_front.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> c70_front_board = ITEMS.register("c70_front_board",
+            () -> new BlockItem(ModBlocks.c70_front_board.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> c70_left = ITEMS.register("c70_left",
-            () -> new BlockItem(ModBlocks.c70_left.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> c70_left_board = ITEMS.register("c70_left_board",
+            () -> new BlockItem(ModBlocks.c70_left_board.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
     public static final RegistryObject<Item> c70_door = ITEMS.register("c70_door",
             () -> new BlockItem(ModBlocks.c70_door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
@@ -34,4 +34,7 @@ public class ModItems {
     // 注册自定义物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
             () -> new qr_item(new Item.Properties()));
+
+    public static final RegistryObject<Item> spanner = ITEMS.register("spanner",
+            () -> new spanner(new Item.Properties()));
 }

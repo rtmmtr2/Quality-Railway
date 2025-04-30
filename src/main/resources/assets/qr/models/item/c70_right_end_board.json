@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "qr:item/c70/c70_right_face"
+    "layer0": "qr:item/c70/c70_right_end_board"
   }
 }

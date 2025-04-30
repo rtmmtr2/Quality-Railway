@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 /**
@@ -20,25 +19,25 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
  * 2. 碰撞箱
  * 3. 根据玩家放置方向旋转
  */
-public class c70_right_face extends Block {
+public class c70_left_board extends Block {
     // 方向属性（水平方向）
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
     // 定义碰撞箱
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, 0, 0.75, 2, 2, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, 0, 0.75, 1, 2, 1);
     // 朝北时的碰撞箱
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, -1, 0.25, 2, 2);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, -1, 0.25, 2, 1);
     // 朝东时的碰撞箱
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(1, 0, 0, 2, 2, 0.25);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0, 0, 2, 2, 0.25);
     // 朝南时的碰撞箱
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0.75, 0, -1, 1, 2, 2);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(0.75, 0, 0, 1, 2, 2);
     // 朝西时的碰撞箱
 
     /**
      * 构造函数
      * @param properties 方块属性
      */
-    public c70_right_face(Properties properties) {
+    public c70_left_board(Properties properties) {
         super(properties);
         // 设置默认方块状态（朝北）
         this.registerDefaultState(this.stateDefinition.any()
