@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip-v": true,
+  "model": "qr:models/block/gq70/gq70_tank_b.obj",
+  "textures": {
+    "particle": "qr:block/gq70/gq70_tank_b"
+  }
+}
