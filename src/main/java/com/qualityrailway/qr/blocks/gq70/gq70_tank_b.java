@@ -21,9 +21,9 @@ public class gq70_tank_b extends Block {
 
     private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, 0, 0, 2, 2, 2);
 
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, -1, 2, 2, 2);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(-1, 0, -1, 1, 2, 2);
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, 0, 2, 2, 2);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, -1, 2, 2, 1);
 
     private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, -1, 2, 2, 2);
 
