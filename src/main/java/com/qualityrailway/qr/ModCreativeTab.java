@@ -18,7 +18,7 @@ public class ModCreativeTab {
             return new TranslatableComponent("itemGroup.trains");
         }
     };
-    public static final CreativeModeTab spanner = new CreativeModeTab("spanner") {
+    public static final CreativeModeTab tools = new CreativeModeTab("tools") {
         @Override
         public ItemStack makeIcon() {
             // 使用自定义物品作为图标（需要先注册图标物品）
@@ -28,7 +28,7 @@ public class ModCreativeTab {
         @Override
         public TranslatableComponent getDisplayName() {
             // 使用 TranslatableComponent 代替 Component.translatable
-            return new TranslatableComponent("itemGroup.spanner");
+            return new TranslatableComponent("itemGroup.tools");
         }
     };
 }

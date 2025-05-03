@@ -43,10 +43,16 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.gq70_tank_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
 
-    // 注册物品
+    // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
             () -> new qr_item(new Item.Properties()));
-
+    //注册物品
     public static final RegistryObject<Item> spanner = ITEMS.register("spanner",
             () -> new spanner(new Item.Properties()));
+
+    public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
+            () -> new high_horn(new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> low_horn = ITEMS.register("low_horn",
+            () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
 }

@@ -1,0 +1,8 @@
+{
+  "high_horn": {
+    "sounds": [{"name": "qr:high_horn"}]
+  },
+  "low_horn": {
+    "sounds": [{"name": "qr:low_horn"}]
+  }
+}

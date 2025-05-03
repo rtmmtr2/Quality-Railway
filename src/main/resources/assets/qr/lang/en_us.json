@@ -9,8 +9,12 @@
   "block.qr.gq70_tank_a": "GQ70 tank A",
   "block.qr.gq70_tank_b": "GQ70 tank B",
   "block.qr.gq70_tank_c": "GQ70 tank C",
+
+  "item.qr.high_horn": "High horn",
+  "item.qr.low_horn": "Low horn",
   "item.qr.qr_item": "qr_item",
   "item.qr.spanner": "spanner",
+
   "itemGroup.trains": "Trains",
-  "itemGroup.spanner": "Tool and foods"
+  "itemGroup.tools": "Tools"
 }
