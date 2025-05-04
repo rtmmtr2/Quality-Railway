@@ -55,4 +55,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> low_horn = ITEMS.register("low_horn",
             () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> bell = ITEMS.register("bell",
+            () -> new BlockItem(ModBlocks.bell.get(), new Item.Properties().tab(ModCreativeTab.tools)));
 }

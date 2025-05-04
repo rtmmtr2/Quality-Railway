@@ -15,4 +15,7 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> low_horn = SOUNDS.register("low_horn",
             () -> new SoundEvent(ResourceLocation.parse(qr.MODID + ":low_horn")));
+
+    public static final RegistryObject<SoundEvent> bell = SOUNDS.register("bell",
+            () -> new SoundEvent(ResourceLocation.parse(qr.MODID + ":bell")));
 }

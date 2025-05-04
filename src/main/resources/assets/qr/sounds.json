@@ -4,5 +4,8 @@
   },
   "low_horn": {
     "sounds": [{"name": "qr:low_horn"}]
+  },
+  "bell": {
+    "sounds": [{"name": "qr:bell"}]
   }
 }

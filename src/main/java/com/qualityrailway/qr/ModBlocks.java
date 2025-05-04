@@ -1,9 +1,11 @@
 package com.qualityrailway.qr;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.material.Material;
+import com.qualityrailway.qr.blocks.tools.*;
 import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 
@@ -53,7 +55,11 @@ public class ModBlocks {
             () -> new gq70_tank_c(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
+    //other blocks
 
-
+    public static final RegistryObject<Block> bell = BLOCKS.register(
+            "bell",
+            () -> new bell(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 }
