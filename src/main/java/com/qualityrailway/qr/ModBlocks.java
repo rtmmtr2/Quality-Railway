@@ -1,6 +1,8 @@
 package com.qualityrailway.qr;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -14,7 +16,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, qr.MODID);
 
-    // 注册方块
+    // trains
     public static final RegistryObject<Block> c70_left_end_board = BLOCKS.register("c70_left_end_board",
             () -> new c70_left_end_board(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
@@ -55,11 +57,23 @@ public class ModBlocks {
             () -> new gq70_tank_c(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-    //other blocks
+    //tools
 
     public static final RegistryObject<Block> bell = BLOCKS.register(
             "bell",
             () -> new bell(Block.Properties.of(Material.STONE)
                     .strength(2.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    // 注册完整方块（用于合成半砖）
+
+    public static final RegistryObject<Block> railway_ballast = BLOCKS.register("railway_ballast",
+            () -> new railway_ballast(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    // 注册半砖方块
+    public static final RegistryObject<SlabBlock> railway_ballast_slab =
+            BLOCKS.register("railway_ballast_slab", () -> new railway_ballast_slab(
+                    BlockBehaviour.Properties.copy(railway_ballast.get())
+            ));
 
 }

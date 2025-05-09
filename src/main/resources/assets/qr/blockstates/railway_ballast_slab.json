@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "qr:block/tools/railway_ballast_slab"
+    },
+    "type=double": {
+      "model": "qr:block/tools/railway_ballast"
+    },
+    "type=top": {
+      "model": "qr:block/tools/railway_ballast_top"
+    }
+  }
+}

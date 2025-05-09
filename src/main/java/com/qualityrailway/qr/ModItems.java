@@ -49,7 +49,7 @@ public class ModItems {
     //注册物品
     public static final RegistryObject<Item> spanner = ITEMS.register("spanner",
             () -> new spanner(new Item.Properties()));
-
+    //tools
     public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
             () -> new high_horn(new Item.Properties().tab(ModCreativeTab.tools)));
 
@@ -58,4 +58,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> bell = ITEMS.register("bell",
             () -> new BlockItem(ModBlocks.bell.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> railway_ballast = ITEMS.register("railway_ballast",
+            () -> new BlockItem(ModBlocks.railway_ballast.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> railway_ballast_slab = ITEMS.register("railway_ballast_slab",
+            () -> new BlockItem(ModBlocks.railway_ballast_slab.get(), new Item.Properties().tab(ModCreativeTab.tools)));
 }

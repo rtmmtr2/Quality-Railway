@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "qr:block/tools/railway_ballast"
+    }
+  }
+}
