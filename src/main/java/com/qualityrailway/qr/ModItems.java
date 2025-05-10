@@ -64,4 +64,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> railway_ballast_slab = ITEMS.register("railway_ballast_slab",
             () -> new BlockItem(ModBlocks.railway_ballast_slab.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> gravel = ITEMS.register("gravel",
+            () -> new BlockItem(ModBlocks.gravel.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> gravel_slab = ITEMS.register("gravel_slab",
+            () -> new BlockItem(ModBlocks.gravel_slab.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+
 }

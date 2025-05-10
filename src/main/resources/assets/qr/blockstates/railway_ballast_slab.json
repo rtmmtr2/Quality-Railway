@@ -7,7 +7,7 @@
       "model": "qr:block/tools/railway_ballast"
     },
     "type=top": {
-      "model": "qr:block/tools/railway_ballast_top"
+      "model": "qr:block/tools/railway_ballast_slab_top"
     }
   }
 }

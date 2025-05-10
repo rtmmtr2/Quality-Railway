@@ -64,16 +64,24 @@ public class ModBlocks {
             () -> new bell(Block.Properties.of(Material.STONE)
                     .strength(2.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    // 注册完整方块（用于合成半砖）
+    //
 
     public static final RegistryObject<Block> railway_ballast = BLOCKS.register("railway_ballast",
             () -> new railway_ballast(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-    // 注册半砖方块
     public static final RegistryObject<SlabBlock> railway_ballast_slab =
             BLOCKS.register("railway_ballast_slab", () -> new railway_ballast_slab(
                     BlockBehaviour.Properties.copy(railway_ballast.get())
+            ));
+
+    public static final RegistryObject<Block> gravel = BLOCKS.register("gravel",
+            () -> new gravel(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<SlabBlock> gravel_slab =
+            BLOCKS.register("gravel_slab", () -> new gravel_slab(
+                    BlockBehaviour.Properties.copy(gravel.get())
             ));
 
 }
