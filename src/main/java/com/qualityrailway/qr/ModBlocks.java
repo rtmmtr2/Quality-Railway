@@ -37,8 +37,8 @@ public class ModBlocks {
             () -> new c70_door(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-    public static final RegistryObject<Block> c70_fool = BLOCKS.register("c70_fool",
-            () -> new c70_fool(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> c70_floor = BLOCKS.register("c70_floor",
+            () -> new c70_floor(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> gq70_end_tank = BLOCKS.register("gq70_end_tank",

@@ -2,8 +2,8 @@
   "parent": "block/cube_all",
   "loader": "forge:obj",
   "flip-v": true,
-  "model": "qr:models/block/c70/c70_fool.obj",
+  "model": "qr:models/block/c70/c70_floor.obj",
   "textures": {
-    "particle": "qr:block/c70/c70_fool"
+    "particle": "qr:block/c70/c70_floor"
   }
 }

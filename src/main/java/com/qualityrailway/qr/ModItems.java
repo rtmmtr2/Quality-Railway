@@ -27,8 +27,8 @@ public class ModItems {
     public static final RegistryObject<Item> c70_door = ITEMS.register("c70_door",
             () -> new BlockItem(ModBlocks.c70_door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> c70_fool = ITEMS.register("c70_fool",
-            () -> new BlockItem(ModBlocks.c70_fool.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> c70_floor = ITEMS.register("c70_floor",
+            () -> new BlockItem(ModBlocks.c70_floor.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
     public static final RegistryObject<Item> gq70_end_tank = ITEMS.register("gq70_end_tank",
             () -> new BlockItem(ModBlocks.gq70_end_tank.get(), new Item.Properties().tab(ModCreativeTab.trains)));
