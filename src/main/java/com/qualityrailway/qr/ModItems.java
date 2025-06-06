@@ -51,7 +51,7 @@ public class ModItems {
             () -> new spanner(new Item.Properties()));
     //tools
     public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
-            () -> new high_horn(new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
 
     public static final RegistryObject<Item> low_horn = ITEMS.register("low_horn",
             () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));

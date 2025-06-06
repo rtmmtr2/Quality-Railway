@@ -22,40 +22,31 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> c70_right_end_board = BLOCKS.register("c70_right_end_board",
-            () -> new c70_right_end_board(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new c70_right_end_board(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> c70_front_board = BLOCKS.register("c70_front_board",
-            () -> new c70_front_board(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new c70_front_board(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> c70_left_board = BLOCKS.register("c70_left_board",
-            () -> new c70_left_board(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new c70_left_board(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> c70_door = BLOCKS.register("c70_door",
-            () -> new c70_door(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new c70_door(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> c70_floor = BLOCKS.register("c70_floor",
-            () -> new c70_floor(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new c70_floor(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> gq70_end_tank = BLOCKS.register("gq70_end_tank",
-            () -> new gq70_end_tank(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new gq70_end_tank(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> gq70_tank_a = BLOCKS.register("gq70_tank_a",
-            () -> new gq70_tank_a(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new gq70_tank_a(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> gq70_tank_b = BLOCKS.register("gq70_tank_b",
-            () -> new gq70_tank_b(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new gq70_tank_b(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> gq70_tank_c = BLOCKS.register("gq70_tank_c",
-            () -> new gq70_tank_c(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new gq70_tank_c(Block.Properties.copy(c70_left_end_board.get())));
 
     //tools
 

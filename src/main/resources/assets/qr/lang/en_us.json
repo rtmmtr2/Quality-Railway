@@ -20,6 +20,9 @@
   "block.qr.gravel": "Gravel",
   "block.qr.gravel_slab": "Gravel Slab",
 
+  "tooltip.qr.high_horn.description": "Right-click to horn",
+  "tooltip.qr.low_horn.description": "Right-click to horn",
+
   "itemGroup.trains": "Trains",
   "itemGroup.tools": "Tools"
 }
