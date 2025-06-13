@@ -1,0 +1,20 @@
+{
+	"type":"minecraft:crafting_shaped",
+	"pattern":[
+		" T ",
+		"SSS",
+		" T "
+	],
+	"key":{
+		"S":{
+			"item":"minecraft:cobblestone"
+		},
+		"T":{
+			"item":"minecraft:redstone"
+		}
+	},
+	"result":{
+		"item":"qr:bell",
+		"count":1
+	}
+}

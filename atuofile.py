@@ -12,7 +12,9 @@ src_paths = [
 
     "src/main/resources/assets/qr/models/item/c70_left_end_board.json",
 
-    "src/main/resources/data/qr/loot_tables/blocks/gravel.json"
+    "src/main/resources/data/qr/loot_tables/blocks/c70_left_end_board.json"
+    
+    "src/main/resources/data/qr/recipes/c70_left_end_board.json"
 ]
 
 for src in src_paths:

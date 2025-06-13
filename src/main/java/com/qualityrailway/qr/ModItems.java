@@ -46,15 +46,19 @@ public class ModItems {
     // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
             () -> new qr_item(new Item.Properties()));
-    //注册物品
+
     public static final RegistryObject<Item> spanner = ITEMS.register("spanner",
             () -> new spanner(new Item.Properties()));
+
     //tools
     public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
             () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
 
     public static final RegistryObject<Item> low_horn = ITEMS.register("low_horn",
             () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
+
+    public static final RegistryObject<Item> steel_plate = ITEMS.register("steel_plate",
+            () -> new steel_plate(new Item.Properties().tab(ModCreativeTab.tools)));
 
     public static final RegistryObject<Item> bell = ITEMS.register("bell",
             () -> new BlockItem(ModBlocks.bell.get(), new Item.Properties().tab(ModCreativeTab.tools)));
