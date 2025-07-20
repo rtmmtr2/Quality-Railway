@@ -20,7 +20,7 @@ issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway/issues" #optional
 # The modid of the mod
 modId="qr" #mandatory
 # The version number of the mod
-version="1.0-beta" #mandatory
+version="1.0-release" #mandatory
 # A display name for the mod
 displayName="Quality Railway" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -42,7 +42,7 @@ authors="rtmmtr" #optional
 #displayTest="MATCH_VERSION" # if nothing is specified, MATCH_VERSION is the default when clientSideOnly=false, otherwise IGNORE_ALL_VERSION when clientSideOnly=true (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''Just a minecraft train mod.'''
+description='''Experience authentic Chinese rail content that seamlessly integrates with major train mods!'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.qr]] #optional
 # the modid of the dependency
