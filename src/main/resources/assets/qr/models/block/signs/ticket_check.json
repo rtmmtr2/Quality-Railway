@@ -1,0 +1,22 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with rtmmtr",
+	"textures": {
+		"0": "qr:block/signs/ticket_check",
+		"particle": "qr:block/signs/ticket_check"
+	},
+	"elements": [
+		{
+			"from": [-16, 0, 0],
+			"to": [16, 8, 4],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [13.08707, 0, 16, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [13.08707, 0, 16, 7.95778], "texture": "#0"},
+				"up": {"uv": [13.08707, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [13.08707, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

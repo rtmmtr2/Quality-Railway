@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.material.Material;
 import com.qualityrailway.qr.blocks.tools.*;
+import com.qualityrailway.qr.blocks.signs.*;
 import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 
@@ -72,7 +73,13 @@ public class ModBlocks {
 
     public static final RegistryObject<SlabBlock> gravel_slab =
             BLOCKS.register("gravel_slab", () -> new gravel_slab(
-                    BlockBehaviour.Properties.copy(gravel.get())
-            ));
+                    BlockBehaviour.Properties.copy(gravel.get())));
+
+    //signs
+
+    public static final RegistryObject<Block> ticket_check = BLOCKS.register("ticket_check",
+            () -> new ticket_check(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
 
 }

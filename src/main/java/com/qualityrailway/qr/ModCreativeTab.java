@@ -14,21 +14,34 @@ public class ModCreativeTab {
 
         @Override
         public TranslatableComponent getDisplayName() {
-            // 使用 TranslatableComponent 代替 Component.translatable
+
             return new TranslatableComponent("itemGroup.trains");
         }
     };
     public static final CreativeModeTab tools = new CreativeModeTab("tools") {
         @Override
         public ItemStack makeIcon() {
-            // 使用自定义物品作为图标（需要先注册图标物品）
+
             return new ItemStack(ModItems.spanner.get());
         }
 
         @Override
         public TranslatableComponent getDisplayName() {
-            // 使用 TranslatableComponent 代替 Component.translatable
+
             return new TranslatableComponent("itemGroup.tools");
+        }
+    };
+    public static final CreativeModeTab signs = new CreativeModeTab("signs") {
+        @Override
+        public ItemStack makeIcon() {
+
+            return new ItemStack(ModItems.sign.get());
+        }
+
+        @Override
+        public TranslatableComponent getDisplayName() {
+
+            return new TranslatableComponent("itemGroup.signs");
         }
     };
 }

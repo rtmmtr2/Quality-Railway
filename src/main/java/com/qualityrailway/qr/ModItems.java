@@ -50,6 +50,9 @@ public class ModItems {
     public static final RegistryObject<Item> spanner = ITEMS.register("spanner",
             () -> new spanner(new Item.Properties()));
 
+    public static final RegistryObject<Item> sign = ITEMS.register("sign",
+            () -> new sign(new Item.Properties()));
+
     //tools
     public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
             () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
@@ -74,5 +77,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> gravel_slab = ITEMS.register("gravel_slab",
             () -> new BlockItem(ModBlocks.gravel_slab.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+
+    //signs
+
+    public static final RegistryObject<Item> ticket_check = ITEMS.register("ticket_check",
+            () -> new BlockItem(ModBlocks.ticket_check.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 
 }
