@@ -22,6 +22,9 @@
   "block.qr.gravel_slab": "Gravel Slab",
 
   "block.qr.ticket_check": "Ticket Check",
+  "block.qr.police": "Police",
+  "block.qr.information": "Information",
+  "block.qr.toilet": "Toilet",
 
   "tooltip.qr.high_horn.description": "Right-click to horn",
   "tooltip.qr.low_horn.description": "Right-click to horn",

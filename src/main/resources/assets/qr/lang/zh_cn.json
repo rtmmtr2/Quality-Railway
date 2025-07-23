@@ -22,6 +22,9 @@
   "block.qr.gravel_slab": "沙砾半砖",
 
   "block.qr.ticket_check": "检票口",
+  "block.qr.police": "警务室",
+  "block.qr.information": "问讯处",
+  "block.qr.toilet": "卫生间",
 
   "tooltip.qr.high_horn.description": "右键鸣笛",
   "tooltip.qr.low_horn.description": "右键鸣笛",

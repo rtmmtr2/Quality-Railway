@@ -83,5 +83,14 @@ public class ModItems {
     public static final RegistryObject<Item> ticket_check = ITEMS.register("ticket_check",
             () -> new BlockItem(ModBlocks.ticket_check.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    public static final RegistryObject<Item> police = ITEMS.register("police",
+            () -> new BlockItem(ModBlocks.police.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> information = ITEMS.register("information",
+            () -> new BlockItem(ModBlocks.information.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> toilet = ITEMS.register("toilet",
+            () -> new BlockItem(ModBlocks.toilet.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 
 }

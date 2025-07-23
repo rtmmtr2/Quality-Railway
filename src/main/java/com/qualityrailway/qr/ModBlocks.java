@@ -81,5 +81,17 @@ public class ModBlocks {
             () -> new ticket_check(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
+    public static final RegistryObject<Block> police = BLOCKS.register("police",
+            () -> new police(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> information = BLOCKS.register("information",
+            () -> new information(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> toilet = BLOCKS.register("toilet",
+            () -> new toilet(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
 
 }
