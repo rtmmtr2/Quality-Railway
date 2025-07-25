@@ -25,6 +25,11 @@
   "block.qr.police": "警务室",
   "block.qr.information": "问讯处",
   "block.qr.toilet": "卫生间",
+  "block.qr.sign_post": "标志柱",
+  "block.qr.first_approach_section_sign": "接近一",
+  "block.qr.second_approach_section_sign": "接近二",
+  "block.qr.third_approach_section_sign": "接近三",
+  "block.qr.dual_pantograph_prohibited_sign": "禁止双弓",
 
   "tooltip.qr.high_horn.description": "右键鸣笛",
   "tooltip.qr.low_horn.description": "右键鸣笛",

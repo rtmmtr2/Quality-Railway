@@ -92,5 +92,20 @@ public class ModItems {
     public static final RegistryObject<Item> toilet = ITEMS.register("toilet",
             () -> new BlockItem(ModBlocks.toilet.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    public static final RegistryObject<Item> sign_post = ITEMS.register("sign_post",
+            () -> new BlockItem(ModBlocks.sign_post.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> first_approach_section_sign = ITEMS.register("first_approach_section_sign",
+            () -> new BlockItem(ModBlocks.first_approach_section_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> second_approach_section_sign = ITEMS.register("second_approach_section_sign",
+            () -> new BlockItem(ModBlocks.second_approach_section_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> third_approach_section_sign = ITEMS.register("third_approach_section_sign",
+            () -> new BlockItem(ModBlocks.third_approach_section_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> dual_pantograph_prohibited_sign = ITEMS.register("dual_pantograph_prohibited_sign",
+            () -> new BlockItem(ModBlocks.dual_pantograph_prohibited_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 
 }

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with rtmmtr",
+	"textures": {
+		"0": "qr:block/signs/dual_pantograph_prohibited_sign",
+		"1": "qr:block/signs/first_approach_section_sign_2",
+		"particle": "qr:block/signs/dual_pantograph_prohibited_sign"
+	},
+	"elements": [
+		{
+			"from": [4, 0, -0.5],
+			"to": [12, 24, 0],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 0]},
+			"faces": {
+				"north": {"uv": [5.75, 0, 10.5, 16], "texture": "#0"},
+				"east": {"uv": [6, 7.7, 6.25, 15.7], "texture": "#0"},
+				"south": {"uv": [5.75, 0, 10.5, 16], "texture": "#0"},
+				"west": {"uv": [6, 7.7, 6.25, 15.7], "texture": "#0"},
+				"up": {"uv": [6, 0.5, 10, 0.75], "texture": "#0"},
+				"down": {"uv": [6, 0.5, 10, 0.75], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0, 0],
+			"to": [9, 16, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 16], "texture": "#1"},
+				"east": {"uv": [2, 0, 4, 16], "texture": "#1"},
+				"south": {"uv": [4, 0, 6, 16], "texture": "#1"},
+				"west": {"uv": [6, 0, 8, 16], "texture": "#1"},
+				"up": {"uv": [10, 2, 8, 0], "texture": "#1"},
+				"down": {"uv": [10, 2, 8, 4], "texture": "#1"}
+			}
+		}
+	]
+}

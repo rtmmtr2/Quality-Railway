@@ -93,5 +93,26 @@ public class ModBlocks {
             () -> new toilet(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
+    public static final RegistryObject<Block> sign_post = BLOCKS.register("sign_post",
+            () -> new sign_post(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> first_approach_section_sign = BLOCKS.register("first_approach_section_sign",
+            () -> new first_approach_section_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> second_approach_section_sign = BLOCKS.register("second_approach_section_sign",
+            () -> new second_approach_section_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> third_approach_section_sign = BLOCKS.register("third_approach_section_sign",
+            () -> new third_approach_section_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> dual_pantograph_prohibited_sign = BLOCKS.register("dual_pantograph_prohibited_sign",
+            () -> new dual_pantograph_prohibited_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+
 
 }

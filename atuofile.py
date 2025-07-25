@@ -2,7 +2,7 @@ import shutil
 import os
 
 
-name = "information"  # 示例名称
+name = "sign_post"  # 示例名称
 
 # 定义源文件路径
 src_paths = [

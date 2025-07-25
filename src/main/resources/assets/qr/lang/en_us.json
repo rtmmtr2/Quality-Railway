@@ -25,6 +25,11 @@
   "block.qr.police": "Police",
   "block.qr.information": "Information",
   "block.qr.toilet": "Toilet",
+  "block.qr.sign_post": "Sign Post",
+  "block.qr.first_approach_section_sign": "First Approach Section",
+  "block.qr.second_approach_section_sign": "Second Approach Section",
+  "block.qr.third_approach_section_sign": "Third Approach Section",
+  "block.qr.dual_pantograph_prohibited_sign": "Dual Pantograph Prohibited",
 
   "tooltip.qr.high_horn.description": "Right-click to horn",
   "tooltip.qr.low_horn.description": "Right-click to horn",
