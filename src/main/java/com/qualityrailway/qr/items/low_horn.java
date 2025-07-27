@@ -14,13 +14,12 @@ public class low_horn extends Item {
     public low_horn(Properties properties) {
         super(properties);
     }
-
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world,
                                 List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, world, tooltip, flag);
 
-        // 使用 Component.translatable 替代 TranslatableComponent
+        // 添加自定义描述文本
         tooltip.add(Component.translatable("tooltip.qr.low_horn.description").withStyle(ChatFormatting.GRAY));
     }
 }

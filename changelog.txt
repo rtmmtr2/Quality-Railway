@@ -1,59 +1,12 @@
 1.19.2 Changelog
-43.5
-====
- - 43.5.0 1.19.2 RB 5
-          https://forums.minecraftforge.net/topic/154385-forge-435-minecraft-1192/
-
 43.4
 ====
- - 43.4.23 Add '#forge:chorus_additionally_grows_on' tag for similar mechanics to '#minecraft:azalea_grows_on' but for chorus (#10464)
- - 43.4.22 Speed up mod annotation scanning by ~30% (#10472)
-           Co-authored-by: LexManos <LexManos@gmail.com>
- - 43.4.21 Fix continuing to use items after dropping or when a shield breaks (#10382)
-           Fixes MC-231097 and MC-168573
-           Cache this.useItem before running item break logic, Fixes #10344
- - 43.4.20 Add fast graphics render type to block model jsons (#10400)
-           Make modded leaves behave like vanilla leaves by default (Fixes #10389)
- - 43.4.19 Backport even more future ResourceLocation methods (#10430)
- - 43.4.18 Ensure NetworkConstants is loaded before mod construction (#10448)
- - 43.4.17 Add `clientSideOnly` feature to mods.toml (#10085) (backport of #9804 to 1.20.1) (#10367)
-           Co-authored-by: Paint_Ninja <PaintNinja@users.noreply.github.com>
- - 43.4.16 Fix incorrect method reference in TntBlock.explode() (#10333)
- - 43.4.15 Fix issue with shields being disabled by an attacker (#10323)
- - 43.4.14 Fix issues in VillagerTrades.EmeraldsForVillagerTypeItem related to custom Villager Types (#10360)
-           Add VillagerType#registerBiomeType
-           Co-authored-by: Joseph T. McQuigg <J.T.McQuigg12@gmail.com>
- - 43.4.13 Fix non-passengers being tickable without checking canUpdate() (#10306)
- - 43.4.12 Bump CoreMods to 5.2.4 (#10269)
- - 43.4.11 Allow mipmap lowering to be disabled (#10250)
- - 43.4.10 Add optional fix of use item duration, disabled by default (#10244)
- - 43.4.9  Backport some Vanilla 1.21 `ResourceLocation` methods (#10239)
-           Co-authored-by: Paint_Ninja <PaintNinja@users.noreply.github.com>
- - 43.4.8  Deprecate `@ObjectHolder`, add a couple of fast-paths (#10226)
-           Co-authored-by: Paint_Ninja <PaintNinja@users.noreply.github.com>
- - 43.4.7  Disable clean on TeamCity (#10260)
- - 43.4.6  Bump JNA to 5.12.1 (#10186)
- - 43.4.5  Bump CoreMods to 5.2 (#10132)
-           Full Changelog: https://gist.github.com/Jonathing/c3ad28b2a048ac839a7baba5417ee870
-           The key features are:
-           - ES6 language support
-           - Thoroughly updated ASMAPI, with full documentation
-           - Bug fixes (some optional for backwards-compatibility)
-           - Partial internal code cleanup
-           - Request CoreMods to not apply fix for ASMAPI.findFirstInstructionBefore by default
-           Related dependency bumps:
-           - Updated ASM to 9.7.1
-           - Updated Nashorn to 15.4
-           - Updated Log4J to 2.19.0 (included with installer)
- - 43.4.4  Cleanup FML Bindings (backport of #10004 to 1.19.2) (#10105)
- - 43.4.3  Optionally supply FMLJavaModLoadingContext as a param to mod constructors (backport of #10074 to 1.19.2) (#10106)
-           Co-authored-by: RealMangoRage <andrew333awesome@outlook.com>
- - 43.4.2  Fixed falling block entities not rendering as moving blocks (#10006) (#10020)
-           Co-authored-by: Ven <tudurap.com@gmail.com>
- - 43.4.1  Choose default JarJar mod file type based on parent JAR (#10025)
-           Co-authored-by: thedarkcolour <30441001+thedarkcolour@users.noreply.github.com>
- - 43.4.0  1.19.2 RB 4
-           https://forums.minecraftforge.net/topic/149548-forge-434-minecraft-1192/
+ - 43.4.2 Fixed falling block entities not rendering as moving blocks (#10006) (#10020)
+          Co-authored-by: Ven <tudurap.com@gmail.com>
+ - 43.4.1 Choose default JarJar mod file type based on parent JAR (#10025)
+          Co-authored-by: thedarkcolour <30441001+thedarkcolour@users.noreply.github.com>
+ - 43.4.0 1.19.2 RB 4
+          https://forums.minecraftforge.net/topic/149548-forge-434-minecraft-1192/
 
 43.3
 ====
