@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "qr:item/gq70/gq70_end_tank"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "qr:models/block/c70/c70_floor.obj",
+  "textures": {
+    "particle": "qr:block/c70/c70_floor"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "qr:item/signs/dual_pantograph_prohibited_sign"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "block.qr.c70_left_end_board": "C70 左端面",
+  "block.qr.c70_right_end_board": "C70 右端面",
+  "block.qr.c70_front_board": "C70 正箱板",
+  "block.qr.c70_left_board": "C70 左箱板",
+  "block.qr.c70_door": "C70 门板",
+  "block.qr.c70_floor": "C70 地板",
+  "block.qr.gq70_end_tank": "GQ70 端面",
+  "block.qr.gq70_tank_a": "GQ70 罐体 A",
+  "block.qr.gq70_tank_b": "GQ70 罐体 B",
+  "block.qr.gq70_tank_c": "GQ70 罐体 C",
+
+  "item.qr.high_horn": "高音鸣笛",
+  "item.qr.low_horn": "低音电笛",
+  "item.qr.steel_plate":"钢板",
+  "item.qr.qr_item": "QR Item",
+  "item.qr.spanner": "Spanner",
+  "block.qr.bell": "发车铃",
+  "block.qr.railway_ballast": "道砟",
+  "block.qr.railway_ballast_slab": "道砟半砖",
+  "block.qr.gravel": "沙砾",
+  "block.qr.gravel_slab": "沙砾半砖",
+
+  "block.qr.ticket_check": "检票口",
+  "block.qr.police": "警务室",
+  "block.qr.information": "问讯处",
+  "block.qr.toilet": "卫生间",
+  "block.qr.sign_post": "标志柱",
+  "block.qr.first_approach_section_sign": "接近一",
+  "block.qr.second_approach_section_sign": "接近二",
+  "block.qr.third_approach_section_sign": "接近三",
+  "block.qr.dual_pantograph_prohibited_sign": "禁止双弓",
+
+  "tooltip.qr.high_horn.description": "右键鸣笛",
+  "tooltip.qr.low_horn.description": "右键鸣笛",
+
+  "itemGroup.qr.trains": "车辆",
+  "itemGroup.qr.tools": "铁路工具",
+  "itemGroup.qr.signs": "铁路标志"
+}

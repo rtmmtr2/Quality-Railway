@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "qr:block/tools/gravel_slab"
+    },
+    "type=double": {
+      "model": "qr:block/tools/gravel"
+    },
+    "type=top": {
+      "model": "qr:block/tools/gravel_slab_top"
+    }
+  }
+}
