@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab",
-	"textures": {
-		"bottom": "qr:block/tools/railway_ballast",
-		"top": "qr:block/tools/railway_ballast",
-		"side": "qr:block/tools/railway_ballast"
-	}
-}
