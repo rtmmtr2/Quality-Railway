@@ -42,6 +42,9 @@ public class ModItems {
     public static final RegistryObject<Item> gq70_tank_c = ITEMS.register("gq70_tank_c",
             () -> new BlockItem(ModBlocks.gq70_tank_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> df4d = ITEMS.register("df4d",
+            () -> new BlockItem(ModBlocks.df4d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
 
     // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
@@ -107,5 +110,6 @@ public class ModItems {
     public static final RegistryObject<Item> dual_pantograph_prohibited_sign = ITEMS.register("dual_pantograph_prohibited_sign",
             () -> new BlockItem(ModBlocks.dual_pantograph_prohibited_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    //doors
 
 }

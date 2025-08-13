@@ -11,6 +11,7 @@ import com.qualityrailway.qr.blocks.tools.*;
 import com.qualityrailway.qr.blocks.signs.*;
 import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
+import com.qualityrailway.qr.blocks.df4d.*;
 
 
 public class ModBlocks {
@@ -48,6 +49,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> gq70_tank_c = BLOCKS.register("gq70_tank_c",
             () -> new gq70_tank_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d = BLOCKS.register("df4d",
+            () -> new df4d(Block.Properties.copy(c70_left_end_board.get())));
 
     //tools
 
@@ -112,6 +116,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> dual_pantograph_prohibited_sign = BLOCKS.register("dual_pantograph_prohibited_sign",
             () -> new dual_pantograph_prohibited_sign(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
+
+    //doors
+
 
 
 
