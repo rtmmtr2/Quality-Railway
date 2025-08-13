@@ -1,0 +1,17 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "   ",
+    "S S",
+    "   "
+  ],
+  "key":{
+    "S":{
+      "item":"minecraft:gravel"
+    }
+  },
+  "result":{
+    "item":"qr:gravel",
+    "count":1
+  }
+}

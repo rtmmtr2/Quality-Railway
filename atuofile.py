@@ -2,16 +2,19 @@ import shutil
 import os
 
 
-name = "gq70_tank_c"  # 示例名称
+name = "sign_post"  # 示例名称
 
 # 定义源文件路径
 src_paths = [
-    # 第一个文件路径
     "src/main/resources/assets/qr/blockstates/c70_left_end_board.json",
-    # 第二个文件路径
-    "src/main/resources/assets/qr/models/block/gq70/c70_left_end_board.json",
-    # 第三个文件路径
-    "src/main/resources/assets/qr/models/item/c70_left_end_board.json"
+
+    #"src/main/resources/assets/qr/models/block/gq70/c70_left_end_board.json",
+
+    "src/main/resources/assets/qr/models/item/c70_left_end_board.json",
+
+    "src/main/resources/data/qr/loot_tables/blocks/c70_left_end_board.json"
+    
+    "src/main/resources/data/qr/recipes/c70_left_end_board.json"
 ]
 
 for src in src_paths:

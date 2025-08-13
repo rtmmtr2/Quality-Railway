@@ -1,0 +1,20 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "   ",
+    "TST",
+    "   "
+  ],
+  "key":{
+    "S":{
+      "item":"minecraft:green_dye"
+    },
+    "T":{
+      "item":"minecraft:redstone"
+    }
+  },
+  "result":{
+    "item":"qr:low_horn",
+    "count":1
+  }
+}

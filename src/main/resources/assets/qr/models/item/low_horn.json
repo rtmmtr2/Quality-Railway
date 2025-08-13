@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "qr:item/low_horn"
+    "layer0": "qr:item/tools/low_horn"
   }
 }
