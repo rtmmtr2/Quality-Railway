@@ -1,5 +1,7 @@
 package com.qualityrailway.qr;
+import com.qualityrailway.qr.blocks.door;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -50,8 +52,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> gq70_tank_c = BLOCKS.register("gq70_tank_c",
             () -> new gq70_tank_c(Block.Properties.copy(c70_left_end_board.get())));
 
-    public static final RegistryObject<Block> df4d = BLOCKS.register("df4d",
-            () -> new df4d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
+            () -> new door(Block.Properties.of(Material.WOOD)));
 
     //tools
 
