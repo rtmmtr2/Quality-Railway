@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "no-thoroughfare",
-		"1": "huidi",
-		"particle": "no-thoroughfare"
+		"0": "qr:block/signs/shopping",
+		"1": "qr:block/signs/landi2",
+		"particle": "qr:block/signs/shopping"
 	},
 	"elements": [
 		{

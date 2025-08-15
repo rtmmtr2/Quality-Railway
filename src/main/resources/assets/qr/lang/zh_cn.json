@@ -30,6 +30,12 @@
   "block.qr.second_approach_section_sign": "接近二",
   "block.qr.third_approach_section_sign": "接近三",
   "block.qr.dual_pantograph_prohibited_sign": "禁止双弓",
+  "block.qr.automatic_tickets": "自动购票机",
+  "block.qr.entrance": "铁路进站口",
+  "block.qr.exit": "铁路出站口",
+  "block.qr.railway_tickets": "购票处",
+  "block.qr.shopping": "商店",
+  "block.qr.vip": "VIP",
 
   "tooltip.qr.high_horn.description": "右键鸣笛",
   "tooltip.qr.low_horn.description": "右键鸣笛",

@@ -30,6 +30,13 @@
   "block.qr.second_approach_section_sign": "Second Approach Section",
   "block.qr.third_approach_section_sign": "Third Approach Section",
   "block.qr.dual_pantograph_prohibited_sign": "Dual Pantograph Prohibited",
+  "block.qr.automatic_tickets": "Automatic Tickets",
+  "block.qr.entrance": "Entrance",
+  "block.qr.exit": "Exit",
+  "block.qr.railway_tickets": "Railway Tickets",
+  "block.qr.shopping": "Shopping",
+  "block.qr.vip": "VIP",
+
 
   "tooltip.qr.high_horn.description": "Right-click to horn",
   "tooltip.qr.low_horn.description": "Right-click to horn",

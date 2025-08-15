@@ -110,6 +110,24 @@ public class ModItems {
     public static final RegistryObject<Item> dual_pantograph_prohibited_sign = ITEMS.register("dual_pantograph_prohibited_sign",
             () -> new BlockItem(ModBlocks.dual_pantograph_prohibited_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    public static final RegistryObject<Item> automatic_tickets = ITEMS.register("automatic_tickets",
+            () -> new BlockItem(ModBlocks.automatic_tickets.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> entrance = ITEMS.register("entrance",
+            () -> new BlockItem(ModBlocks.entrance.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> exit = ITEMS.register("exit",
+            () -> new BlockItem(ModBlocks.exit.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> railway_tickets = ITEMS.register("railway_tickets",
+            () -> new BlockItem(ModBlocks.railway_tickets.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> shopping = ITEMS.register("shopping",
+            () -> new BlockItem(ModBlocks.shopping.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> vip = ITEMS.register("vip",
+            () -> new BlockItem(ModBlocks.vip.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
     //doors
 
 }

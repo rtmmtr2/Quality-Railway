@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "railway-tickets",
-		"3": "landi",
-		"particle": "railway-tickets"
+		"2": "qr:block/signs/railway_tickets",
+		"3": "qr:block/signs/landi2",
+		"particle": "qr:block/signs/railway_tickets"
 	},
 	"elements": [
 		{

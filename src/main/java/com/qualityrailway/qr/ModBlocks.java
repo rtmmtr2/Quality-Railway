@@ -13,7 +13,6 @@ import com.qualityrailway.qr.blocks.tools.*;
 import com.qualityrailway.qr.blocks.signs.*;
 import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
-import com.qualityrailway.qr.blocks.df4d.*;
 
 
 public class ModBlocks {
@@ -119,6 +118,31 @@ public class ModBlocks {
     public static final RegistryObject<Block> dual_pantograph_prohibited_sign = BLOCKS.register("dual_pantograph_prohibited_sign",
             () -> new dual_pantograph_prohibited_sign(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
+
+    public static final RegistryObject<Block> automatic_tickets = BLOCKS.register("automatic_tickets",
+            () -> new automatic_tickets(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> entrance = BLOCKS.register("entrance",
+            () -> new entrance(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> exit = BLOCKS.register("exit",
+            () -> new exit(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> railway_tickets = BLOCKS.register("railway_tickets",
+            () -> new railway_tickets(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> shopping = BLOCKS.register("shopping",
+            () -> new shopping(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> vip = BLOCKS.register("vip",
+            () -> new vip(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
 
     //doors
 

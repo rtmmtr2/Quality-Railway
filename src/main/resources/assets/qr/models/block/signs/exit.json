@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "lvidi",
-		"2": "exit",
-		"particle": "exit"
+		"1": "qr:block/signs/lvidi",
+		"2": "qr:block/signs/exit",
+		"particle": "qr:block/signs/exit"
 	},
 	"elements": [
 		{

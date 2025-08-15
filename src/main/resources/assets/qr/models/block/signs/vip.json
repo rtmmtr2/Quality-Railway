@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "vip",
-		"1": "landi2",
-		"particle": "vip"
+		"0": "qr:block/signs/vip",
+		"1": "qr:block/signs/landi2",
+		"particle": "qr:block/signs/vip"
 	},
 	"elements": [
 		{
