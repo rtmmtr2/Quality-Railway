@@ -36,6 +36,8 @@
   "block.qr.railway_tickets": "Railway Tickets",
   "block.qr.shopping": "Shopping",
   "block.qr.vip": "VIP",
+  "block.qr.passengers_stopped": "Passengers Stopped",
+  "block.qr.waiting_room": "Waiting Room",
 
 
   "tooltip.qr.high_horn.description": "Right-click to horn",

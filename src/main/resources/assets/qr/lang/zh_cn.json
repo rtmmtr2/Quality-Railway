@@ -36,6 +36,8 @@
   "block.qr.railway_tickets": "购票处",
   "block.qr.shopping": "商店",
   "block.qr.vip": "VIP",
+  "block.qr.passengers_stopped": "旅客止步",
+  "block.qr.waiting_room": "候车室",
 
   "tooltip.qr.high_horn.description": "右键鸣笛",
   "tooltip.qr.low_horn.description": "右键鸣笛",

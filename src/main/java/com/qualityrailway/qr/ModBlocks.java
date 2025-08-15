@@ -143,6 +143,12 @@ public class ModBlocks {
             () -> new vip(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
+    public static final RegistryObject<Block> passengers_stopped = BLOCKS.register("passengers_stopped",
+            () -> new passengers_stopped(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+    public static final RegistryObject<Block> waiting_room = BLOCKS.register("waiting_room",
+            () -> new waiting_room(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
 
     //doors
 

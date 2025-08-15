@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "waiting-room",
-		"1": "landi2",
-		"particle": "waiting-room"
+		"0": "qr:block/signs/waiting_room",
+		"1": "qr:block/signs/landi2",
+		"particle": "qr:block/signs/waiting_room"
 	},
 	"elements": [
 		{

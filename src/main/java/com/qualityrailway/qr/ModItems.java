@@ -128,6 +128,12 @@ public class ModItems {
     public static final RegistryObject<Item> vip = ITEMS.register("vip",
             () -> new BlockItem(ModBlocks.vip.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    public static final RegistryObject<Item> passengers_stopped = ITEMS.register("passengers_stopped",
+            () -> new BlockItem(ModBlocks.passengers_stopped.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> waiting_room = ITEMS.register("waiting_room",
+            () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
     //doors
 
 }
