@@ -2,13 +2,13 @@ import shutil
 import os
 
 
-name = "sign_post"  # 示例名称
+name = "df7g_enclosure_end"  # 示例名称
 
 # 定义源文件路径
 src_paths = [
     "src/main/resources/assets/qr/blockstates/c70_left_end_board.json",
 
-    #"src/main/resources/assets/qr/models/block/gq70/c70_left_end_board.json",
+    "src/main/resources/assets/qr/models/block/df7g/c70_left_end_board.json",
 
     "src/main/resources/assets/qr/models/item/c70_left_end_board.json",
 

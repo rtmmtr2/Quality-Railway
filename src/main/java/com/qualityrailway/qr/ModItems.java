@@ -42,6 +42,54 @@ public class ModItems {
     public static final RegistryObject<Item> gq70_tank_c = ITEMS.register("gq70_tank_c",
             () -> new BlockItem(ModBlocks.gq70_tank_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> df7g_cab = ITEMS.register("df7g_cab",
+            () -> new BlockItem(ModBlocks.df7g_cab.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_front_pilot = ITEMS.register("df7g_front_pilot",
+            () -> new BlockItem(ModBlocks.df7g_front_pilot.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_end_pilot = ITEMS.register("df7g_end_pilot",
+            () -> new BlockItem(ModBlocks.df7g_end_pilot.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_floor_a = ITEMS.register("df7g_floor_a",
+            () -> new BlockItem(ModBlocks.df7g_floor_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_floor_b = ITEMS.register("df7g_floor_b",
+            () -> new BlockItem(ModBlocks.df7g_floor_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_floor_c = ITEMS.register("df7g_floor_c",
+            () -> new BlockItem(ModBlocks.df7g_floor_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_floor_d = ITEMS.register("df7g_floor_d",
+            () -> new BlockItem(ModBlocks.df7g_floor_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_floor_e = ITEMS.register("df7g_floor_e",
+            () -> new BlockItem(ModBlocks.df7g_floor_e.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_floor_f = ITEMS.register("df7g_floor_f",
+            () -> new BlockItem(ModBlocks.df7g_floor_f.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_a = ITEMS.register("df7g_enclosure_a",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_b = ITEMS.register("df7g_enclosure_b",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_c = ITEMS.register("df7g_enclosure_c",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_d = ITEMS.register("df7g_enclosure_d",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_e = ITEMS.register("df7g_enclosure_e",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_e.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_f = ITEMS.register("df7g_enclosure_f",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_f.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df7g_enclosure_end = ITEMS.register("df7g_enclosure_end",
+            () -> new BlockItem(ModBlocks.df7g_enclosure_end.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
 
     public static final RegistryObject<Item> door = ITEMS.register("door",
             () -> new BlockItem(ModBlocks.door.get(), new Item.Properties().tab(ModCreativeTab.trains)));

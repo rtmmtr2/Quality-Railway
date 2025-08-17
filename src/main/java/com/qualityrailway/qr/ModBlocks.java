@@ -13,6 +13,7 @@ import com.qualityrailway.qr.blocks.tools.*;
 import com.qualityrailway.qr.blocks.signs.*;
 import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
+import com.qualityrailway.qr.blocks.df7g.*;
 
 
 public class ModBlocks {
@@ -51,6 +52,53 @@ public class ModBlocks {
     public static final RegistryObject<Block> gq70_tank_c = BLOCKS.register("gq70_tank_c",
             () -> new gq70_tank_c(Block.Properties.copy(c70_left_end_board.get())));
 
+    public static final RegistryObject<Block> df7g_cab = BLOCKS.register("df7g_cab",
+            () -> new df7g_cab(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_front_pilot = BLOCKS.register("df7g_front_pilot",
+            () -> new df7g_front_pilot(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_end_pilot = BLOCKS.register("df7g_end_pilot",
+            () -> new df7g_end_pilot(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_a = BLOCKS.register("df7g_floor_a",
+            () -> new df7g_floor_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_b = BLOCKS.register("df7g_floor_b",
+            () -> new df7g_floor_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_c = BLOCKS.register("df7g_floor_c",
+            () -> new df7g_floor_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_d = BLOCKS.register("df7g_floor_d",
+            () -> new df7g_floor_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_e = BLOCKS.register("df7g_floor_e",
+            () -> new df7g_floor_e(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_f = BLOCKS.register("df7g_floor_f",
+            () -> new df7g_floor_f(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_a = BLOCKS.register("df7g_enclosure_a",
+            () -> new df7g_enclosure_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_b = BLOCKS.register("df7g_enclosure_b",
+            () -> new df7g_enclosure_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_c = BLOCKS.register("df7g_enclosure_c",
+            () -> new df7g_enclosure_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_d = BLOCKS.register("df7g_enclosure_d",
+            () -> new df7g_enclosure_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_e = BLOCKS.register("df7g_enclosure_e",
+            () -> new df7g_enclosure_e(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_f = BLOCKS.register("df7g_enclosure_f",
+            () -> new df7g_enclosure_f(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_end = BLOCKS.register("df7g_enclosure_end",
+            () -> new df7g_enclosure_end(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
             () -> new door(Block.Properties.of(Material.WOOD)));
