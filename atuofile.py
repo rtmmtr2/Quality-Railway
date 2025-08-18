@@ -2,19 +2,19 @@ import shutil
 import os
 
 
-name = "df7g_enclosure_end"  # 示例名称
+name = "df4d_roof_e"  # 示例名称
 
 # 定义源文件路径
 src_paths = [
-    "src/main/resources/assets/qr/blockstates/c70_left_end_board.json",
+    #"src/main/resources/assets/qr/blockstates/c70_left_end_board.json",
 
-    "src/main/resources/assets/qr/models/block/df7g/c70_left_end_board.json",
+    "src/main/resources/assets/qr/models/block/df4d/c70_left_end_board.json",
 
-    "src/main/resources/assets/qr/models/item/c70_left_end_board.json",
+    #"src/main/resources/assets/qr/models/item/c70_left_end_board.json",
 
-    "src/main/resources/data/qr/loot_tables/blocks/c70_left_end_board.json"
+    #"src/main/resources/data/qr/loot_tables/blocks/c70_left_end_board.json"
     
-    "src/main/resources/data/qr/recipes/c70_left_end_board.json"
+    #"src/main/resources/data/qr/recipes/c70_left_end_board.json"
 ]
 
 for src in src_paths:

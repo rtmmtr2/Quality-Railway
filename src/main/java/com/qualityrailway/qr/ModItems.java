@@ -42,6 +42,8 @@ public class ModItems {
     public static final RegistryObject<Item> gq70_tank_c = ITEMS.register("gq70_tank_c",
             () -> new BlockItem(ModBlocks.gq70_tank_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    //df7g
+
     public static final RegistryObject<Item> df7g_cab = ITEMS.register("df7g_cab",
             () -> new BlockItem(ModBlocks.df7g_cab.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
@@ -89,6 +91,86 @@ public class ModItems {
 
     public static final RegistryObject<Item> df7g_enclosure_end = ITEMS.register("df7g_enclosure_end",
             () -> new BlockItem(ModBlocks.df7g_enclosure_end.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    //df4d
+
+    public static final RegistryObject<Item> df4d_cab = ITEMS.register("df4d_cab",
+            () -> new BlockItem(ModBlocks.df4d_cab.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_chimney_a = ITEMS.register("df4d_chimney_a",
+            () -> new BlockItem(ModBlocks.df4d_chimney_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_floor_a = ITEMS.register("df4d_floor_a",
+            () -> new BlockItem(ModBlocks.df4d_floor_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_floor_b = ITEMS.register("df4d_floor_b",
+            () -> new BlockItem(ModBlocks.df4d_floor_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_floor_c = ITEMS.register("df4d_floor_c",
+            () -> new BlockItem(ModBlocks.df4d_floor_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_a = ITEMS.register("df4d_left_board_a",
+            () -> new BlockItem(ModBlocks.df4d_left_board_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_b = ITEMS.register("df4d_left_board_b",
+            () -> new BlockItem(ModBlocks.df4d_left_board_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_c = ITEMS.register("df4d_left_board_c",
+            () -> new BlockItem(ModBlocks.df4d_left_board_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_d = ITEMS.register("df4d_left_board_d",
+            () -> new BlockItem(ModBlocks.df4d_left_board_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_e = ITEMS.register("df4d_left_board_e",
+            () -> new BlockItem(ModBlocks.df4d_left_board_e.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_f = ITEMS.register("df4d_left_board_f",
+            () -> new BlockItem(ModBlocks.df4d_left_board_f.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_left_board_g = ITEMS.register("df4d_left_board_g",
+            () -> new BlockItem(ModBlocks.df4d_left_board_g.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_radiator_a = ITEMS.register("df4d_radiator_a",
+            () -> new BlockItem(ModBlocks.df4d_radiator_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_radiator_b = ITEMS.register("df4d_radiator_b",
+            () -> new BlockItem(ModBlocks.df4d_radiator_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_a = ITEMS.register("df4d_right_board_a",
+            () -> new BlockItem(ModBlocks.df4d_right_board_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_b = ITEMS.register("df4d_right_board_b",
+            () -> new BlockItem(ModBlocks.df4d_right_board_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_c = ITEMS.register("df4d_right_board_c",
+            () -> new BlockItem(ModBlocks.df4d_right_board_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_d = ITEMS.register("df4d_right_board_d",
+            () -> new BlockItem(ModBlocks.df4d_right_board_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_e = ITEMS.register("df4d_right_board_e",
+            () -> new BlockItem(ModBlocks.df4d_right_board_e.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_f = ITEMS.register("df4d_right_board_f",
+            () -> new BlockItem(ModBlocks.df4d_right_board_f.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_right_board_g = ITEMS.register("df4d_right_board_g",
+            () -> new BlockItem(ModBlocks.df4d_right_board_g.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_roof_a = ITEMS.register("df4d_roof_a",
+            () -> new BlockItem(ModBlocks.df4d_roof_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_roof_b = ITEMS.register("df4d_roof_b",
+            () -> new BlockItem(ModBlocks.df4d_roof_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_roof_c = ITEMS.register("df4d_roof_c",
+            () -> new BlockItem(ModBlocks.df4d_roof_c.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_roof_d = ITEMS.register("df4d_roof_d",
+            () -> new BlockItem(ModBlocks.df4d_roof_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_roof_e = ITEMS.register("df4d_roof_e",
+            () -> new BlockItem(ModBlocks.df4d_roof_e.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
 
     public static final RegistryObject<Item> door = ITEMS.register("door",

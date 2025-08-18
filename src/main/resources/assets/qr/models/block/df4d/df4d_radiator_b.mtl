@@ -1,0 +1,6 @@
+# Made in Blockbench 4.12.6
+newmtl m_4e0e14c0-3a1b-a1a7-2371-67acb080962c
+map_Kd qr:block/df4d/df4d_floor_a_1
+newmtl m_cd114273-55ee-c6fd-4b9b-fb41cfd09693
+map_Kd qr:block/df4d/df4d_roof_a_1
+newmtl none

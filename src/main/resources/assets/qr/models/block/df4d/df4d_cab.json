@@ -1,0 +1,16 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip-v": true,
+  "model": "qr:models/block/df4d/df4d_cab.obj",
+  "textures": {
+    "particle": "qr:block/df4d/df4d_cab_a_1",
+    "0": "qr:block/df4d/df4d_cab_a_1",
+    "1": "qr:block/df4d/df4d_cab_a_2",
+    "2": "qr:block/df4d/df4d_cab_a_3",
+    "3": "qr:block/df4d/df4d_cab_a_4",
+    "4": "qr:block/df4d/df4d_cab_a_5",
+    "5": "qr:block/df4d/df4d_cab_a_6",
+    "6": "qr:block/df4d/df4d_cab_a_7"
+  }
+}
