@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "qr:models/block/df7g/df7g_enclosure_e.obj",
+  "textures": {
+    "particle": "qr:block/df7g/df7g_enclosure_e_1"
+  }
+}

@@ -20,7 +20,7 @@ public class ModCreativeTab {
             // 注册三个标签页
             TRAINS = CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.qr.trains"))
-                    .icon(() -> new ItemStack(ModItems.c70_left_end_board.get()))
+                    .icon(() -> new ItemStack(ModItems.qr_item.get()))
                     .build();
 
             TOOLS = CreativeModeTab.builder()
@@ -54,6 +54,51 @@ public class ModCreativeTab {
             event.accept(ModItems.gq70_tank_a);
             event.accept(ModItems.gq70_tank_b);
             event.accept(ModItems.gq70_tank_c);
+            event.accept(ModItems.df7g_cab);
+            event.accept(ModItems.df7g_cowcatcher_a);
+            event.accept(ModItems.df7g_cowcatcher_b);
+            event.accept(ModItems.df7g_enclosure_a);
+            event.accept(ModItems.df7g_enclosure_b);
+            event.accept(ModItems.df7g_enclosure_c);
+            event.accept(ModItems.df7g_enclosure_d);
+            event.accept(ModItems.df7g_enclosure_e);
+            event.accept(ModItems.df7g_enclosure_f);
+            event.accept(ModItems.df7g_enclosure_end);
+            event.accept(ModItems.df7g_floor_a);
+            event.accept(ModItems.df7g_floor_b);
+            event.accept(ModItems.df7g_floor_c);
+            event.accept(ModItems.df7g_floor_d);
+            event.accept(ModItems.df7g_floor_e);
+            event.accept(ModItems.df7g_floor_f);
+            event.accept(ModItems.df4d_cab);
+            event.accept(ModItems.df4d_cab_door_a);
+            event.accept(ModItems.df4d_cab_door_b);
+            event.accept(ModItems.df4d_chimney_a);
+            event.accept(ModItems.df4d_floor_a);
+            event.accept(ModItems.df4d_floor_b);
+            event.accept(ModItems.df4d_floor_c);
+            event.accept(ModItems.df4d_floor_d);
+            event.accept(ModItems.df4d_left_board_a);
+            event.accept(ModItems.df4d_left_board_b);
+            event.accept(ModItems.df4d_left_board_c);
+            event.accept(ModItems.df4d_left_board_d);
+            event.accept(ModItems.df4d_left_board_e);
+            event.accept(ModItems.df4d_left_board_f);
+            event.accept(ModItems.df4d_left_board_g);
+            event.accept(ModItems.df4d_right_board_a);
+            event.accept(ModItems.df4d_right_board_b);
+            event.accept(ModItems.df4d_right_board_c);
+            event.accept(ModItems.df4d_right_board_d);
+            event.accept(ModItems.df4d_right_board_e);
+            event.accept(ModItems.df4d_right_board_f);
+            event.accept(ModItems.df4d_right_board_g);
+            event.accept(ModItems.df4d_radiator_a);
+            event.accept(ModItems.df4d_radiator_b);
+            event.accept(ModItems.df4d_roof_a);
+            event.accept(ModItems.df4d_roof_b);
+            event.accept(ModItems.df4d_roof_c);
+            event.accept(ModItems.df4d_roof_d);
+            event.accept(ModItems.df4d_roof_e);
         }
         // 填充 tools 标签页
         else if (event.getTab() == TOOLS) {
@@ -65,6 +110,7 @@ public class ModCreativeTab {
             event.accept(ModItems.railway_ballast_slab);
             event.accept(ModItems.gravel);
             event.accept(ModItems.gravel_slab);
+
         }
         // 填充 signs 标签页
         else if (event.getTab() == SIGNS) {
@@ -77,6 +123,14 @@ public class ModCreativeTab {
             event.accept(ModItems.second_approach_section_sign);
             event.accept(ModItems.third_approach_section_sign);
             event.accept(ModItems.dual_pantograph_prohibited_sign);
+            event.accept(ModItems.automatic_tickets);
+            event.accept(ModItems.entrance);
+            event.accept(ModItems.exit);
+            event.accept(ModItems.railway_tickets);
+            event.accept(ModItems.shopping);
+            event.accept(ModItems.vip);
+            event.accept(ModItems.passengers_stopped);
+            event.accept(ModItems.waiting_room);
         }
     }
 }

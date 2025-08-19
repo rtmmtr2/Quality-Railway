@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with rtmmtr",
+	"texture_size": [32, 32],
+	"textures": {
+		"7": "qr:block/df4d/df4d_cab_door_a_6",
+		"particle": "qr:block/df4d/df4d_cab_door_b_1"
+	},
+	"elements": [
+		{
+			"from": [-2.05, 0, 0],
+			"to": [-1.05, 16, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-2.05, 0, 14]},
+			"faces": {
+				"north": {"uv": [1, 8, 0.5, 16], "texture": "#7"},
+				"east": {"uv": [14, 0, 7, 8], "texture": "#7"},
+				"south": {"uv": [0.5, 8, 0, 16], "texture": "#7"},
+				"west": {"uv": [7, 0, 0, 8], "texture": "#7"},
+				"up": {"uv": [1, 8.5, 8, 8], "rotation": 270, "texture": "#7"},
+				"down": {"uv": [8, 8, 15, 8.5], "rotation": 90, "texture": "#7"}
+			}
+		}
+	]
+}

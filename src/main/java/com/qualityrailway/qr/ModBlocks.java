@@ -1,17 +1,20 @@
 package com.qualityrailway.qr;
+import com.qualityrailway.qr.blocks.door;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.minecraft.world.level.material.MapColor;
 import com.qualityrailway.qr.blocks.tools.*;
 import com.qualityrailway.qr.blocks.signs.*;
 import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
-
+import com.qualityrailway.qr.blocks.df7g.*;
+import com.qualityrailway.qr.blocks.df4d.*;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -19,7 +22,7 @@ public class ModBlocks {
 
     // trains
     public static final RegistryObject<Block> c70_left_end_board = BLOCKS.register("c70_left_end_board",
-            () -> new c70_left_end_board(BlockBehaviour.Properties.of()
+            () -> new c70_left_end_board(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> c70_right_end_board = BLOCKS.register("c70_right_end_board",
@@ -48,6 +51,153 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> gq70_tank_c = BLOCKS.register("gq70_tank_c",
             () -> new gq70_tank_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    // df7g
+
+    public static final RegistryObject<Block> df7g_cab = BLOCKS.register("df7g_cab",
+            () -> new df7g_cab(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_cowcatcher_a = BLOCKS.register("df7g_cowcatcher_a",
+            () -> new df7g_cowcatcher_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_cowcatcher_b = BLOCKS.register("df7g_cowcatcher_b",
+            () -> new df7g_cowcatcher_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_a = BLOCKS.register("df7g_floor_a",
+            () -> new df7g_floor_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_b = BLOCKS.register("df7g_floor_b",
+            () -> new df7g_floor_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_c = BLOCKS.register("df7g_floor_c",
+            () -> new df7g_floor_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_d = BLOCKS.register("df7g_floor_d",
+            () -> new df7g_floor_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_e = BLOCKS.register("df7g_floor_e",
+            () -> new df7g_floor_e(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_floor_f = BLOCKS.register("df7g_floor_f",
+            () -> new df7g_floor_f(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_a = BLOCKS.register("df7g_enclosure_a",
+            () -> new df7g_enclosure_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_b = BLOCKS.register("df7g_enclosure_b",
+            () -> new df7g_enclosure_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_c = BLOCKS.register("df7g_enclosure_c",
+            () -> new df7g_enclosure_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_d = BLOCKS.register("df7g_enclosure_d",
+            () -> new df7g_enclosure_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_e = BLOCKS.register("df7g_enclosure_e",
+            () -> new df7g_enclosure_e(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_f = BLOCKS.register("df7g_enclosure_f",
+            () -> new df7g_enclosure_f(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df7g_enclosure_end = BLOCKS.register("df7g_enclosure_end",
+            () -> new df7g_enclosure_end(Block.Properties.copy(c70_left_end_board.get())));
+
+    // df4d
+
+    public static final RegistryObject<Block> df4d_cab = BLOCKS.register("df4d_cab",
+            () -> new df4d_cab(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_chimney_a = BLOCKS.register("df4d_chimney_a",
+            () -> new df4d_chimney_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_floor_a = BLOCKS.register("df4d_floor_a",
+            () -> new df4d_floor_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_floor_b = BLOCKS.register("df4d_floor_b",
+            () -> new df4d_floor_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_floor_c = BLOCKS.register("df4d_floor_c",
+            () -> new df4d_floor_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_a = BLOCKS.register("df4d_left_board_a",
+            () -> new df4d_left_board_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_b = BLOCKS.register("df4d_left_board_b",
+            () -> new df4d_left_board_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_c = BLOCKS.register("df4d_left_board_c",
+            () -> new df4d_left_board_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_d = BLOCKS.register("df4d_left_board_d",
+            () -> new df4d_left_board_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_e = BLOCKS.register("df4d_left_board_e",
+            () -> new df4d_left_board_e(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_f = BLOCKS.register("df4d_left_board_f",
+            () -> new df4d_left_board_f(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_left_board_g = BLOCKS.register("df4d_left_board_g",
+            () -> new df4d_left_board_g(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_radiator_a = BLOCKS.register("df4d_radiator_a",
+            () -> new df4d_radiator_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_radiator_b = BLOCKS.register("df4d_radiator_b",
+            () -> new df4d_radiator_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_a = BLOCKS.register("df4d_right_board_a",
+            () -> new df4d_right_board_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_b = BLOCKS.register("df4d_right_board_b",
+            () -> new df4d_right_board_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_c = BLOCKS.register("df4d_right_board_c",
+            () -> new df4d_right_board_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_d = BLOCKS.register("df4d_right_board_d",
+            () -> new df4d_right_board_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_e = BLOCKS.register("df4d_right_board_e",
+            () -> new df4d_right_board_e(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_f = BLOCKS.register("df4d_right_board_f",
+            () -> new df4d_right_board_f(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_right_board_g = BLOCKS.register("df4d_right_board_g",
+            () -> new df4d_right_board_g(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_roof_a = BLOCKS.register("df4d_roof_a",
+            () -> new df4d_roof_a(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_roof_b = BLOCKS.register("df4d_roof_b",
+            () -> new df4d_roof_b(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_roof_c = BLOCKS.register("df4d_roof_c",
+            () -> new df4d_roof_c(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_roof_d = BLOCKS.register("df4d_roof_d",
+            () -> new df4d_roof_d(Block.Properties.copy(c70_left_end_board.get())));
+
+    public static final RegistryObject<Block> df4d_roof_e = BLOCKS.register("df4d_roof_e",
+            () -> new df4d_roof_e(Block.Properties.copy(c70_left_end_board.get())));
+
+
+    public static final RegistryObject<DoorBlock> df4d_cab_door_a = BLOCKS.register("df4d_cab_door_a",
+            () -> new df4d_cab_door_a(Block.Properties.of()));
+
+    public static final RegistryObject<DoorBlock> df4d_cab_door_b = BLOCKS.register("df4d_cab_door_b",
+            () -> new df4d_cab_door_b(Block.Properties.of()));
+
+    public static final RegistryObject<DoorBlock> df4d_middle_door = BLOCKS.register("df4d_middle_door",
+            () -> new df4d_middle_door(Block.Properties.of()));
+
+    public static final RegistryObject<Block> df4d_floor_d = BLOCKS.register("df4d_floor_d",
+            () -> new df4d_floor_d(Block.Properties.copy(c70_left_end_board.get())));
+
+
+    public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
+            () -> new door(Block.Properties.of()));
 
     //tools
 
@@ -112,6 +262,40 @@ public class ModBlocks {
     public static final RegistryObject<Block> dual_pantograph_prohibited_sign = BLOCKS.register("dual_pantograph_prohibited_sign",
             () -> new dual_pantograph_prohibited_sign(Block.Properties.of()
                     .strength(2.0f)));
+
+    public static final RegistryObject<Block> automatic_tickets = BLOCKS.register("automatic_tickets",
+            () -> new automatic_tickets(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> entrance = BLOCKS.register("entrance",
+            () -> new entrance(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> exit = BLOCKS.register("exit",
+            () -> new exit(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> railway_tickets = BLOCKS.register("railway_tickets",
+            () -> new railway_tickets(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> shopping = BLOCKS.register("shopping",
+            () -> new shopping(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> vip = BLOCKS.register("vip",
+            () -> new vip(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> passengers_stopped = BLOCKS.register("passengers_stopped",
+            () -> new passengers_stopped(Block.Properties.of()
+                    .strength(2.0f)));
+    public static final RegistryObject<Block> waiting_room = BLOCKS.register("waiting_room",
+            () -> new waiting_room(Block.Properties.of()
+                    .strength(2.0f)));
+
+    //doors
+
 
 
 

@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "qr:models/block/df4d/df4d_left_board_c.obj",
+  "textures": {
+    "particle": "qr:block/df4d/df4d_left_broad_c_1"
+  }
+}

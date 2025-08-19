@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "qr:models/block/df4d/df4d_radiator_a.obj",
+  "textures": {
+    "particle": "qr:block/df4d/df4d_roof_a_1",
+    "0": "qr:block/df4d/df4d_roof_a_1",
+    "1": "qr:block/df4d/df4d_enclosure_a_1"
+  }
+}

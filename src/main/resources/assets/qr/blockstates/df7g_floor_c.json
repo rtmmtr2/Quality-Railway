@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "qr:block/df7g/df7g_floor_c",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/df7g/df7g_floor_c",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "qr:block/df7g/df7g_floor_c",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "qr:block/df7g/df7g_floor_c",
+      "y": 90
+    }
+  }
+}
