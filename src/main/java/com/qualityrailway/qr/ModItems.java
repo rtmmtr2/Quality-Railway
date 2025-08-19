@@ -172,9 +172,20 @@ public class ModItems {
     public static final RegistryObject<Item> df4d_roof_e = ITEMS.register("df4d_roof_e",
             () -> new BlockItem(ModBlocks.df4d_roof_e.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> df4d_cab_door_a = ITEMS.register("df4d_cab_door_a",
+            () -> new BlockItem(ModBlocks.df4d_cab_door_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_cab_door_b = ITEMS.register("df4d_cab_door_b",
+            () -> new BlockItem(ModBlocks.df4d_cab_door_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_middle_door = ITEMS.register("df4d_middle_door",
+            () -> new BlockItem(ModBlocks.df4d_middle_door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> df4d_floor_d = ITEMS.register("df4d_floor_d",
+            () -> new BlockItem(ModBlocks.df4d_floor_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
     public static final RegistryObject<Item> door = ITEMS.register("door",
-            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties()));
 
     // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",

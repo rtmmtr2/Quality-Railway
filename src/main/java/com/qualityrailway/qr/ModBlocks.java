@@ -183,6 +183,18 @@ public class ModBlocks {
             () -> new df4d_roof_e(Block.Properties.copy(c70_left_end_board.get())));
 
 
+    public static final RegistryObject<DoorBlock> df4d_cab_door_a = BLOCKS.register("df4d_cab_door_a",
+            () -> new df4d_cab_door_a(Block.Properties.of(Material.WOOD)));
+
+    public static final RegistryObject<DoorBlock> df4d_cab_door_b = BLOCKS.register("df4d_cab_door_b",
+            () -> new df4d_cab_door_b(Block.Properties.of(Material.WOOD)));
+
+    public static final RegistryObject<DoorBlock> df4d_middle_door = BLOCKS.register("df4d_middle_door",
+            () -> new df4d_middle_door(Block.Properties.of(Material.WOOD)));
+
+    public static final RegistryObject<Block> df4d_floor_d = BLOCKS.register("df4d_floor_d",
+            () -> new df4d_floor_d(Block.Properties.copy(c70_left_end_board.get())));
+
 
     public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
             () -> new door(Block.Properties.of(Material.WOOD)));

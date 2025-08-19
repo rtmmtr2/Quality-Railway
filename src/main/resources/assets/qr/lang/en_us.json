@@ -53,6 +53,10 @@
   "block.qr.df4d_roof_c": "DF4D Roof C",
   "block.qr.df4d_roof_d": "DF4D Roof D",
   "block.qr.df4d_roof_e": "DF4D Roof E",
+  "block.qr.df4d_cab_door_a": "DF4D Cab Door A",
+  "block.qr.df4d_cab_door_b": "DF4D Cab Door B",
+  "block.qr.df4d_middle_door": "DF4D Middle Door",
+  "block.qr.df4d_floor_d": "DF4D Floor D",
 
   "item.qr.high_horn": "High Horn",
   "item.qr.low_horn": "Low Horn",

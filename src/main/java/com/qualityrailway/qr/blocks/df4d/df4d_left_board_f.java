@@ -19,13 +19,13 @@ public class df4d_left_board_f extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, 0, 0, 2, 2, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, 0, 2, 2, 0.125);
 
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, -1, 1, 2, 2);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(0.875, 0, 0, 1, 2, 2);
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, 0, 2, 2, 1);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, 0.875, 1, 2, 1);
 
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, -1, 1, 2, 2);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, -1, 0.125, 2, 1);
 
 
 

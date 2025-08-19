@@ -53,6 +53,10 @@
   "block.qr.df4d_roof_c": "DF4D 车顶 C",
   "block.qr.df4d_roof_d": "DF4D 车顶 D",
   "block.qr.df4d_roof_e": "DF4D 车顶 E",
+  "block.qr.df4d_cab_door_a": "DF4D 驾驶室门 A",
+  "block.qr.df4d_cab_door_b": "DF4D 驾驶室门 B",
+  "block.qr.df4d_middle_door": "DF4D 机械间门",
+  "block.qr.df4d_floor_d": "DF4D 地板 D（把这个垫门底下）",
 
   "item.qr.high_horn": "高音鸣笛",
   "item.qr.low_horn": "低音电笛",
