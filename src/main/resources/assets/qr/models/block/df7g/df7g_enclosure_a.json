@@ -4,6 +4,6 @@
   "flip-v": true,
   "model": "qr:models/block/df7g/df7g_enclosure_a.obj",
   "textures": {
-    "particle": "qr:block/df7g/df7g_enclosure_a"
+    "particle": "qr:block/df7g/df7g_enclosure_a_1"
   }
 }

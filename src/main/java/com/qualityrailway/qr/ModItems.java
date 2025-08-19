@@ -47,11 +47,11 @@ public class ModItems {
     public static final RegistryObject<Item> df7g_cab = ITEMS.register("df7g_cab",
             () -> new BlockItem(ModBlocks.df7g_cab.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> df7g_front_pilot = ITEMS.register("df7g_front_pilot",
-            () -> new BlockItem(ModBlocks.df7g_front_pilot.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> df7g_cowcatcher_a = ITEMS.register("df7g_cowcatcher_a",
+            () -> new BlockItem(ModBlocks.df7g_cowcatcher_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> df7g_end_pilot = ITEMS.register("df7g_end_pilot",
-            () -> new BlockItem(ModBlocks.df7g_end_pilot.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+    public static final RegistryObject<Item> df7g_cowcatcher_b = ITEMS.register("df7g_cowcatcher_b",
+            () -> new BlockItem(ModBlocks.df7g_cowcatcher_b.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
     public static final RegistryObject<Item> df7g_floor_a = ITEMS.register("df7g_floor_a",
             () -> new BlockItem(ModBlocks.df7g_floor_a.get(), new Item.Properties().tab(ModCreativeTab.trains)));

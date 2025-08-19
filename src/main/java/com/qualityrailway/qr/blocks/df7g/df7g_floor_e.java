@@ -19,14 +19,13 @@ public class df7g_floor_e extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, 0, 0, 2, 2, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.or(Shapes.box(0, 0.625, 0, 1.1875, 1, 1),Shapes.box(1.125, 1, 0, 1.1875, 2, 1));
 
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, -1, 1, 2, 2);
+    private static final VoxelShape SHAPE_EAST = Shapes.or(Shapes.box(0, 0.625, 0, 1, 1, 1.1875),Shapes.box(0, 1, 1.125, 1, 2, 1.1875));
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, 0, 2, 2, 1);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.or(Shapes.box(-0.1875, 0.625, 0, 1, 1, 1),Shapes.box(-0.1875, 1, 0, -0.125, 2, 1));
 
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, -1, 1, 2, 2);
-
+    private static final VoxelShape SHAPE_WEST = Shapes.or(Shapes.box(0, 0.625, -0.1875, 1, 1, 1),Shapes.box(0, 1, -0.1875, 1, 2, -0.125));
 
 
     public df7g_floor_e(Properties properties) {

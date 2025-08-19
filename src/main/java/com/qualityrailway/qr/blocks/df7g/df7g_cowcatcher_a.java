@@ -14,22 +14,22 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 
-public class df7g_front_pilot extends Block {
+public class df7g_cowcatcher_a extends Block {
 
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, 0, 0, 2, 2, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.or(Shapes.box(-0.625, 0.75, 0, 1.625, 1, 1),Shapes.box(-0.625, 1, 0.9375, 1.625, 2, 1));
 
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, -1, 1, 2, 2);
+    private static final VoxelShape SHAPE_EAST = Shapes.or(Shapes.box(0, 0.75, -0.625, 1, 1, 1.625),Shapes.box(0, 1, -0.625, 0.0625, 2, 1.625));
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, 0, 2, 2, 1);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.or(Shapes.box(-0.625, 0.75, 0, 1.625, 1, 1),Shapes.box(-0.625, 1, 0, 1.625, 2, 0.0625));
 
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, -1, 1, 2, 2);
+    private static final VoxelShape SHAPE_WEST = Shapes.or(Shapes.box(0, 0.75, -0.625, 1, 1, 1.625),Shapes.box(0.9375, 1, -0.625, 1, 2, 1.625));
 
 
 
-    public df7g_front_pilot(Properties properties) {
+    public df7g_cowcatcher_a(Properties properties) {
         super(properties);
         // 设置默认方块状态（朝北）
         this.registerDefaultState(this.stateDefinition.any()

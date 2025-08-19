@@ -57,11 +57,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> df7g_cab = BLOCKS.register("df7g_cab",
             () -> new df7g_cab(Block.Properties.copy(c70_left_end_board.get())));
 
-    public static final RegistryObject<Block> df7g_front_pilot = BLOCKS.register("df7g_front_pilot",
-            () -> new df7g_front_pilot(Block.Properties.copy(c70_left_end_board.get())));
+    public static final RegistryObject<Block> df7g_cowcatcher_a = BLOCKS.register("df7g_cowcatcher_a",
+            () -> new df7g_cowcatcher_a(Block.Properties.copy(c70_left_end_board.get())));
 
-    public static final RegistryObject<Block> df7g_end_pilot = BLOCKS.register("df7g_end_pilot",
-            () -> new df7g_end_pilot(Block.Properties.copy(c70_left_end_board.get())));
+    public static final RegistryObject<Block> df7g_cowcatcher_b = BLOCKS.register("df7g_cowcatcher_b",
+            () -> new df7g_cowcatcher_b(Block.Properties.copy(c70_left_end_board.get())));
 
     public static final RegistryObject<Block> df7g_floor_a = BLOCKS.register("df7g_floor_a",
             () -> new df7g_floor_a(Block.Properties.copy(c70_left_end_board.get())));
