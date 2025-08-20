@@ -92,6 +92,6 @@
   "tooltip.qr.low_horn.description": "Right-click to horn",
 
   "itemGroup.qr.trains": "Trains",
-  "itemGroup.qr.tools": "Railway Tools",
+  "itemGroup.qr.railway_tools": "Railway Tools",
   "itemGroup.qr.signs": "Railway Signs"
 }

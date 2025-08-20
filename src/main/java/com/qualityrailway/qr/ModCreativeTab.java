@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegisterEvent;
 @Mod.EventBusSubscriber(modid = qr.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeTab {
     public static CreativeModeTab TRAINS;
-    public static CreativeModeTab TOOLS;
+    public static CreativeModeTab RAILWAY_TOOLS;
     public static CreativeModeTab SIGNS;
 
     @SubscribeEvent
@@ -23,8 +23,8 @@ public class ModCreativeTab {
                     .icon(() -> new ItemStack(ModItems.qr_item.get()))
                     .build();
 
-            TOOLS = CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.qr.tools"))
+            RAILWAY_TOOLS = CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.qr.railway_tools"))
                     .icon(() -> new ItemStack(ModItems.spanner.get()))
                     .build();
 
@@ -35,7 +35,7 @@ public class ModCreativeTab {
 
             // 注册到游戏
             helper.register("trains", TRAINS);
-            helper.register("tools", TOOLS);
+            helper.register("railway_tools", RAILWAY_TOOLS);
             helper.register("signs", SIGNS);
         });
     }
@@ -101,7 +101,7 @@ public class ModCreativeTab {
             event.accept(ModItems.df4d_roof_e);
         }
         // 填充 tools 标签页
-        else if (event.getTab() == TOOLS) {
+        else if (event.getTab() == RAILWAY_TOOLS) {
             event.accept(ModItems.high_horn);
             event.accept(ModItems.low_horn);
             event.accept(ModItems.steel_plate);
