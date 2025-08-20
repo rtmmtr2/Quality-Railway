@@ -99,6 +99,7 @@ public class ModCreativeTab {
             event.accept(ModItems.df4d_roof_c);
             event.accept(ModItems.df4d_roof_d);
             event.accept(ModItems.df4d_roof_e);
+            event.accept(ModItems.df4d_middle_door);
         }
         // 填充 tools 标签页
         else if (event.getTab() == RAILWAY_TOOLS) {

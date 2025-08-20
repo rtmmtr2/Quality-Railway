@@ -17,13 +17,13 @@ issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway/issues" #optional
 # The modid of the mod
 modId="qr" #mandatory
 # The version number of the mod
-version="1.3-release" #mandatory
+version="1.4-release" #mandatory
 # A display name for the mod
 displayName="Quality Railway" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://www.curseforge.com/minecraft/mc-mods/quality-railway" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/quality-railway"#optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="qr.png" #optional
 # A text field displayed in the mod UI
