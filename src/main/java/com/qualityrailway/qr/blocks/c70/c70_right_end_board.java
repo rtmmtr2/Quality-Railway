@@ -25,13 +25,13 @@ public class c70_right_end_board extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
     // 定义碰撞箱
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, -0.5, -0.25, 2, 1.5, 0);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(-1, -0.5+0.125, -0.25, 2, 1.5+0.125, 0);
     // 朝北时的碰撞箱
-    private static final VoxelShape SHAPE_EAST = Shapes.box(1, -0.5, -1, 1.25, 1.5, 2);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(1, -0.5+0.125, -1, 1.25, 1.5+0.125, 2);
     // 朝东时的碰撞箱
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, -0.5, 1, 2, 1.5, 1.25);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, -0.5+0.125, 1, 2, 1.5+0.125, 1.25);
     // 朝南时的碰撞箱
-    private static final VoxelShape SHAPE_WEST = Shapes.box(-0.25, -0.5, -1, 0, 1.5, 2);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(-0.25, -0.5+0.125, -1, 0, 1.5+0.125, 2);
     // 朝西时的碰撞箱
 
     /**
