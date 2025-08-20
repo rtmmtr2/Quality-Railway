@@ -18,7 +18,7 @@ public class ModCreativeTab {
             return new TranslatableComponent("itemGroup.trains");
         }
     };
-    public static final CreativeModeTab tools = new CreativeModeTab("tools") {
+    public static final CreativeModeTab railway_tools = new CreativeModeTab("railway_tools") {
         @Override
         public ItemStack makeIcon() {
 
@@ -28,7 +28,7 @@ public class ModCreativeTab {
         @Override
         public TranslatableComponent getDisplayName() {
 
-            return new TranslatableComponent("itemGroup.tools");
+            return new TranslatableComponent("itemGroup.railway_tools");
         }
     };
     public static final CreativeModeTab signs = new CreativeModeTab("signs") {

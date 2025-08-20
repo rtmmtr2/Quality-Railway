@@ -90,7 +90,7 @@
   "tooltip.qr.high_horn.description": "右键鸣笛",
   "tooltip.qr.low_horn.description": "右键鸣笛",
 
-  "itemGroup.trains": "车辆",
-  "itemGroup.tools": "铁路工具",
+  "itemGroup.trains": "铁路车辆",
+  "itemGroup.railway_tools": "铁路工具",
   "itemGroup.signs": "铁路标志"
 }

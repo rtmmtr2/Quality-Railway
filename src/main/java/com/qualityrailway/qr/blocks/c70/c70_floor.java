@@ -24,13 +24,13 @@ public class c70_floor extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
     // 定义碰撞箱
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0.6875, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0.185, 0, 1, 0.5, 1);
     // 朝北时的碰撞箱
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0.6875, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0.185, 0, 1, 0.5, 1);
     // 朝东时的碰撞箱
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0.6875, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0.185, 0, 1, 0.5, 1);
     // 朝南时的碰撞箱
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0.6875, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0.185, 0, 1, 0.5, 1);
     // 朝西时的碰撞箱
 
     /**
