@@ -197,30 +197,30 @@ public class ModItems {
     public static final RegistryObject<Item> sign = ITEMS.register("sign",
             () -> new sign(new Item.Properties()));
 
-    //tools
+    //railway_tools
     public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
-            () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new low_horn(new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> low_horn = ITEMS.register("low_horn",
-            () -> new low_horn(new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new low_horn(new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> steel_plate = ITEMS.register("steel_plate",
-            () -> new steel_plate(new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new steel_plate(new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> bell = ITEMS.register("bell",
-            () -> new BlockItem(ModBlocks.bell.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new BlockItem(ModBlocks.bell.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> railway_ballast = ITEMS.register("railway_ballast",
-            () -> new BlockItem(ModBlocks.railway_ballast.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new BlockItem(ModBlocks.railway_ballast.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> railway_ballast_slab = ITEMS.register("railway_ballast_slab",
-            () -> new BlockItem(ModBlocks.railway_ballast_slab.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new BlockItem(ModBlocks.railway_ballast_slab.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> gravel = ITEMS.register("gravel",
-            () -> new BlockItem(ModBlocks.gravel.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new BlockItem(ModBlocks.gravel.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     public static final RegistryObject<Item> gravel_slab = ITEMS.register("gravel_slab",
-            () -> new BlockItem(ModBlocks.gravel_slab.get(), new Item.Properties().tab(ModCreativeTab.tools)));
+            () -> new BlockItem(ModBlocks.gravel_slab.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
     //signs
 

@@ -18,7 +18,7 @@ public class ModCreativeTab {
         }
     };
 
-    public static final CreativeModeTab tools = new CreativeModeTab("tools") {
+    public static final CreativeModeTab railway_tools = new CreativeModeTab("railway_tools") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.spanner.get());
@@ -26,7 +26,7 @@ public class ModCreativeTab {
 
         @Override
         public Component getDisplayName() {
-            return Component.translatable("itemGroup.tools");
+            return Component.translatable("itemGroup.railway_tools");
         }
     };
 
