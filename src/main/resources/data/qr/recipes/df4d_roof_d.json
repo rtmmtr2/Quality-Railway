@@ -1,10 +1,29 @@
 {
-  "type": "minecraft:block",
-  "pools": [{
-    "rolls": 1,
-    "entries": [{
-      "type": "minecraft:item",
-      "name": "qr:df4d_roof_d"
-    }]
-  }]
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    " G ",
+    "SSS",
+    "   "
+  ],
+  "key":{
+    "S":{
+      "item":"qr:steel_plate"
+    },
+    "T":{
+      "item":"minecraft:black_dye"
+    },
+    "B":{
+      "item":"minecraft:light_blue_dye"
+    },
+    "R":{
+      "item":"minecraft:red_dye"
+    },
+    "G":{
+      "item":"minecraft:gray_dye"
+    }
+  },
+  "result":{
+    "item":"qr:df4d_roof_a",
+    "count":1
+  }
 }
