@@ -1,9 +1,9 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    "   ",
-    "SGS",
-    "GGG"
+    "S S",
+    "RSR",
+    "SRS"
   ],
   "key":{
     "S":{
@@ -11,13 +11,10 @@
     },
     "R":{
       "item":"minecraft:red_dye"
-    },
-    "G":{
-      "item":"minecraft:gray_dye"
     }
   },
   "result":{
-    "item":"qr:df4d_floor_a",
+    "item":"qr:df7g_door_a",
     "count":1
   }
 }
