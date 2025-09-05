@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "qr:steel_plate"
+    },
+    "title": "这是ump45",
+    "description": {
+      "translate": "获取钢板"
+    },
+    "frame": "task",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "obtain_steel_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "qr:steel_plate"
+          }
+        ]
+      }
+    }
+  }
+}
+    
