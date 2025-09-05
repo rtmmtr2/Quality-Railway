@@ -5,6 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -19,13 +20,25 @@ public class df7g_enclosure_b extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(
+            0.1, 0.0, 0.1,  // 最小x, y, z
+            0.9, 0.8, 0.9   // 最大x, y, z
+    );
 
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(
+            0.1, 0.0, 0.1,
+            0.9, 0.8, 0.9
+    );
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(
+            0.1, 0.0, 0.1,
+            0.9, 0.8, 0.9
+    );
 
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(
+            0.1, 0.0, 0.1,
+            0.9, 0.8, 0.9
+    );
 
 
 
@@ -49,15 +62,27 @@ public class df7g_enclosure_b extends Block {
     }
 
 
+
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        return getShape(state, world, pos, context);
+    }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
                 .setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+    // 确保方块使用正确的渲染层（非透明）
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
     }
 }

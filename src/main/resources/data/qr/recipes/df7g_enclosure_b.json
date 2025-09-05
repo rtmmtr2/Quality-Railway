@@ -1,9 +1,9 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    "S S",
-    "RSR",
-    "SRS"
+    "SSS",
+    "SSR",
+    "SSR"
   ],
   "key":{
     "S":{
@@ -14,7 +14,7 @@
     }
   },
   "result":{
-    "item":"qr:df7g_door_f",
+    "item":"qr:df7g_enclosure_b",
     "count":1
   }
 }

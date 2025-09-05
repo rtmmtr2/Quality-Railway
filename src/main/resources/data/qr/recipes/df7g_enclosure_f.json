@@ -1,9 +1,9 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    "S S",
-    "RSR",
-    "SRS"
+    "SRR",
+    "SRR",
+    "SRR"
   ],
   "key":{
     "S":{
@@ -14,7 +14,7 @@
     }
   },
   "result":{
-    "item":"qr:df7g_cowcatcher_b",
+    "item":"qr:df7g_enclosure_f",
     "count":1
   }
 }
