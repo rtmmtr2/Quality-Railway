@@ -92,7 +92,5 @@
 
   "itemGroup.trains": "铁路车辆",
   "itemGroup.railway_tools": "铁路工具",
-  "itemGroup.signs": "铁路标志",
-  "advancements.qr.root.title": "这是UMP45（划掉）",
-  "advancements.qr.root.description": "获得第一块钢板"
+  "itemGroup.signs": "铁路标志"
 }

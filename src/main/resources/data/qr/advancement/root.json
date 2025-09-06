@@ -1,39 +1,26 @@
 {
+  "parent": "minecraft:recipes/root",
   "display": {
     "icon": {
-      "item": "qr:steel_plate"
+      "item": "qr:qr_item"
     },
-    "title": {
-      "translate": "advancements.qr.root.title"
-    },
-    "description": {
-      "translate": "advancements.qr.root.description"
-    },
-    "background": "minecraft:textures/block/iron_block.png",
+    "title": "Steel Plate",
+    "description": "Prepare Material",
+    "background": "qr:textures/block/tools/gravel.png",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "obtain_steel_plate": {
+    "qr_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "qr:steel_plate",
-            "count": {
-              "min": 1
-            }
-          }
-        ],
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:player"
-            }
+            "items": [
+              "qr:qr_item"
+            ]
           }
         ]
       }
@@ -41,8 +28,7 @@
   },
   "requirements": [
     [
-      "obtain_steel_plate"
+      "qr_item"
     ]
-  ],
-  "sends_telemetry_event": false
+  ]
 }
