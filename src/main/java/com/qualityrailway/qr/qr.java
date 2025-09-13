@@ -3,6 +3,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.common.MinecraftForge;
+import com.simibubi.create.AllBlockEntityTypes;
 @Mod(qr.MODID)
 public class qr {
     public static final String MODID = "qr";
