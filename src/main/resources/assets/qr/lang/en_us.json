@@ -58,8 +58,7 @@
   "block.qr.df4d_middle_door": "DF4D Middle Door",
   "block.qr.df4d_floor_d": "DF4D Floor D",
 
-  "item.qr.high_horn": "High Horn",
-  "item.qr.low_horn": "Low Horn",
+
   "item.qr.steel_plate":"Steel Plate",
   "item.qr.qr_item": "QR Item",
   "item.qr.spanner": "Spanner",
@@ -93,5 +92,9 @@
 
   "itemGroup.trains": "Trains",
   "itemGroup.railway_tools": "Railway Tools",
-  "itemGroup.signs": "Railway Signs"
+  "itemGroup.signs": "Railway Signs",
+
+  "key.qr.high_horn": "High Horn",
+  "key.qr.low_horn": "Low Horn",
+  "category.qr.horns": "Train Horns"
 }
