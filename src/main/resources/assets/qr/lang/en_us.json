@@ -93,5 +93,9 @@
 
   "itemGroup.qr.trains": "Trains",
   "itemGroup.qr.railway_tools": "Railway Tools",
-  "itemGroup.qr.signs": "Railway Signs"
+  "itemGroup.qr.signs": "Railway Signs",
+
+  "key.qr.high_horn": "High Horn",
+  "key.qr.low_horn": "Low Horn",
+  "category.qr.horns": "Train Horns"
 }

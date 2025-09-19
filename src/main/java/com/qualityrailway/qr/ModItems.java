@@ -198,11 +198,6 @@ public class ModItems {
             () -> new sign(new Item.Properties()));
 
     //tools
-    public static final RegistryObject<Item> high_horn = ITEMS.register("high_horn",
-            () -> new low_horn(new Item.Properties()));
-
-    public static final RegistryObject<Item> low_horn = ITEMS.register("low_horn",
-            () -> new low_horn(new Item.Properties()));
 
     public static final RegistryObject<Item> steel_plate = ITEMS.register("steel_plate",
             () -> new steel_plate(new Item.Properties()));

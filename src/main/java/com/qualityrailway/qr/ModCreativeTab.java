@@ -103,8 +103,7 @@ public class ModCreativeTab {
         }
         // 填充 tools 标签页
         else if (event.getTab() == RAILWAY_TOOLS) {
-            event.accept(ModItems.high_horn);
-            event.accept(ModItems.low_horn);
+
             event.accept(ModItems.steel_plate);
             event.accept(ModItems.bell);
             event.accept(ModItems.railway_ballast);
