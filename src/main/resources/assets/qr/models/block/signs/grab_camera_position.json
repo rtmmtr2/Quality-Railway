@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [16, 64],
 	"textures": {
-		"0": "grab-camera-position",
-		"1": "huidi",
-		"particle": "grab-camera-position"
+		"0": "qr:block/signs/grab-camera-position",
+		"1": "qr:block/signs/huidi",
+		"particle": "qr:block/signs/grab-camera-position"
 	},
 	"elements": [
 		{

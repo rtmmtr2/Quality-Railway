@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [16, 64],
 	"textures": {
-		"0": "locomotive-parking-position",
-		"1": "huidi",
-		"particle": "locomotive-parking-position"
+		"0": "qr:block/signs/locomotive-parking-position",
+		"1": "qr:block/signs/huidi",
+		"particle": "qr:block/signs/locomotive-parking-position"
 	},
 	"elements": [
 		{
@@ -36,7 +36,7 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, 180, 0],
+			"rotation": [0, -180, 0],
 			"translation": [0, 7.75, -7.75]
 		}
 	}
