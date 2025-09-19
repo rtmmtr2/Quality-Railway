@@ -58,8 +58,7 @@
   "block.qr.df4d_middle_door": "DF4D 机械间门",
   "block.qr.df4d_floor_d": "DF4D 地板 D（把这个垫门底下）",
 
-  "item.qr.high_horn": "高音鸣笛",
-  "item.qr.low_horn": "低音电笛",
+
   "item.qr.steel_plate":"钢板",
   "item.qr.qr_item": "QR Item",
   "item.qr.spanner": "Spanner",
@@ -92,5 +91,9 @@
 
   "itemGroup.trains": "铁路车辆",
   "itemGroup.railway_tools": "铁路工具",
-  "itemGroup.signs": "铁路标志"
+  "itemGroup.signs": "铁路标志",
+
+  "key.qr.high_horn": "高音风笛",
+  "key.qr.low_horn": "低音电笛",
+  "category.qr.horns": "机车鸣笛"
 }
