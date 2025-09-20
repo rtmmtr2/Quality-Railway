@@ -1,10 +1,11 @@
 package com.qualityrailway.qr;
 import com.qualityrailway.qr.blocks.door;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
+import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
+import com.simibubi.create.foundation.data.BuilderTransformers;
+import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -15,6 +16,8 @@ import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
+
+import static com.simibubi.create.Create.REGISTRATE;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -196,8 +199,7 @@ public class ModBlocks {
             () -> new df4d_floor_d(Block.Properties.copy(c70_left_end_board.get())));
 
 
-    public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
-            () -> new door(Block.Properties.of(Material.WOOD)));
+
 
     //tools
 
@@ -295,7 +297,13 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     //doors
-
+    public static final BlockEntry<SlidingDoorBlock> door =
+            REGISTRATE.block("door", p -> new SlidingDoorBlock(p, false))
+                    .transform(BuilderTransformers.slidingDoor("brass"))
+                    .properties(p -> p.color(MaterialColor.TERRACOTTA_YELLOW)
+                            .sound(SoundType.STONE)
+                            .noOcclusion())
+                    .register();
 
 
 
