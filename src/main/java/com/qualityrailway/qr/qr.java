@@ -1,8 +1,5 @@
 package com.qualityrailway.qr;
 
-import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
-import com.qualityrailway.qr.blocks.doors.DoorBlockMovementBehaviour;
-import com.qualityrailway.qr.blocks.doors.DoorBlockMovingInteraction;
 import com.simibubi.create.content.contraptions.behaviour.MovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.SimpleBlockMovingInteraction;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -21,7 +18,6 @@ public class qr {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
-        ModBlockEntities.BLOCK_ENTITIES.register(bus);
 
         bus.addListener(this::onClientSetup);
 

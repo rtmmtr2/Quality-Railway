@@ -1,6 +1,9 @@
 package com.qualityrailway.qr;
 //import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
+import com.qualityrailway.qr.blocks.door;
+import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
+import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorMovementBehaviour;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
@@ -19,8 +22,10 @@ import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
+
+import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
+import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
 import static com.simibubi.create.Create.REGISTRATE;
-import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
 import net.minecraft.world.level.block.Block;
 
 import net.minecraft.world.level.block.SoundType;
@@ -308,10 +313,15 @@ public class ModBlocks {
 
     //doors
     // 注册示例木门方块
-    public static final RegistryObject<CustomDoorBlock> EXAMPLE_DOOR_1 = BLOCKS.register("example_door_1",
-            () -> new CustomDoorBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD)
-                    .strength(3.0F)
-                    .noOcclusion()
-                    .requiresCorrectToolForDrops()));
 
+
+    public static final BlockEntry<SlidingDoorBlock> door =
+            REGISTRATE.block("door", p -> new SlidingDoorBlock(p, false))
+                    .onRegister(interactionBehaviour(new DoorMovingInteraction()))
+                    .onRegister(movementBehaviour(new SlidingDoorMovementBehaviour()))
+                    .transform(BuilderTransformers.slidingDoor("train"))
+                    .properties(p -> p.color(MaterialColor.TERRACOTTA_CYAN)
+                            .sound(SoundType.NETHERITE_BLOCK)
+                            .noOcclusion())
+                    .register();
 }
