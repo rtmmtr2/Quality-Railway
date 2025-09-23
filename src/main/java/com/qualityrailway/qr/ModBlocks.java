@@ -1,8 +1,10 @@
 package com.qualityrailway.qr;
+//import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
 import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,7 +20,7 @@ import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
 import static com.simibubi.create.Create.REGISTRATE;
-
+import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
 import net.minecraft.world.level.block.Block;
 
 import net.minecraft.world.level.block.SoundType;
@@ -305,15 +307,11 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     //doors
-
-    public static final BlockEntry<SlidingDoorBlock> door =
-            REGISTRATE.block("door", p -> new SlidingDoorBlock(p, false))
-                    .transform(BuilderTransformers.slidingDoor("train"))
-                    .properties(p -> p.color(MaterialColor.TERRACOTTA_CYAN)
-                            .sound(SoundType.NETHERITE_BLOCK)
-                            .noOcclusion())
-                    .register();
-
-
+    // 注册示例木门方块
+    public static final RegistryObject<CustomDoorBlock> EXAMPLE_DOOR_1 = BLOCKS.register("example_door_1",
+            () -> new CustomDoorBlock(Block.Properties.of(Material.WOOD, MaterialColor.WOOD)
+                    .strength(3.0F)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
 }
