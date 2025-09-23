@@ -184,8 +184,7 @@ public class ModItems {
     public static final RegistryObject<Item> df4d_floor_d = ITEMS.register("df4d_floor_d",
             () -> new BlockItem(ModBlocks.df4d_floor_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> door = ITEMS.register("door",
-            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties()));
+
 
     // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
@@ -272,5 +271,6 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
     //doors
-
+    public static final RegistryObject<Item> door = ITEMS.register("door",
+            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 }

@@ -1,8 +1,9 @@
 package com.qualityrailway.qr;
-import com.qualityrailway.qr.blocks.door;
 import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MaterialColor;
@@ -16,8 +17,15 @@ import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
-
 import static com.simibubi.create.Create.REGISTRATE;
+
+import net.minecraft.world.level.block.Block;
+
+import net.minecraft.world.level.block.SoundType;
+
+
+
+
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -297,11 +305,12 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     //doors
+
     public static final BlockEntry<SlidingDoorBlock> door =
             REGISTRATE.block("door", p -> new SlidingDoorBlock(p, false))
-                    .transform(BuilderTransformers.slidingDoor("brass"))
-                    .properties(p -> p.color(MaterialColor.TERRACOTTA_YELLOW)
-                            .sound(SoundType.STONE)
+                    .transform(BuilderTransformers.slidingDoor("train"))
+                    .properties(p -> p.color(MaterialColor.TERRACOTTA_CYAN)
+                            .sound(SoundType.NETHERITE_BLOCK)
                             .noOcclusion())
                     .register();
 
