@@ -1,18 +1,7 @@
 package com.qualityrailway.qr;
-//import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
-import com.qualityrailway.qr.blocks.Doors.SlidingDoor.TrainSlidingDoorBlock;
-import com.qualityrailway.qr.blocks.door;
-import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
-import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
-import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorMovementBehaviour;
-import com.simibubi.create.foundation.data.BuilderTransformers;
-import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.Item;
+
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -24,9 +13,6 @@ import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
 
-import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
-import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
-import static com.simibubi.create.Create.REGISTRATE;
 import net.minecraft.world.level.block.Block;
 
 import net.minecraft.world.level.block.SoundType;
@@ -315,12 +301,8 @@ public class ModBlocks {
     //doors
     // 注册示例木门方块
 
-    public static final BlockEntry<DoorBlock> door_custom =
-            REGISTRATE.block("custom_door", DoorBlock::new)
-                    .initialProperties(() -> Blocks.OAK_DOOR) // for villager AI..
-                    .transform(TrainUtilitiesBuilderTransformers.defaultDoor("custom"))
-                    .properties(BlockBehaviour.Properties::noOcclusion)
-                    .register();
+
+
 
 
 
