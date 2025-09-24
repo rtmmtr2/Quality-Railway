@@ -1,5 +1,6 @@
 package com.qualityrailway.qr;
 //import com.qualityrailway.qr.blocks.doors.CustomDoorBlock;
+import com.qualityrailway.qr.blocks.Doors.SlidingDoor.TrainSlidingDoorBlock;
 import com.qualityrailway.qr.blocks.door;
 import com.simibubi.create.content.contraptions.behaviour.DoorMovingInteraction;
 import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
@@ -314,14 +315,13 @@ public class ModBlocks {
     //doors
     // 注册示例木门方块
 
-
-    public static final BlockEntry<SlidingDoorBlock> door =
-            REGISTRATE.block("door", p -> new SlidingDoorBlock(p, false))
-                    .onRegister(interactionBehaviour(new DoorMovingInteraction()))
-                    .onRegister(movementBehaviour(new SlidingDoorMovementBehaviour()))
-                    .transform(BuilderTransformers.slidingDoor("train"))
-                    .properties(p -> p.color(MaterialColor.TERRACOTTA_CYAN)
-                            .sound(SoundType.NETHERITE_BLOCK)
-                            .noOcclusion())
+    public static final BlockEntry<DoorBlock> door_custom =
+            REGISTRATE.block("custom_door", DoorBlock::new)
+                    .initialProperties(() -> Blocks.OAK_DOOR) // for villager AI..
+                    .transform(TrainUtilitiesBuilderTransformers.defaultDoor("custom"))
+                    .properties(BlockBehaviour.Properties::noOcclusion)
                     .register();
+
+
+
 }

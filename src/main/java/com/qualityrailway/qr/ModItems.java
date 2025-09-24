@@ -1,7 +1,11 @@
 package com.qualityrailway.qr;
 
 import com.qualityrailway.qr.items.*;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -271,8 +275,12 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
     //doors
-    public static final RegistryObject<Item> door = ITEMS.register("door",
-            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties()));
-
+    public static final ItemEntry<Item> door_custom =
+            item("door_custom");
+    private static ItemEntry<Item> item(String name) {
+        return qr.REGISTRATE.item(name, Item::new)
+                .tab((NonNullSupplier<? extends CreativeModeTab>) ModCreativeTab.trains)
+                .register();
+    }
 
 }
