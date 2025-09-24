@@ -271,7 +271,9 @@ public class ModItems {
     public static final RegistryObject<Item> waiting_room = ITEMS.register("waiting_room",
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    //doors
+    public static final RegistryObject<Item> SIGNAL_BLOCK = ITEMS.register("signal_block",
+            () -> new BlockItem(ModBlocks.SIGNAL_BLOCK.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 
 
 }

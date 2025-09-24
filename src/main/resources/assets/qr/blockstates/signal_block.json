@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "facing=north,model_state=0": { "model": "qr:block/signals/signal_block_green" },
+    "facing=east,model_state=0": { "model": "qr:block/signals/signal_block_green", "y": 90 },
+    "facing=south,model_state=0": { "model": "qr:block/signals/signal_block_green", "y": 180 },
+    "facing=west,model_state=0": { "model": "qr:block/signals/signal_block_green", "y": 270 },
+
+    "facing=north,model_state=1": { "model": "qr:block/signals/signal_block_green" },
+    "facing=east,model_state=1": { "model": "qr:block/signals/signal_block_green", "y": 90 },
+    "facing=south,model_state=1": { "model": "qr:block/signals/signal_block_green", "y": 180 },
+    "facing=west,model_state=1": { "model": "qr:block/signals/signal_block_green", "y": 270 },
+
+    "facing=north,model_state=2": { "model": "qr:block/signals/signal_block_green_yellow" },
+    "facing=east,model_state=2": { "model": "qr:block/signals/signal_block_green_yellow", "y": 90 },
+    "facing=south,model_state=2": { "model": "qr:block/signals/signal_block_green_yellow", "y": 180 },
+    "facing=west,model_state=2": { "model": "qr:block/signals/signal_block_green_yellow", "y": 270 },
+
+    "facing=north,model_state=3": { "model": "qr:block/signals/signal_block_yellow" },
+    "facing=east,model_state=3": { "model": "qr:block/signals/signal_block_yellow", "y": 90 },
+    "facing=south,model_state=3": { "model": "qr:block/signals/signal_block_yellow", "y": 180 },
+    "facing=west,model_state=3": { "model": "qr:block/signals/signal_block_yellow", "y": 270 },
+
+    "facing=north,model_state=4": { "model": "qr:block/signals/signal_block_red_yellow" },
+    "facing=east,model_state=4": { "model": "qr:block/signals/signal_block_red_yellow", "y": 90 },
+    "facing=south,model_state=4": { "model": "qr:block/signals/signal_block_red_yellow", "y": 180 },
+    "facing=west,model_state=4": { "model": "qr:block/signals/signal_block_red_yellow", "y": 270 },
+
+    "facing=north,model_state=5": { "model": "qr:block/signals/signal_block_red" },
+    "facing=east,model_state=5": { "model": "qr:block/signals/signal_block_red", "y": 90 },
+    "facing=south,model_state=5": { "model": "qr:block/signals/signal_block_red", "y": 180 },
+    "facing=west,model_state=5": { "model": "qr:block/signals/signal_block_red", "y": 270 }
+  }
+}

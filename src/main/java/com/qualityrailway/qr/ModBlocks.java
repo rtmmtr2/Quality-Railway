@@ -1,5 +1,6 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.blocks.signals.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
@@ -298,9 +299,9 @@ public class ModBlocks {
             () -> new waiting_room(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-    //doors
-    // 注册示例木门方块
-
+    public static final RegistryObject<Block> SIGNAL_BLOCK = BLOCKS.register("signal_block",
+            () -> new SignalBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2.0f)));
 
 
 

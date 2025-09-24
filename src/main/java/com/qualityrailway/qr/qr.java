@@ -16,6 +16,7 @@ public class qr {
         ModItems.ITEMS.register(bus);
         ModSounds.SOUNDS.register(bus);
 
+
         // 注册客户端设置事件监听器
         bus.addListener(this::onClientSetup);
 
