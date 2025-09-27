@@ -4,6 +4,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.common.MinecraftForge;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import static net.minecraftforge.registries.ForgeRegistries.BLOCK_ENTITIES;
 
 @Mod(qr.MODID)
 public class qr {
@@ -15,14 +19,13 @@ public class qr {
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModSounds.SOUNDS.register(bus);
-
-
+        ModBlockEntities.BLOCK_ENTITIES.register(bus);
         // 注册客户端设置事件监听器
         bus.addListener(this::onClientSetup);
 
         MinecraftForge.EVENT_BUS.register(new EventHandler());
     }
-
+    public static final Logger LOGGER = LogManager.getLogger();
     private void onClientSetup(final FMLClientSetupEvent event) {
         KeyBindings.register(event);
     }

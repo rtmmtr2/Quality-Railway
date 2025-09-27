@@ -300,8 +300,7 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> SIGNAL_BLOCK = BLOCKS.register("signal_block",
-            () -> new SignalBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            SignalBlock::new);
 
 
 
