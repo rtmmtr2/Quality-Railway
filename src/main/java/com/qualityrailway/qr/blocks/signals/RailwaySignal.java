@@ -20,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 // 自定义信号方块类，继承Block并实现EntityBlock接口
-public class SignalBlock extends Block implements EntityBlock {
+public class RailwaySignal extends Block implements EntityBlock {
     // 定义信号强度属性，范围0-15
     public static final IntegerProperty SIGNAL_STRENGTH = IntegerProperty.create("signal", 0, 15);
     // 定义模型状态属性，对应6种不同的模型
@@ -33,9 +33,9 @@ public class SignalBlock extends Block implements EntityBlock {
     private static final VoxelShape SHAPE_WEST = Block.box(0, 0, 0, 16, 16, 16);
     private static final VoxelShape SHAPE_EAST = Block.box(0, 0, 0, 16, 16, 16);
 
-    public SignalBlock() {
+    public RailwaySignal() {
         super(Block.Properties.of(Material.STONE)
-                .strength(2.0f));
+                .strength(2.0f).noOcclusion());//半透明渲染
 
 
         // 注册默认方块状态
@@ -49,7 +49,7 @@ public class SignalBlock extends Block implements EntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new SignalBlockEntity(pos, state);
+        return new RailwaySignalEntity(pos, state);
     }
 
     // 当方块被放置时调用，设置面向方向
@@ -86,8 +86,8 @@ public class SignalBlock extends Block implements EntityBlock {
             int currentPower = world.getBestNeighborSignal(pos);
             BlockEntity tileEntity = world.getBlockEntity(pos);
 
-            if (tileEntity instanceof SignalBlockEntity) {
-                ((SignalBlockEntity) tileEntity).updateSignalStrength(currentPower);
+            if (tileEntity instanceof RailwaySignalEntity) {
+                ((RailwaySignalEntity) tileEntity).updateSignalStrength(currentPower);
             }
 
             // 强制加载周围区块（半径为2）

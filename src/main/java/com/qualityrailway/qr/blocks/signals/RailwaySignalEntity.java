@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 // 信号方块的方块实体类，用于存储状态数据
-public class SignalBlockEntity extends BlockEntity {
+public class RailwaySignalEntity extends BlockEntity {
     // 当前红石信号强度
     private int currentSignalStrength = 0;
     // 上一次触发改变的红石信号强度（用于实现状态保持）
@@ -14,8 +14,8 @@ public class SignalBlockEntity extends BlockEntity {
     // 当前模型状态
     private int currentModelState = 0;
 
-    public SignalBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.SIGNAL_BLOCK_ENTITY.get(), pos, state);
+    public RailwaySignalEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.RAILWAY_SIGNAL_ENTITY.get(), pos, state);
     }
 
     // 更新红石信号强度
@@ -59,8 +59,8 @@ public class SignalBlockEntity extends BlockEntity {
             // 更新方块状态
             if (level != null) {
                 BlockState state = level.getBlockState(worldPosition);
-                level.setBlock(worldPosition, state.setValue(SignalBlock.MODEL_STATE, newModelState)
-                        .setValue(SignalBlock.SIGNAL_STRENGTH, signalStrength), 3);
+                level.setBlock(worldPosition, state.setValue(RailwaySignal.MODEL_STATE, newModelState)
+                        .setValue(RailwaySignal.SIGNAL_STRENGTH, signalStrength), 3);
             }
 
             setChanged();

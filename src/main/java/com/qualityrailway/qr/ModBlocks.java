@@ -299,8 +299,27 @@ public class ModBlocks {
             () -> new waiting_room(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-    public static final RegistryObject<Block> SIGNAL_BLOCK = BLOCKS.register("signal_block",
-            SignalBlock::new);
+    public static final RegistryObject<Block> closed_sign = BLOCKS.register("closed_sign",
+            () -> new closed_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> open_sign = BLOCKS.register("open_sign",
+            () -> new open_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> lower_sign = BLOCKS.register("lower_sign",
+            () -> new lower_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> raise_sign = BLOCKS.register("raise_sign",
+            () -> new raise_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+
+//signs
+
+    public static final RegistryObject<Block> RAILWAY_SIGNAL = BLOCKS.register("railway_signal",
+            RailwaySignal::new);
 
 
 

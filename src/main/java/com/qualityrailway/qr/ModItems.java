@@ -271,8 +271,20 @@ public class ModItems {
     public static final RegistryObject<Item> waiting_room = ITEMS.register("waiting_room",
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    public static final RegistryObject<Item> SIGNAL_BLOCK = ITEMS.register("signal_block",
-            () -> new BlockItem(ModBlocks.SIGNAL_BLOCK.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+    public static final RegistryObject<Item> closed_sign = ITEMS.register("closed_sign",
+            () -> new BlockItem(ModBlocks.closed_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> open_sign = ITEMS.register("open_sign",
+            () -> new BlockItem(ModBlocks.open_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> lower_sign = ITEMS.register("lower_sign",
+            () -> new BlockItem(ModBlocks.lower_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> raise_sign = ITEMS.register("raise_sign",
+            () -> new BlockItem(ModBlocks.raise_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+//signs
+    public static final RegistryObject<Item> RAILWAY_SIGNAL = ITEMS.register("railway_signal",
+            () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
 
 
