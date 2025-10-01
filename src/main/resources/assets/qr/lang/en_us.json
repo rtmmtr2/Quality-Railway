@@ -85,11 +85,9 @@
   "block.qr.vip": "VIP",
   "block.qr.passengers_stopped": "Passengers Stopped",
   "block.qr.waiting_room": "Waiting Room",
-  "block.qr.closed_sign": "Closed Sign",
-  "block.qr.open_sign": "Open Sign",
-  "block.qr.lower_sign": "Lower Sign",
-  "block.qr.raise_sign": "Raise Sign",
 
+  "block.qr.china_railway_freight_a": "China Railway Freight A",
+  "block.qr.china_railway_freight_b": "China Railway Freight B",
   "block.qr.railway_signal": "Railway Signal(Alpha)",
 
   "itemGroup.trains": "Trains",

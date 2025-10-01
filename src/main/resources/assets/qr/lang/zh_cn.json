@@ -85,10 +85,8 @@
   "block.qr.vip": "VIP",
   "block.qr.passengers_stopped": "旅客止步",
   "block.qr.waiting_room": "候车室",
-  "block.qr.closed_sign": "合",
-  "block.qr.open_sign": "断",
-  "block.qr.lower_sign": "降",
-  "block.qr.raise_sign": "升",
+  "block.qr.china_railway_freight_a": "铁路货运 A",
+  "block.qr.china_railway_freight_b": "铁路货运 B",
   "block.qr.railway_signal": "通用信号机（Alpha）",
 
   "itemGroup.trains": "铁路车辆",
