@@ -56,7 +56,7 @@
   "block.qr.df4d_cab_door_a": "DF4D Cab Door A",
   "block.qr.df4d_cab_door_b": "DF4D Cab Door B",
   "block.qr.df4d_middle_door": "DF4D Middle Door",
-  "block.qr.df4d_floor_d": "DF4D Floor D",
+  "block.qr.df4d_floor_d": "DF4D Floor D(put it under the door)",
 
 
   "item.qr.steel_plate":"Steel Plate",
@@ -88,6 +88,19 @@
 
   "block.qr.china_railway_freight_a": "China Railway Freight A",
   "block.qr.china_railway_freight_b": "China Railway Freight B",
+  "block.qr.catenary_end": "Catenary End",
+  "block.qr.communication_switching": "Communication Switching",
+  "block.qr.derailer": "Derailer",
+  "block.qr.electrified_zone": "Electrified Zone",
+  "block.qr.fifty_meters_to_buffer_stop": "Fifty Meters To Buffer Stop",
+  "block.qr.locomotive_stopping_position": "Locomotive Stopping Position",
+  "block.qr.no_entry": "No Entry",
+  "block.qr.no_thoroughfare": "No Thoroughfare",
+  "block.qr.non_electrified_zone": "Non Electrified Zone",
+  "block.qr.prepare_to_lower_pantograph": "Prepare To Lower Pantograph",
+  "block.qr.road_rail_vehicle_coordination": "Road Rail Vehicle Coordination",
+  "block.qr.track_scale": "Track Scale",
+
   "block.qr.railway_signal": "Railway Signal(Alpha)",
 
   "itemGroup.trains": "Trains",

@@ -310,6 +310,54 @@ public class ModBlocks {
                     .strength(2.0f)));
 
 
+    public static final RegistryObject<Block> catenary_end = BLOCKS.register("catenary_end",
+            () -> new catenary_end(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> communication_switching = BLOCKS.register("communication_switching",
+            () -> new communication_switching(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> derailer = BLOCKS.register("derailer",
+            () -> new derailer(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> electrified_zone = BLOCKS.register("electrified_zone",
+            () -> new electrified_zone(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> fifty_meters_to_buffer_stop = BLOCKS.register("fifty_meters_to_buffer_stop",
+            () -> new fifty_meters_to_buffer_stop(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> locomotive_stopping_position = BLOCKS.register("locomotive_stopping_position",
+            () -> new locomotive_stopping_position(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> no_entry = BLOCKS.register("no_entry",
+            () -> new no_entry(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> no_thoroughfare = BLOCKS.register("no_thoroughfare",
+            () -> new no_thoroughfare(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> non_electrified_zone = BLOCKS.register("non_electrified_zone",
+            () -> new non_electrified_zone(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> prepare_to_lower_pantograph = BLOCKS.register("prepare_to_lower_pantograph",
+            () -> new prepare_to_lower_pantograph(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> road_rail_vehicle_coordination = BLOCKS.register("road_rail_vehicle_coordination",
+            () -> new road_rail_vehicle_coordination(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> track_scale = BLOCKS.register("track_scale",
+            () -> new track_scale(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
 //signs
 
     public static final RegistryObject<Block> RAILWAY_SIGNAL = BLOCKS.register("railway_signal",

@@ -279,6 +279,42 @@ public class ModItems {
     public static final RegistryObject<Item> china_railway_freight_b = ITEMS.register("china_railway_freight_b",
             () -> new BlockItem(ModBlocks.china_railway_freight_b.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    public static final RegistryObject<Item> catenary_end = ITEMS.register("catenary_end",
+            () -> new BlockItem(ModBlocks.catenary_end.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> communication_switching = ITEMS.register("communication_switching",
+            () -> new BlockItem(ModBlocks.communication_switching.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> derailer = ITEMS.register("derailer",
+            () -> new BlockItem(ModBlocks.derailer.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> electrified_zone = ITEMS.register("electrified_zone",
+            () -> new BlockItem(ModBlocks.electrified_zone.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> fifty_meters_to_buffer_stop = ITEMS.register("fifty_meters_to_buffer_stop",
+            () -> new BlockItem(ModBlocks.fifty_meters_to_buffer_stop.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> locomotive_stopping_position = ITEMS.register("locomotive_stopping_position",
+            () -> new BlockItem(ModBlocks.locomotive_stopping_position.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> no_entry = ITEMS.register("no_entry",
+            () -> new BlockItem(ModBlocks.no_entry.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> no_thoroughfare = ITEMS.register("no_thoroughfare",
+            () -> new BlockItem(ModBlocks.no_thoroughfare.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> non_electrified_zone = ITEMS.register("non_electrified_zone",
+            () -> new BlockItem(ModBlocks.non_electrified_zone.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> prepare_to_lower_pantograph = ITEMS.register("prepare_to_lower_pantograph",
+            () -> new BlockItem(ModBlocks.prepare_to_lower_pantograph.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> road_rail_vehicle_coordination = ITEMS.register("road_rail_vehicle_coordination",
+            () -> new BlockItem(ModBlocks.road_rail_vehicle_coordination.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> track_scale = ITEMS.register("track_scale",
+            () -> new BlockItem(ModBlocks.track_scale.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 //signs
     public static final RegistryObject<Item> RAILWAY_SIGNAL = ITEMS.register("railway_signal",
             () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
