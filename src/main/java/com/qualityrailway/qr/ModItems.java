@@ -1,6 +1,7 @@
 package com.qualityrailway.qr;
 
 import com.qualityrailway.qr.items.*;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -184,8 +185,7 @@ public class ModItems {
     public static final RegistryObject<Item> df4d_floor_d = ITEMS.register("df4d_floor_d",
             () -> new BlockItem(ModBlocks.df4d_floor_d.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
-    public static final RegistryObject<Item> door = ITEMS.register("door",
-            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties()));
+
 
     // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
@@ -271,6 +271,21 @@ public class ModItems {
     public static final RegistryObject<Item> waiting_room = ITEMS.register("waiting_room",
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    //doors
+    public static final RegistryObject<Item> closed_sign = ITEMS.register("closed_sign",
+            () -> new BlockItem(ModBlocks.closed_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> open_sign = ITEMS.register("open_sign",
+            () -> new BlockItem(ModBlocks.open_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> lower_sign = ITEMS.register("lower_sign",
+            () -> new BlockItem(ModBlocks.lower_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> raise_sign = ITEMS.register("raise_sign",
+            () -> new BlockItem(ModBlocks.raise_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+//signs
+    public static final RegistryObject<Item> RAILWAY_SIGNAL = ITEMS.register("railway_signal",
+            () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
+
 
 }

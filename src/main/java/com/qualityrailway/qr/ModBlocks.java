@@ -1,9 +1,7 @@
 package com.qualityrailway.qr;
-import com.qualityrailway.qr.blocks.door;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
+
+import com.qualityrailway.qr.blocks.signals.*;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,6 +13,14 @@ import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
+
+import net.minecraft.world.level.block.Block;
+
+import net.minecraft.world.level.block.SoundType;
+
+
+
+
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -196,8 +202,7 @@ public class ModBlocks {
             () -> new df4d_floor_d(Block.Properties.copy(c70_left_end_board.get())));
 
 
-    public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
-            () -> new door(Block.Properties.of(Material.WOOD)));
+
 
     //tools
 
@@ -294,7 +299,28 @@ public class ModBlocks {
             () -> new waiting_room(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-    //doors
+    public static final RegistryObject<Block> closed_sign = BLOCKS.register("closed_sign",
+            () -> new closed_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> open_sign = BLOCKS.register("open_sign",
+            () -> new open_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> lower_sign = BLOCKS.register("lower_sign",
+            () -> new lower_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> raise_sign = BLOCKS.register("raise_sign",
+            () -> new raise_sign(Block.Properties.of(Material.STONE)
+                    .strength(2.0f).noOcclusion()));
+
+
+//signs
+
+    public static final RegistryObject<Block> RAILWAY_SIGNAL = BLOCKS.register("railway_signal",
+            RailwaySignal::new);
+
 
 
 
