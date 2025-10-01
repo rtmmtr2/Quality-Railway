@@ -14,16 +14,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 
-public class closed_sign extends Block {
+public class china_railway_freight_a extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.or(Shapes.box(0.25, 0, -0.03125, 0.75, 1.5, 0),Shapes.box(0.4375, 0, 0, 0.5625, 1, 0.125));
-    private static final VoxelShape SHAPE_WEST = Shapes.or(Shapes.box(1, 0, 0.25, 1.03125, 1.5, 0.75),Shapes.box(0.875, 0, 0.4375, 1, 1, 0.5625));
-    private static final VoxelShape SHAPE_NORTH = Shapes.or(Shapes.box(0.25, 0, 1, 0.75, 1.5, 1.03125),Shapes.box(0.4375, 0, 0.875, 0.5625, 1, 1));
-    private static final VoxelShape SHAPE_EAST = Shapes.or(Shapes.box(-0.03125, 0, 0.25, 0, 1.5, 0.75),Shapes.box(0, 0, 0.4375, 0.125, 1, 0.5625));
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(-1, 0, 0, 1, 1, 0.0625);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(0.9375, 0, -1, 1, 1, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, 0.9375, 2, 1, 1);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, 0, 0.0625, 1, 2);
 
 
-    public closed_sign(Properties properties) {
+    public china_railway_freight_a(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH));

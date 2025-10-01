@@ -271,17 +271,14 @@ public class ModItems {
     public static final RegistryObject<Item> waiting_room = ITEMS.register("waiting_room",
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    public static final RegistryObject<Item> closed_sign = ITEMS.register("closed_sign",
-            () -> new BlockItem(ModBlocks.closed_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    public static final RegistryObject<Item> open_sign = ITEMS.register("open_sign",
-            () -> new BlockItem(ModBlocks.open_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    public static final RegistryObject<Item> lower_sign = ITEMS.register("lower_sign",
-            () -> new BlockItem(ModBlocks.lower_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+    public static final RegistryObject<Item> china_railway_freight_a = ITEMS.register("china_railway_freight_a",
+            () -> new BlockItem(ModBlocks.china_railway_freight_a.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-    public static final RegistryObject<Item> raise_sign = ITEMS.register("raise_sign",
-            () -> new BlockItem(ModBlocks.raise_sign.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+    public static final RegistryObject<Item> china_railway_freight_b = ITEMS.register("china_railway_freight_b",
+            () -> new BlockItem(ModBlocks.china_railway_freight_b.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 //signs
     public static final RegistryObject<Item> RAILWAY_SIGNAL = ITEMS.register("railway_signal",
             () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
