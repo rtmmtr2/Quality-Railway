@@ -2,10 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "qr:block/signs/3_4platform",
 		"1": "qr:block/signs/no_thoroughfare_2",
 		"2": "qr:block/signs/jianbiandise",
-		"particle": "qr:block/signs/3_4platform"
+		"3": "qr:block/signs/4_5platform"
 	},
 	"elements": [
 		{
@@ -13,7 +12,7 @@
 			"to": [16, 16, 2],
 			"rotation": {"angle": 0, "axis": "y", "origin": [-16, 0, 0]},
 			"faces": {
-				"north": {"uv": [1.12979, 2.2357, 16, 12.26057], "texture": "#0"},
+				"north": {"uv": [0.86965, 2.2357, 16, 12.26057], "texture": "#3"},
 				"east": {"uv": [0.06015, 0, 16, 16], "texture": "#2"},
 				"south": {"uv": [0, 0, 15, 16], "texture": "#1"},
 				"west": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#2"},
