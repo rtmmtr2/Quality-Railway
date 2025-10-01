@@ -4,8 +4,10 @@
 	"texture_size": [16, 64],
 	"textures": {
 		"1": "qr:block/signs/huidi",
+		"3": "qr:block/signs/heibaihuawen",
 		"4": "qr:block/signs/crh_fight_location_yellow",
-		"5": "qr:block/signs/crh_location_of_the_fight_blue"
+		"5": "qr:block/signs/crh_location_of_the_fight_blue",
+		"particle": "qr:block/signs/heibaihuawen"
 	},
 	"elements": [
 		{
@@ -26,10 +28,10 @@
 			"to": [9, 12, 1],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
 			"faces": {
-				"north": {"uv": [0, 0, 0, 0], "texture": "#1"},
-				"east": {"uv": [0, 0, 1, 3], "texture": "#1"},
-				"south": {"uv": [0, 0, 2, 3], "texture": "#1"},
-				"west": {"uv": [0, 0, 1, 3], "texture": "#1"},
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 15.89936], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#3"},
 				"up": {"uv": [0, 0, 2, 0.25], "texture": "#1"},
 				"down": {"uv": [0, 0, 2, 0.25], "texture": "#1"}
 			}
