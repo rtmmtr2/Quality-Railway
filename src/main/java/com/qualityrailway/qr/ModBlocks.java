@@ -485,8 +485,7 @@ public class ModBlocks {
 //31 blocks
 //signals
 
-    public static final RegistryObject<Block> RAILWAY_SIGNAL = BLOCKS.register("railway_signal",
-            RailwaySignal::new);
+
 
 
 

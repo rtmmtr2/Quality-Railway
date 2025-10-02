@@ -409,8 +409,7 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.platform_8.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
 //signals
-    public static final RegistryObject<Item> RAILWAY_SIGNAL = ITEMS.register("railway_signal",
-            () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties()));
+
 
 
 
