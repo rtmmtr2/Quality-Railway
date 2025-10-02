@@ -315,9 +315,102 @@ public class ModItems {
     public static final RegistryObject<Item> track_scale = ITEMS.register("track_scale",
             () -> new BlockItem(ModBlocks.track_scale.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-//signs
+    public static final RegistryObject<Item> platform_1 = ITEMS.register("platform_1",
+            () -> new BlockItem(ModBlocks.platform_1.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_1_and_2 = ITEMS.register("platform_1_and_2",
+            () -> new BlockItem(ModBlocks.platform_1_and_2.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_1_and_2_left = ITEMS.register("platform_1_and_2_left",
+            () -> new BlockItem(ModBlocks.platform_1_and_2_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_1_and_2_right = ITEMS.register("platform_1_and_2_right",
+            () -> new BlockItem(ModBlocks.platform_1_and_2_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_1_left = ITEMS.register("platform_1_left",
+            () -> new BlockItem(ModBlocks.platform_1_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_1_right = ITEMS.register("platform_1_right",
+            () -> new BlockItem(ModBlocks.platform_1_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_2 = ITEMS.register("platform_2",
+            () -> new BlockItem(ModBlocks.platform_2.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_2_and_3 = ITEMS.register("platform_2_and_3",
+            () -> new BlockItem(ModBlocks.platform_2_and_3.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_2_and_3_left = ITEMS.register("platform_2_and_3_left",
+            () -> new BlockItem(ModBlocks.platform_2_and_3_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_2_and_3_right = ITEMS.register("platform_2_and_3_right",
+            () -> new BlockItem(ModBlocks.platform_2_and_3_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_3 = ITEMS.register("platform_3",
+            () -> new BlockItem(ModBlocks.platform_3.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_3_and_4 = ITEMS.register("platform_3_and_4",
+            () -> new BlockItem(ModBlocks.platform_3_and_4.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_3_and_4_left = ITEMS.register("platform_3_and_4_left",
+            () -> new BlockItem(ModBlocks.platform_3_and_4_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_3_and_4_right = ITEMS.register("platform_3_and_4_right",
+            () -> new BlockItem(ModBlocks.platform_3_and_4_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_4 = ITEMS.register("platform_4",
+            () -> new BlockItem(ModBlocks.platform_4.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_4_and_5 = ITEMS.register("platform_4_and_5",
+            () -> new BlockItem(ModBlocks.platform_4_and_5.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_4_and_5_left = ITEMS.register("platform_4_and_5_left",
+            () -> new BlockItem(ModBlocks.platform_4_and_5_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_4_and_5_right = ITEMS.register("platform_4_and_5_right",
+            () -> new BlockItem(ModBlocks.platform_4_and_5_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_5 = ITEMS.register("platform_5",
+            () -> new BlockItem(ModBlocks.platform_5.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_5_and_6 = ITEMS.register("platform_5_and_6",
+            () -> new BlockItem(ModBlocks.platform_5_and_6.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_5_and_6_left = ITEMS.register("platform_5_and_6_left",
+            () -> new BlockItem(ModBlocks.platform_5_and_6_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_5_and_6_right = ITEMS.register("platform_5_and_6_right",
+            () -> new BlockItem(ModBlocks.platform_5_and_6_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_6 = ITEMS.register("platform_6",
+            () -> new BlockItem(ModBlocks.platform_6.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_6_and_7 = ITEMS.register("platform_6_and_7",
+            () -> new BlockItem(ModBlocks.platform_6_and_7.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_6_and_7_left = ITEMS.register("platform_6_and_7_left",
+            () -> new BlockItem(ModBlocks.platform_6_and_7_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_6_and_7_right = ITEMS.register("platform_6_and_7_right",
+            () -> new BlockItem(ModBlocks.platform_6_and_7_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_7 = ITEMS.register("platform_7",
+            () -> new BlockItem(ModBlocks.platform_7.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_7_and_8 = ITEMS.register("platform_7_and_8",
+            () -> new BlockItem(ModBlocks.platform_7_and_8.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_7_and_8_left = ITEMS.register("platform_7_and_8_left",
+            () -> new BlockItem(ModBlocks.platform_7_and_8_left.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_7_and_8_right = ITEMS.register("platform_7_and_8_right",
+            () -> new BlockItem(ModBlocks.platform_7_and_8_right.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> platform_8 = ITEMS.register("platform_8",
+            () -> new BlockItem(ModBlocks.platform_8.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+//signals
     public static final RegistryObject<Item> RAILWAY_SIGNAL = ITEMS.register("railway_signal",
-            () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+            () -> new BlockItem(ModBlocks.RAILWAY_SIGNAL.get(), new Item.Properties()));
 
 
 

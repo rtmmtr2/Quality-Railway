@@ -358,7 +358,132 @@ public class ModBlocks {
             () -> new track_scale(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-//signs
+    public static final RegistryObject<Block> platform_1 = BLOCKS.register("platform_1",
+            () -> new platform_1(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_1_and_2 = BLOCKS.register("platform_1_and_2",
+            () -> new platform_1_and_2(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_1_and_2_left = BLOCKS.register("platform_1_and_2_left",
+            () -> new platform_1_and_2_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_1_and_2_right = BLOCKS.register("platform_1_and_2_right",
+            () -> new platform_1_and_2_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_1_left = BLOCKS.register("platform_1_left",
+            () -> new platform_1_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_1_right = BLOCKS.register("platform_1_right",
+            () -> new platform_1_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_2 = BLOCKS.register("platform_2",
+            () -> new platform_2(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_2_and_3 = BLOCKS.register("platform_2_and_3",
+            () -> new platform_2_and_3(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_2_and_3_left = BLOCKS.register("platform_2_and_3_left",
+            () -> new platform_2_and_3_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_2_and_3_right = BLOCKS.register("platform_2_and_3_right",
+            () -> new platform_2_and_3_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_3 = BLOCKS.register("platform_3",
+            () -> new platform_3(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_3_and_4 = BLOCKS.register("platform_3_and_4",
+            () -> new platform_3_and_4(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_3_and_4_left = BLOCKS.register("platform_3_and_4_left",
+            () -> new platform_3_and_4_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_3_and_4_right = BLOCKS.register("platform_3_and_4_right",
+            () -> new platform_3_and_4_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_4 = BLOCKS.register("platform_4",
+            () -> new platform_4(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_4_and_5 = BLOCKS.register("platform_4_and_5",
+            () -> new platform_4_and_5(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_4_and_5_left = BLOCKS.register("platform_4_and_5_left",
+            () -> new platform_4_and_5_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_4_and_5_right = BLOCKS.register("platform_4_and_5_right",
+            () -> new platform_4_and_5_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_5 = BLOCKS.register("platform_5",
+            () -> new platform_5(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_5_and_6 = BLOCKS.register("platform_5_and_6",
+            () -> new platform_5_and_6(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_5_and_6_left = BLOCKS.register("platform_5_and_6_left",
+            () -> new platform_5_and_6_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_5_and_6_right = BLOCKS.register("platform_5_and_6_right",
+            () -> new platform_5_and_6_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_6 = BLOCKS.register("platform_6",
+            () -> new platform_6(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_6_and_7 = BLOCKS.register("platform_6_and_7",
+            () -> new platform_6_and_7(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_6_and_7_left = BLOCKS.register("platform_6_and_7_left",
+            () -> new platform_6_and_7_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_6_and_7_right = BLOCKS.register("platform_6_and_7_right",
+            () -> new platform_6_and_7_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_7 = BLOCKS.register("platform_7",
+            () -> new platform_7(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_7_and_8 = BLOCKS.register("platform_7_and_8",
+            () -> new platform_7_and_8(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_7_and_8_left = BLOCKS.register("platform_7_and_8_left",
+            () -> new platform_7_and_8_left(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_7_and_8_right = BLOCKS.register("platform_7_and_8_right",
+            () -> new platform_7_and_8_right(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_8 = BLOCKS.register("platform_8",
+            () -> new platform_8(Block.Properties.of(Material.STONE)
+                    .strength(2.0f)));
+
+//31 blocks
+//signals
 
     public static final RegistryObject<Block> RAILWAY_SIGNAL = BLOCKS.register("railway_signal",
             RailwaySignal::new);
