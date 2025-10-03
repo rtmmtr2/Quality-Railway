@@ -408,9 +408,16 @@ public class ModItems {
     public static final RegistryObject<Item> platform_8 = ITEMS.register("platform_8",
             () -> new BlockItem(ModBlocks.platform_8.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
-//signals
-
-
+//tickets
+    public static final RegistryObject<Item> TurnstileBlock = ITEMS.register("turnstile_block",
+        () -> new BlockItem(ModBlocks.TurnstileBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+// 注册三种车票物品，都添加ticket标签
+    public static final RegistryObject<Item> SingleTicket = ITEMS.register("single_ticket",
+        () -> new Item(new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
 
 }
+
+
+
+

@@ -20,6 +20,7 @@ public class qr {
         ModItems.ITEMS.register(bus);
         ModSounds.SOUNDS.register(bus);
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
+        MinecraftForge.EVENT_BUS.register(this);
         // 注册客户端设置事件监听器
         bus.addListener(this::onClientSetup);
 

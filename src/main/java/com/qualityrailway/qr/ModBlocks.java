@@ -1,6 +1,6 @@
 package com.qualityrailway.qr;
 
-import com.qualityrailway.qr.blocks.signals.*;
+import com.qualityrailway.qr.blocks.tickets.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
@@ -482,8 +482,10 @@ public class ModBlocks {
             () -> new platform_8(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
-//31 blocks
-//signals
+    public static final RegistryObject<Block> TurnstileBlock = BLOCKS.register("turnstile_block",
+            () -> new TurnstileBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3.0f, 6.0f)
+                    .noOcclusion())); // 允许方块不被完全遮挡，便于渲染
 
 
 
