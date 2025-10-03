@@ -8,7 +8,6 @@ import com.qualityrailway.qr.qr;
 import com.qualityrailway.qr.blocks.tickets.TurnstileBlock;
 import com.qualityrailway.qr.blocks.tickets.TurnstileBlockEntity;
 
-// 方块实体注册类，负责注册闸机方块实体
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, qr.MODID);

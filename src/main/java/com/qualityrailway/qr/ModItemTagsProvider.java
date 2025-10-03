@@ -11,9 +11,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import com.qualityrailway.qr.qr;
 import com.qualityrailway.qr.ModItems;
 
-// 数据生成器，用于为车票物品添加ticket标签
+//用于为车票物品添加ticket标签
 public class ModItemTagsProvider extends ItemTagsProvider {
-    // 创建自定义的ticket标签
+    // 创建自定义ticket标签
     @SuppressWarnings("removal")
     public static final TagKey<Item> TicketItems = ItemTags.create(new ResourceLocation(qr.MODID, "ticket"));
 
@@ -24,7 +24,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags() {
-        // 将三种车票添加到ticket标签
+        // 将车票添加到ticket标签
         this.tag(TicketItems)
                 .add(ModItems.SingleTicket.get());
     }

@@ -485,7 +485,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TurnstileBlock = BLOCKS.register("turnstile_block",
             () -> new TurnstileBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(3.0f, 6.0f)
-                    .noOcclusion())); // 允许方块不被完全遮挡，便于渲染
+                    .noOcclusion())); //半透明渲染
 
 
 

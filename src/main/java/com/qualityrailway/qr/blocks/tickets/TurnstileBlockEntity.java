@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import com.qualityrailway.qr.blocks.tickets.TurnstileBlock;
 import com.qualityrailway.qr.ModBlockEntities;
 
-// 闸机方块实体类，负责处理开门逻辑和状态保存
+// 闸机方块实体类
 public class TurnstileBlockEntity extends BlockEntity {
     private static final String OPEN_TIME_KEY = "OpenTime";
     private static final int CLOSE_DELAY = 60; // 3秒（20 ticks/秒 × 3 = 60 ticks）
@@ -23,12 +23,12 @@ public class TurnstileBlockEntity extends BlockEntity {
         super(ModBlockEntities.TurnstileBlockEntity.get(), pos, state);
     }
 
-    // 激活闸机（开门）
+    // 激活闸机
     public InteractionResult activate(Player player, InteractionHand hand) {
         if (!level.isClientSide) {
             if (!isOpen) {
                 openGate();
-                // 消耗一张车票（如果不在创造模式）
+                // 消耗一张车票
                 if (!player.isCreative()) {
                     player.getItemInHand(hand).shrink(1);
                 }

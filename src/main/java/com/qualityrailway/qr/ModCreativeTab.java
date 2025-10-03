@@ -8,7 +8,7 @@ public class ModCreativeTab {
     public static final CreativeModeTab trains = new CreativeModeTab("trains") {
         @Override
         public ItemStack makeIcon() {
-            // 使用自定义物品作为图标（需要先注册图标物品）
+            // 使用自定义物品作为图标
             return new ItemStack(ModItems.qr_item.get());
         }
 

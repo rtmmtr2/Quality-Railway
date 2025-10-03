@@ -26,13 +26,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import com.qualityrailway.qr.blocks.tickets.TurnstileBlockEntity;
 import com.qualityrailway.qr.ModBlockEntities;
 
-// 闸机方块类，继承BaseEntityBlock以支持方块实体
+// 继承BaseEntityBlock
 public class TurnstileBlock extends BaseEntityBlock {
-    // 定义方块状态：朝向和开门状态
+    // 定义方块状态
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
 
-    // 定义碰撞箱形状（根据朝向和状态会变化）
+    // 定义碰撞箱形状
     private static final VoxelShape CLOSED_SHAPE_NORTH = Block.box(0.0, 0.0, 7.0, 16.0, 16.0, 9.0);
     private static final VoxelShape CLOSED_SHAPE_SOUTH = Block.box(0.0, 0.0, 7.0, 16.0, 16.0, 9.0);
     private static final VoxelShape CLOSED_SHAPE_EAST = Block.box(7.0, 0.0, 0.0, 9.0, 16.0, 16.0);
@@ -45,7 +45,7 @@ public class TurnstileBlock extends BaseEntityBlock {
 
     public TurnstileBlock(Properties properties) {
         super(properties);
-        // 注册默认方块状态
+        // 默认方块状态
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(OPEN, false));
@@ -94,13 +94,13 @@ public class TurnstileBlock extends BaseEntityBlock {
         }
     }
 
-    // 获取 occlusion 形状（用于渲染）
+    // 获取 occlusion 形状
     @Override
     public VoxelShape getOcclusionShape(BlockState state, BlockGetter world, BlockPos pos) {
         return this.getShape(state, world, pos, CollisionContext.empty());
     }
 
-    // 方块交互方法（玩家右键点击时调用）
+    // 方块交互方法（右键调用）
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player,
                                  InteractionHand hand, BlockHitResult hit) {
@@ -108,7 +108,7 @@ public class TurnstileBlock extends BaseEntityBlock {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof TurnstileBlockEntity) {
                 TurnstileBlockEntity turnstile = (TurnstileBlockEntity) blockEntity;
-                // 检查玩家手持物品是否含有ticket标签
+                // 检查物品是否含有ticket标签
                 if (hasTicketTag(player.getItemInHand(hand))) {
                     return turnstile.activate(player, hand);
                 }
@@ -130,7 +130,7 @@ public class TurnstileBlock extends BaseEntityBlock {
         return new TurnstileBlockEntity(pos, state);
     }
 
-    // 获取方块实体的Ticker（用于服务器端逻辑）
+    // 获取方块实体的Ticker
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state,

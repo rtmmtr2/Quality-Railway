@@ -411,7 +411,7 @@ public class ModItems {
 //tickets
     public static final RegistryObject<Item> TurnstileBlock = ITEMS.register("turnstile_block",
         () -> new BlockItem(ModBlocks.TurnstileBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
-// 注册三种车票物品，都添加ticket标签
+// 注册车票物品，都要添加ticket标签
     public static final RegistryObject<Item> SingleTicket = ITEMS.register("single_ticket",
         () -> new Item(new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
