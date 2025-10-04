@@ -131,6 +131,9 @@
   "block.qr.platform_7_and_8_left": "站台 7-8 向左",
   "block.qr.platform_7_and_8_right": "站台 7-8 向右",
   "block.qr.platform_8": "站台 8",
+  "block.qr.drinking_water": "饮用水",
+  "block.qr.crh_emu_stop": "CRH 动车组停车位置",
+  "block.qr.crh_fight_location": "CRH 打架位置",
 
   "block.qr.railway_signal": "通用信号机（Alpha）",
 

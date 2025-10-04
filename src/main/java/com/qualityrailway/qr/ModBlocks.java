@@ -19,9 +19,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 
 
-
-
-
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, qr.MODID);
@@ -306,8 +303,7 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> china_railway_freight_b = BLOCKS.register("china_railway_freight_b",
-            () -> new china_railway_freight_b(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new china_railway_freight_a(Block.Properties.copy(china_railway_freight_a.get())));
 
 
     public static final RegistryObject<Block> catenary_end = BLOCKS.register("catenary_end",
@@ -315,172 +311,140 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> communication_switching = BLOCKS.register("communication_switching",
-            () -> new communication_switching(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> derailer = BLOCKS.register("derailer",
-            () -> new derailer(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> electrified_zone = BLOCKS.register("electrified_zone",
-            () -> new electrified_zone(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> fifty_meters_to_buffer_stop = BLOCKS.register("fifty_meters_to_buffer_stop",
-            () -> new fifty_meters_to_buffer_stop(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> locomotive_stopping_position = BLOCKS.register("locomotive_stopping_position",
-            () -> new locomotive_stopping_position(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> no_entry = BLOCKS.register("no_entry",
-            () -> new no_entry(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> no_thoroughfare = BLOCKS.register("no_thoroughfare",
-            () -> new no_thoroughfare(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> non_electrified_zone = BLOCKS.register("non_electrified_zone",
-            () -> new non_electrified_zone(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> prepare_to_lower_pantograph = BLOCKS.register("prepare_to_lower_pantograph",
-            () -> new prepare_to_lower_pantograph(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> road_rail_vehicle_coordination = BLOCKS.register("road_rail_vehicle_coordination",
-            () -> new road_rail_vehicle_coordination(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> track_scale = BLOCKS.register("track_scale",
-            () -> new track_scale(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
 
     public static final RegistryObject<Block> platform_1 = BLOCKS.register("platform_1",
             () -> new platform_1(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> platform_1_and_2 = BLOCKS.register("platform_1_and_2",
-            () -> new platform_1_and_2(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_1_and_2_left = BLOCKS.register("platform_1_and_2_left",
-            () -> new platform_1_and_2_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_1_and_2_right = BLOCKS.register("platform_1_and_2_right",
-            () -> new platform_1_and_2_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_1_left = BLOCKS.register("platform_1_left",
-            () -> new platform_1_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_1_right = BLOCKS.register("platform_1_right",
-            () -> new platform_1_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_2 = BLOCKS.register("platform_2",
-            () -> new platform_2(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_2_and_3 = BLOCKS.register("platform_2_and_3",
-            () -> new platform_2_and_3(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_2_and_3_left = BLOCKS.register("platform_2_and_3_left",
-            () -> new platform_2_and_3_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_2_and_3_right = BLOCKS.register("platform_2_and_3_right",
-            () -> new platform_2_and_3_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_3 = BLOCKS.register("platform_3",
-            () -> new platform_3(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_3_and_4 = BLOCKS.register("platform_3_and_4",
-            () -> new platform_3_and_4(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_3_and_4_left = BLOCKS.register("platform_3_and_4_left",
-            () -> new platform_3_and_4_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_3_and_4_right = BLOCKS.register("platform_3_and_4_right",
-            () -> new platform_3_and_4_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_4 = BLOCKS.register("platform_4",
-            () -> new platform_4(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_4_and_5 = BLOCKS.register("platform_4_and_5",
-            () -> new platform_4_and_5(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_4_and_5_left = BLOCKS.register("platform_4_and_5_left",
-            () -> new platform_4_and_5_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_4_and_5_right = BLOCKS.register("platform_4_and_5_right",
-            () -> new platform_4_and_5_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_5 = BLOCKS.register("platform_5",
-            () -> new platform_5(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_5_and_6 = BLOCKS.register("platform_5_and_6",
-            () -> new platform_5_and_6(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_5_and_6_left = BLOCKS.register("platform_5_and_6_left",
-            () -> new platform_5_and_6_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_5_and_6_right = BLOCKS.register("platform_5_and_6_right",
-            () -> new platform_5_and_6_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_6 = BLOCKS.register("platform_6",
-            () -> new platform_6(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_6_and_7 = BLOCKS.register("platform_6_and_7",
-            () -> new platform_6_and_7(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_6_and_7_left = BLOCKS.register("platform_6_and_7_left",
-            () -> new platform_6_and_7_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_6_and_7_right = BLOCKS.register("platform_6_and_7_right",
-            () -> new platform_6_and_7_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_7 = BLOCKS.register("platform_7",
-            () -> new platform_7(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_7_and_8 = BLOCKS.register("platform_7_and_8",
-            () -> new platform_7_and_8(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_7_and_8_left = BLOCKS.register("platform_7_and_8_left",
-            () -> new platform_7_and_8_left(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_7_and_8_right = BLOCKS.register("platform_7_and_8_right",
-            () -> new platform_7_and_8_right(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
 
     public static final RegistryObject<Block> platform_8 = BLOCKS.register("platform_8",
-            () -> new platform_8(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> drinking_water = BLOCKS.register("drinking_water",
+            () -> new china_railway_freight_a(Block.Properties.copy(china_railway_freight_a.get())));
+
+    public static final RegistryObject<Block> crh_emu_stop = BLOCKS.register("crh_emu_stop",
+            () -> new sign_post(Block.Properties.copy(sign_post.get())));
+
+    public static final RegistryObject<Block> crh_fight_location = BLOCKS.register("crh_fight_location",
+            () -> new sign_post(Block.Properties.copy(sign_post.get())));
 
     public static final RegistryObject<Block> TurnstileBlock = BLOCKS.register("turnstile_block",
             () -> new TurnstileBlock(BlockBehaviour.Properties.of(Material.METAL)

@@ -408,6 +408,14 @@ public class ModItems {
     public static final RegistryObject<Item> platform_8 = ITEMS.register("platform_8",
             () -> new BlockItem(ModBlocks.platform_8.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
+    public static final RegistryObject<Item> drinking_water = ITEMS.register("drinking_water",
+            () -> new BlockItem(ModBlocks.drinking_water.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> crh_emu_stop = ITEMS.register("crh_emu_stop",
+            () -> new BlockItem(ModBlocks.crh_emu_stop.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
+    public static final RegistryObject<Item> crh_fight_location = ITEMS.register("crh_fight_location",
+            () -> new BlockItem(ModBlocks.crh_fight_location.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 //tickets
     public static final RegistryObject<Item> TurnstileBlock = ITEMS.register("turnstile_block",
         () -> new BlockItem(ModBlocks.TurnstileBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));

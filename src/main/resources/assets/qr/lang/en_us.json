@@ -132,6 +132,9 @@
   "block.qr.platform_7_and_8_left": "Platform 7-8 Left",
   "block.qr.platform_7_and_8_right": "Platform 7-8 Right",
   "block.qr.platform_8": "Platform 8",
+  "block.qr.drinking_water": "Drinking Water",
+  "block.qr.crh_emu_stop": "CRH EMU Stop",
+  "block.qr.crh_fight_location": "CRH Fight Location",
 
   "block.qr.railway_signal": "Railway Signal(Alpha)",
 
