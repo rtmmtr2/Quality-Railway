@@ -8,19 +8,18 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import com.qualityrailway.qr.blocks.tickets.TurnstileBlock;
 import com.qualityrailway.qr.ModBlockEntities;
 
 // 闸机方块实体类
-public class TurnstileBlockEntity extends BlockEntity {
+public class GateBlockEntity extends BlockEntity {
     private static final String OPEN_TIME_KEY = "OpenTime";
     private static final int CLOSE_DELAY = 60; // 3秒（20 ticks/秒 × 3 = 60 ticks）
 
     private long openTime = -1;
     private boolean isOpen = false;
 
-    public TurnstileBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.TurnstileBlockEntity.get(), pos, state);
+    public GateBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.GateBlockEntity.get(), pos, state);
     }
 
     // 激活闸机
@@ -44,7 +43,7 @@ public class TurnstileBlockEntity extends BlockEntity {
         this.openTime = level.getGameTime();
 
         // 更新方块状态
-        BlockState newState = getBlockState().setValue(TurnstileBlock.OPEN, true);
+        BlockState newState = getBlockState().setValue(GateBlock.OPEN, true);
         level.setBlock(worldPosition, newState, 3);
 
         setChanged();
@@ -56,14 +55,14 @@ public class TurnstileBlockEntity extends BlockEntity {
         this.openTime = -1;
 
         // 更新方块状态
-        BlockState newState = getBlockState().setValue(TurnstileBlock.OPEN, false);
+        BlockState newState = getBlockState().setValue(GateBlock.OPEN, false);
         level.setBlock(worldPosition, newState, 3);
 
         setChanged();
     }
 
     // 每tick更新的逻辑
-    public static void tick(Level level, BlockPos pos, BlockState state, TurnstileBlockEntity blockEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, GateBlockEntity blockEntity) {
         if (!level.isClientSide && blockEntity.isOpen) {
             // 检查是否到了关门时间
             if (level.getGameTime() - blockEntity.openTime >= CLOSE_DELAY) {

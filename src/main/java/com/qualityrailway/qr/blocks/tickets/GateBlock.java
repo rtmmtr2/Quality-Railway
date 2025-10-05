@@ -23,11 +23,10 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import com.qualityrailway.qr.blocks.tickets.TurnstileBlockEntity;
 import com.qualityrailway.qr.ModBlockEntities;
 
 // 继承BaseEntityBlock
-public class TurnstileBlock extends BaseEntityBlock {
+public class GateBlock extends BaseEntityBlock {
     // 定义方块状态
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
@@ -43,7 +42,7 @@ public class TurnstileBlock extends BaseEntityBlock {
     private static final VoxelShape OPEN_SHAPE_EAST = Block.box(0.0, 0.0, 0.0, 9.0, 16.0, 16.0);
     private static final VoxelShape OPEN_SHAPE_WEST = Block.box(0.0, 0.0, 0.0, 9.0, 16.0, 16.0);
 
-    public TurnstileBlock(Properties properties) {
+    public GateBlock(Properties properties) {
         super(properties);
         // 默认方块状态
         this.registerDefaultState(this.stateDefinition.any()
@@ -106,8 +105,8 @@ public class TurnstileBlock extends BaseEntityBlock {
                                  InteractionHand hand, BlockHitResult hit) {
         if (!world.isClientSide) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof TurnstileBlockEntity) {
-                TurnstileBlockEntity turnstile = (TurnstileBlockEntity) blockEntity;
+            if (blockEntity instanceof GateBlockEntity) {
+                GateBlockEntity turnstile = (GateBlockEntity) blockEntity;
                 // 检查物品是否含有ticket标签
                 if (hasTicketTag(player.getItemInHand(hand))) {
                     return turnstile.activate(player, hand);
@@ -127,7 +126,7 @@ public class TurnstileBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new TurnstileBlockEntity(pos, state);
+        return new GateBlockEntity(pos, state);
     }
 
     // 获取方块实体的Ticker
@@ -135,7 +134,7 @@ public class TurnstileBlock extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state,
                                                                   BlockEntityType<T> type) {
-        return createTickerHelper(type, ModBlockEntities.TurnstileBlockEntity.get(),
-                TurnstileBlockEntity::tick);
+        return createTickerHelper(type, ModBlockEntities.GateBlockEntity.get(),
+                GateBlockEntity::tick);
     }
 }

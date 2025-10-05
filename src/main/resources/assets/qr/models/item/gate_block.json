@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "qr:item/tickets/single_ticket"
+    "layer0": "qr:item/tickets/gate_block"
   }
 }

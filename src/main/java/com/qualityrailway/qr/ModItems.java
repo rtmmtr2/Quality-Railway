@@ -416,12 +416,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> crh_fight_location = ITEMS.register("crh_fight_location",
             () -> new BlockItem(ModBlocks.crh_fight_location.get(), new Item.Properties().tab(ModCreativeTab.signs)));
+
 //tickets
-    public static final RegistryObject<Item> TurnstileBlock = ITEMS.register("turnstile_block",
-        () -> new BlockItem(ModBlocks.TurnstileBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+    public static final RegistryObject<Item> GateBlock = ITEMS.register("gate_block",
+        () -> new BlockItem(ModBlocks.GateBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 // 注册车票物品，都要添加ticket标签
-    public static final RegistryObject<Item> SingleTicket = ITEMS.register("single_ticket",
-        () -> new Item(new Item.Properties().tab(ModCreativeTab.railway_tools)));
+    public static final RegistryObject<Item> RedTicket = ITEMS.register("red_ticket",
+        () -> new RedTicket(new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
+    public static final RegistryObject<Item> BlueTicket = ITEMS.register("blue_ticket",
+            () -> new RedTicket(new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
 
 }

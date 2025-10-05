@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "qr:item/tickets/turnstile_block"
+    "layer0": "qr:item/tickets/red_ticket"
   }
 }

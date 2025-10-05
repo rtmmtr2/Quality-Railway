@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "qr:single_ticket"
+    "qr:red_ticket",
+    "qr:blue_ticket"
   ]
 }

@@ -446,8 +446,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> crh_fight_location = BLOCKS.register("crh_fight_location",
             () -> new sign_post(Block.Properties.copy(sign_post.get())));
 
-    public static final RegistryObject<Block> TurnstileBlock = BLOCKS.register("turnstile_block",
-            () -> new TurnstileBlock(BlockBehaviour.Properties.of(Material.METAL)
+    public static final RegistryObject<Block> GateBlock = BLOCKS.register("gate_block",
+            () -> new GateBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(3.0f, 6.0f)
                     .noOcclusion())); //半透明渲染
 

@@ -135,8 +135,10 @@
   "block.qr.drinking_water": "Drinking Water",
   "block.qr.crh_emu_stop": "CRH EMU Stop",
   "block.qr.crh_fight_location": "CRH Fight Location",
-
-  "block.qr.railway_signal": "Railway Signal(Alpha)",
+  "block.qr.gate_block": "Gate Block",
+  "item.qr.red_ticket": "Red Ticket",
+  "item.qr.blue_ticket": "Blue Ticket",
+  "tooltip.qr.red_ticket.description": "Hold the ticket in your right hand to pass through the gate",
 
   "itemGroup.trains": "Trains",
   "itemGroup.railway_tools": "Railway Tools",

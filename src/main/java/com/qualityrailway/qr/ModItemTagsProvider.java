@@ -26,6 +26,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     protected void addTags() {
         // 将车票添加到ticket标签
         this.tag(TicketItems)
-                .add(ModItems.SingleTicket.get());
+                .add(ModItems.RedTicket.get())
+                .add(ModItems.BlueTicket.get());
     }
 }
