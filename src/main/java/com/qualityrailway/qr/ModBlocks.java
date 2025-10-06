@@ -446,12 +446,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> crh_fight_location = BLOCKS.register("crh_fight_location",
             () -> new sign_post(Block.Properties.copy(sign_post.get())));
 
-    public static final RegistryObject<Block> GateBlock = BLOCKS.register("gate_block",
-            () -> new GateBlock(BlockBehaviour.Properties.of(Material.METAL)
+    public static final RegistryObject<Block> ArriveGateBlockRight = BLOCKS.register("arrive_gate_block_right",
+            () -> new ArriveGateBlockRight(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(3.0f, 6.0f)
                     .noOcclusion())); //半透明渲染
 
+    public static final RegistryObject<Block> DepartGateBlockRight = BLOCKS.register("depart_gate_block_right",
+            () -> new DepartGateBlockRight(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3.0f, 6.0f)
+                    .noOcclusion()));
 
+    public static final RegistryObject<Block> GateBlockLeft = BLOCKS.register("gate_block_left",
+            () -> new GateBlockLeft(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3.0f, 6.0f)
+                    .noOcclusion()));
 
 
 

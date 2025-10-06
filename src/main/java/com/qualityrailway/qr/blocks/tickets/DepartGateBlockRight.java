@@ -22,27 +22,28 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import com.qualityrailway.qr.ModBlockEntities;
 
 // 继承BaseEntityBlock
-public class GateBlock extends BaseEntityBlock {
+public class DepartGateBlockRight extends BaseEntityBlock {
     // 定义方块状态
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
 
     // 定义碰撞箱形状
-    private static final VoxelShape CLOSED_SHAPE_NORTH = Block.box(0.0, 0.0, 7.0, 16.0, 16.0, 9.0);
-    private static final VoxelShape CLOSED_SHAPE_SOUTH = Block.box(0.0, 0.0, 7.0, 16.0, 16.0, 9.0);
-    private static final VoxelShape CLOSED_SHAPE_EAST = Block.box(7.0, 0.0, 0.0, 9.0, 16.0, 16.0);
-    private static final VoxelShape CLOSED_SHAPE_WEST = Block.box(7.0, 0.0, 0.0, 9.0, 16.0, 16.0);
+    private static final VoxelShape CLOSED_SHAPE_NORTH = Shapes.or(Shapes.box(0.75, 0, -1, 1, 1.3125, 2),Shapes.box(0, 0.3125, 0.5, 0.75, 1.3125, 0.5625));
+    private static final VoxelShape CLOSED_SHAPE_SOUTH = Shapes.or(Shapes.box(0, 0, -1, 0.25, 1.3125, 2),Shapes.box(0.25, 0.3125, 0.5, 1, 1.3125, 0.5625));
+    private static final VoxelShape CLOSED_SHAPE_EAST = Shapes.or(Shapes.box(-1, 0, 0.75, 2, 1.3125, 1),Shapes.box(0.4375, 0.3125, 0, 0.5, 1.3125, 0.75));
+    private static final VoxelShape CLOSED_SHAPE_WEST = Shapes.or(Shapes.box(-1, 0, 0, 2, 1.3125, 0.25),Shapes.box(0.75, 0.3125, 0.25, 0.8125, 1.3125, 1));
 
-    private static final VoxelShape OPEN_SHAPE_NORTH = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 9.0);
-    private static final VoxelShape OPEN_SHAPE_SOUTH = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 9.0);
-    private static final VoxelShape OPEN_SHAPE_EAST = Block.box(0.0, 0.0, 0.0, 9.0, 16.0, 16.0);
-    private static final VoxelShape OPEN_SHAPE_WEST = Block.box(0.0, 0.0, 0.0, 9.0, 16.0, 16.0);
+    private static final VoxelShape OPEN_SHAPE_NORTH = Block.box(0.75, 0, -1, 1, 1.3125, 2);
+    private static final VoxelShape OPEN_SHAPE_SOUTH = Block.box(0, 0, -1, 0.25, 1.3125, 2);
+    private static final VoxelShape OPEN_SHAPE_EAST = Block.box(-1, 0, 0.75, 2, 1.3125, 1);
+    private static final VoxelShape OPEN_SHAPE_WEST = Block.box(-1, 0, 0, 2, 1.3125, 0.25);
 
-    public GateBlock(Properties properties) {
+    public DepartGateBlockRight(Properties properties) {
         super(properties);
         // 默认方块状态
         this.registerDefaultState(this.stateDefinition.any()
@@ -105,8 +106,8 @@ public class GateBlock extends BaseEntityBlock {
                                  InteractionHand hand, BlockHitResult hit) {
         if (!world.isClientSide) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof GateBlockEntity) {
-                GateBlockEntity turnstile = (GateBlockEntity) blockEntity;
+            if (blockEntity instanceof DepartGateBlockRightEntity) {
+                DepartGateBlockRightEntity turnstile = (DepartGateBlockRightEntity) blockEntity;
                 // 检查物品是否含有ticket标签
                 if (hasTicketTag(player.getItemInHand(hand))) {
                     return turnstile.activate(player, hand);
@@ -126,7 +127,7 @@ public class GateBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new GateBlockEntity(pos, state);
+        return new DepartGateBlockRightEntity(pos, state);
     }
 
     // 获取方块实体的Ticker
@@ -134,7 +135,7 @@ public class GateBlock extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state,
                                                                   BlockEntityType<T> type) {
-        return createTickerHelper(type, ModBlockEntities.GateBlockEntity.get(),
-                GateBlockEntity::tick);
+        return createTickerHelper(type, ModBlockEntities.DepartGateBlockRightEntity.get(),
+                DepartGateBlockRightEntity::tick);
     }
 }

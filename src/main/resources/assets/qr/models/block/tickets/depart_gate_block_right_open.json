@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip-v": true,
+  "model": "qr:models/block/tickets/depart_gate_block_right_open.obj",
+  "textures": {
+    "particle": "qr:block/tickets/depart_gate_block_right_open"
+  }
+}

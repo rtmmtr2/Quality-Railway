@@ -418,8 +418,15 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.crh_fight_location.get(), new Item.Properties().tab(ModCreativeTab.signs)));
 
 //tickets
-    public static final RegistryObject<Item> GateBlock = ITEMS.register("gate_block",
-        () -> new BlockItem(ModBlocks.GateBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+    public static final RegistryObject<Item> ArriveGateBlockRight = ITEMS.register("arrive_gate_block_right",
+        () -> new BlockItem(ModBlocks.ArriveGateBlockRight.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
+    public static final RegistryObject<Item> DepartGateBlockRight = ITEMS.register("depart_gate_block_right",
+            () -> new BlockItem(ModBlocks.DepartGateBlockRight.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
+    public static final RegistryObject<Item> GateBlockLeft = ITEMS.register("gate_block_left",
+            () -> new BlockItem(ModBlocks.GateBlockLeft.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
 // 注册车票物品，都要添加ticket标签
     public static final RegistryObject<Item> RedTicket = ITEMS.register("red_ticket",
         () -> new RedTicket(new Item.Properties().tab(ModCreativeTab.railway_tools)));
