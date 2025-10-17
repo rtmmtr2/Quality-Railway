@@ -427,6 +427,9 @@ public class ModItems {
     public static final RegistryObject<Item> GateBlockLeft = ITEMS.register("gate_block_left",
             () -> new BlockItem(ModBlocks.GateBlockLeft.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
+    public static final RegistryObject<Item> TicketMachineBlock = ITEMS.register("ticket_machine_block",
+            () -> new BlockItem(ModBlocks.TicketMachineBlock.get(), new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
 // 注册车票物品，都要添加ticket标签
     public static final RegistryObject<Item> RedTicket = ITEMS.register("red_ticket",
         () -> new RedTicket(new Item.Properties().tab(ModCreativeTab.railway_tools)));

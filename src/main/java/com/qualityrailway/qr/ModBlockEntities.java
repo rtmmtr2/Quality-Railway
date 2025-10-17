@@ -13,11 +13,16 @@ public class ModBlockEntities {
     // 注册闸机方块实体类型
     public static final RegistryObject<BlockEntityType<ArriveGateBlockRightEntity>> ArriveGateBlockRightEntity =
             BLOCK_ENTITIES.register("arrive_gate_block_right_entity",
-                    () -> BlockEntityType.Builder.of(com.qualityrailway.qr.blocks.tickets.ArriveGateBlockRightEntity::new,
+                    () -> BlockEntityType.Builder.of(ArriveGateBlockRightEntity::new,
                             ModBlocks.ArriveGateBlockRight.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<DepartGateBlockRightEntity>> DepartGateBlockRightEntity =
             BLOCK_ENTITIES.register("depart_gate_block_right_entity",
-                    () -> BlockEntityType.Builder.of(com.qualityrailway.qr.blocks.tickets.DepartGateBlockRightEntity::new,
+                    () -> BlockEntityType.Builder.of(DepartGateBlockRightEntity::new,
                             ModBlocks.DepartGateBlockRight.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<TicketMachineBlockEntity>> TicketMachineBlockEntity =
+            BLOCK_ENTITIES.register("ticket_machine_block_entity",
+                    () -> BlockEntityType.Builder.of(TicketMachineBlockEntity::new,
+                            ModBlocks.TicketMachineBlock.get()).build(null));
 }

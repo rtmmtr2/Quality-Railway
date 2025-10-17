@@ -138,6 +138,8 @@
   "block.qr.arrive_gate_block_right": "出站闸机右侧",
   "block.qr.depart_gate_block_right": "进站闸机右侧",
   "block.qr.gate_block_left": "闸机左侧",
+  "block.qr.ticket_machine_block": "售票机",
+
 
   "item.qr.red_ticket": "红票",
   "item.qr.blue_ticket": "蓝票",
