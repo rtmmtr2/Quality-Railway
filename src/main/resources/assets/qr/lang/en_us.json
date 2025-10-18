@@ -136,15 +136,6 @@
   "block.qr.crh_emu_stop": "CRH EMU Stop",
   "block.qr.crh_fight_location": "CRH Fight Location",
 
-  "block.qr.arrive_gate_block_right": "Arrive Gate Block Right",
-  "block.qr.depart_gate_block_right": "Depart Gate Block Right",
-  "block.qr.gate_block_left": "Gate Block Left",
-  "block.qr.ticket_machine_block": "Ticket Machine Block",
-
-  "item.qr.red_ticket": "Red Ticket",
-  "item.qr.blue_ticket": "Blue Ticket",
-  "tooltip.qr.red_ticket.description": "Hold the ticket in your right hand to pass through the gate",
-
   "itemGroup.trains": "Trains",
   "itemGroup.railway_tools": "Railway Tools",
   "itemGroup.signs": "Railway Signs",

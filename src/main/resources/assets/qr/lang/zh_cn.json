@@ -135,15 +135,6 @@
   "block.qr.crh_emu_stop": "CRH 动车组停车位置",
   "block.qr.crh_fight_location": "CRH 打架位置",
 
-  "block.qr.arrive_gate_block_right": "出站闸机右侧",
-  "block.qr.depart_gate_block_right": "进站闸机右侧",
-  "block.qr.gate_block_left": "闸机左侧",
-  "block.qr.ticket_machine_block": "售票机",
-
-
-  "item.qr.red_ticket": "红票",
-  "item.qr.blue_ticket": "蓝票",
-  "tooltip.qr.red_ticket.description": "手持车票右键通过闸机",
 
   "itemGroup.trains": "铁路车辆",
   "itemGroup.railway_tools": "铁路工具",

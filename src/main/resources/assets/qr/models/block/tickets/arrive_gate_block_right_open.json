@@ -1,9 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "loader": "forge:obj",
-  "flip-v": true,
-  "model": "qr:models/block/tickets/arrive_gate_block_right_open.obj",
-  "textures": {
-    "particle": "qr:block/tickets/arrive_gate_block_right_open"
-  }
-}
