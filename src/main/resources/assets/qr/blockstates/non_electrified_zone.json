@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "qr:block/signs/non_electrified_zone",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/signs/non_electrified_zone",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "qr:block/signs/non_electrified_zone",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "qr:block/signs/non_electrified_zone",
+      "y": 90
+    }
+  }
+}

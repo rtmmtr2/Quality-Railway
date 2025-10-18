@@ -1,10 +1,10 @@
 package com.qualityrailway.qr.blocks.df4d;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -13,41 +13,50 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
-
-public class df4d_floor_d extends Block {
-
+ public class df4d_floor_d extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
 
     private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, 0, 1, 1, 1);
 
+
     private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, 0, 1, 1, 1);
 
+
     private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0, 0, 1, 1, 1);
+
 
     private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, 0, 1, 1, 1);
 
 
 
-    public df4d_floor_d(Properties properties) {
-        super(properties);
-        // 设置默认方块状态（朝北）
-        this.registerDefaultState(this.stateDefinition.any()
-                .setValue(FACING, Direction.NORTH));
+
+
+     public df4d_floor_d(Properties properties) {
+         super(properties);
+         // 设置默认方块状态（朝北）
+         this.registerDefaultState(this.stateDefinition.any()
+                 .setValue(FACING, Direction.NORTH));
+     }
+
+
+     @Override
+     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+         return switch (state.getValue(FACING)) {
+             case NORTH -> SHAPE_NORTH;
+             case EAST -> SHAPE_EAST;
+             case SOUTH -> SHAPE_SOUTH;
+             case WEST -> SHAPE_WEST;
+             default -> SHAPE_NORTH;
+         };
+     }
+
+
+
+     @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        return getShape(state, world, pos, context);
     }
-
-
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return switch (state.getValue(FACING)) {
-            case NORTH -> SHAPE_NORTH;
-            case EAST -> SHAPE_EAST;
-            case SOUTH -> SHAPE_SOUTH;
-            case WEST -> SHAPE_WEST;
-            default -> SHAPE_NORTH;
-        };
-    }
-
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
@@ -59,5 +68,12 @@ public class df4d_floor_d extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+
+// 确保方块使用正确的渲染层（非透明）
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
     }
 }
