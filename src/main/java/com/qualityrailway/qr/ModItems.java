@@ -1,6 +1,7 @@
 package com.qualityrailway.qr;
 
 import com.qualityrailway.qr.items.*;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -184,8 +185,7 @@ public class ModItems {
     public static final RegistryObject<Item> df4d_floor_d = ITEMS.register("df4d_floor_d",
             () -> new BlockItem(ModBlocks.df4d_floor_d.get(), new Item.Properties()));
 
-    public static final RegistryObject<Item> door = ITEMS.register("door",
-            () -> new BlockItem(ModBlocks.door.get(), new Item.Properties()));
+
 
     // 注册图标物品
     public static final RegistryObject<Item> qr_item = ITEMS.register("qr_item",
@@ -197,7 +197,8 @@ public class ModItems {
     public static final RegistryObject<Item> sign = ITEMS.register("sign",
             () -> new sign(new Item.Properties()));
 
-    //tools
+    //railway_tools
+
 
     public static final RegistryObject<Item> steel_plate = ITEMS.register("steel_plate",
             () -> new steel_plate(new Item.Properties()));
@@ -270,6 +271,158 @@ public class ModItems {
     public static final RegistryObject<Item> waiting_room = ITEMS.register("waiting_room",
             () -> new BlockItem(ModBlocks.waiting_room.get(), new Item.Properties()));
 
-    //doors
+
+
+    public static final RegistryObject<Item> china_railway_freight_a = ITEMS.register("china_railway_freight_a",
+            () -> new BlockItem(ModBlocks.china_railway_freight_a.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> china_railway_freight_b = ITEMS.register("china_railway_freight_b",
+            () -> new BlockItem(ModBlocks.china_railway_freight_b.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> catenary_end = ITEMS.register("catenary_end",
+            () -> new BlockItem(ModBlocks.catenary_end.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> communication_switching = ITEMS.register("communication_switching",
+            () -> new BlockItem(ModBlocks.communication_switching.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> derailer = ITEMS.register("derailer",
+            () -> new BlockItem(ModBlocks.derailer.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> electrified_zone = ITEMS.register("electrified_zone",
+            () -> new BlockItem(ModBlocks.electrified_zone.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> fifty_meters_to_buffer_stop = ITEMS.register("fifty_meters_to_buffer_stop",
+            () -> new BlockItem(ModBlocks.fifty_meters_to_buffer_stop.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> locomotive_stopping_position = ITEMS.register("locomotive_stopping_position",
+            () -> new BlockItem(ModBlocks.locomotive_stopping_position.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> no_entry = ITEMS.register("no_entry",
+            () -> new BlockItem(ModBlocks.no_entry.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> no_thoroughfare = ITEMS.register("no_thoroughfare",
+            () -> new BlockItem(ModBlocks.no_thoroughfare.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> non_electrified_zone = ITEMS.register("non_electrified_zone",
+            () -> new BlockItem(ModBlocks.non_electrified_zone.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> prepare_to_lower_pantograph = ITEMS.register("prepare_to_lower_pantograph",
+            () -> new BlockItem(ModBlocks.prepare_to_lower_pantograph.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> road_rail_vehicle_coordination = ITEMS.register("road_rail_vehicle_coordination",
+            () -> new BlockItem(ModBlocks.road_rail_vehicle_coordination.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> track_scale = ITEMS.register("track_scale",
+            () -> new BlockItem(ModBlocks.track_scale.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_1 = ITEMS.register("platform_1",
+            () -> new BlockItem(ModBlocks.platform_1.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_1_and_2 = ITEMS.register("platform_1_and_2",
+            () -> new BlockItem(ModBlocks.platform_1_and_2.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_1_and_2_left = ITEMS.register("platform_1_and_2_left",
+            () -> new BlockItem(ModBlocks.platform_1_and_2_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_1_and_2_right = ITEMS.register("platform_1_and_2_right",
+            () -> new BlockItem(ModBlocks.platform_1_and_2_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_1_left = ITEMS.register("platform_1_left",
+            () -> new BlockItem(ModBlocks.platform_1_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_1_right = ITEMS.register("platform_1_right",
+            () -> new BlockItem(ModBlocks.platform_1_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_2 = ITEMS.register("platform_2",
+            () -> new BlockItem(ModBlocks.platform_2.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_2_and_3 = ITEMS.register("platform_2_and_3",
+            () -> new BlockItem(ModBlocks.platform_2_and_3.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_2_and_3_left = ITEMS.register("platform_2_and_3_left",
+            () -> new BlockItem(ModBlocks.platform_2_and_3_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_2_and_3_right = ITEMS.register("platform_2_and_3_right",
+            () -> new BlockItem(ModBlocks.platform_2_and_3_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_3 = ITEMS.register("platform_3",
+            () -> new BlockItem(ModBlocks.platform_3.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_3_and_4 = ITEMS.register("platform_3_and_4",
+            () -> new BlockItem(ModBlocks.platform_3_and_4.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_3_and_4_left = ITEMS.register("platform_3_and_4_left",
+            () -> new BlockItem(ModBlocks.platform_3_and_4_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_3_and_4_right = ITEMS.register("platform_3_and_4_right",
+            () -> new BlockItem(ModBlocks.platform_3_and_4_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_4 = ITEMS.register("platform_4",
+            () -> new BlockItem(ModBlocks.platform_4.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_4_and_5 = ITEMS.register("platform_4_and_5",
+            () -> new BlockItem(ModBlocks.platform_4_and_5.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_4_and_5_left = ITEMS.register("platform_4_and_5_left",
+            () -> new BlockItem(ModBlocks.platform_4_and_5_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_4_and_5_right = ITEMS.register("platform_4_and_5_right",
+            () -> new BlockItem(ModBlocks.platform_4_and_5_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_5 = ITEMS.register("platform_5",
+            () -> new BlockItem(ModBlocks.platform_5.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_5_and_6 = ITEMS.register("platform_5_and_6",
+            () -> new BlockItem(ModBlocks.platform_5_and_6.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_5_and_6_left = ITEMS.register("platform_5_and_6_left",
+            () -> new BlockItem(ModBlocks.platform_5_and_6_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_5_and_6_right = ITEMS.register("platform_5_and_6_right",
+            () -> new BlockItem(ModBlocks.platform_5_and_6_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_6 = ITEMS.register("platform_6",
+            () -> new BlockItem(ModBlocks.platform_6.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_6_and_7 = ITEMS.register("platform_6_and_7",
+            () -> new BlockItem(ModBlocks.platform_6_and_7.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_6_and_7_left = ITEMS.register("platform_6_and_7_left",
+            () -> new BlockItem(ModBlocks.platform_6_and_7_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_6_and_7_right = ITEMS.register("platform_6_and_7_right",
+            () -> new BlockItem(ModBlocks.platform_6_and_7_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_7 = ITEMS.register("platform_7",
+            () -> new BlockItem(ModBlocks.platform_7.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_7_and_8 = ITEMS.register("platform_7_and_8",
+            () -> new BlockItem(ModBlocks.platform_7_and_8.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_7_and_8_left = ITEMS.register("platform_7_and_8_left",
+            () -> new BlockItem(ModBlocks.platform_7_and_8_left.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_7_and_8_right = ITEMS.register("platform_7_and_8_right",
+            () -> new BlockItem(ModBlocks.platform_7_and_8_right.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> platform_8 = ITEMS.register("platform_8",
+            () -> new BlockItem(ModBlocks.platform_8.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> drinking_water = ITEMS.register("drinking_water",
+            () -> new BlockItem(ModBlocks.drinking_water.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> crh_emu_stop = ITEMS.register("crh_emu_stop",
+            () -> new BlockItem(ModBlocks.crh_emu_stop.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> crh_fight_location = ITEMS.register("crh_fight_location",
+            () -> new BlockItem(ModBlocks.crh_fight_location.get(), new Item.Properties()));
+
+//tickets
+
+
 
 }
+
+
+
+

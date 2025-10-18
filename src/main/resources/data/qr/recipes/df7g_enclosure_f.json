@@ -1,0 +1,20 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "SRR",
+    "SRR",
+    "SRR"
+  ],
+  "key":{
+    "S":{
+      "item":"qr:steel_plate"
+    },
+    "R":{
+      "item":"minecraft:red_dye"
+    }
+  },
+  "result":{
+    "item":"qr:df7g_enclosure_f",
+    "count":1
+  }
+}

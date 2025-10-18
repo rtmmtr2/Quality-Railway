@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "qr:block/signs/platform_2_and_3_right",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/signs/platform_2_and_3_right",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "qr:block/signs/platform_2_and_3_right",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "qr:block/signs/platform_2_and_3_right",
+      "y": 90
+    }
+  }
+}

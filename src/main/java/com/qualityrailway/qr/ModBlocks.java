@@ -1,10 +1,7 @@
 package com.qualityrailway.qr;
-import com.qualityrailway.qr.blocks.door;
+
 import net.minecraft.client.resources.model.Material;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,6 +12,11 @@ import com.qualityrailway.qr.blocks.c70.*;
 import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
+
+import net.minecraft.world.level.block.Block;
+
+import net.minecraft.world.level.block.SoundType;
+
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -196,8 +198,7 @@ public class ModBlocks {
             () -> new df4d_floor_d(Block.Properties.copy(c70_left_end_board.get())));
 
 
-    public static final RegistryObject<DoorBlock> door = BLOCKS.register("door",
-            () -> new door(Block.Properties.of()));
+
 
     //tools
 
@@ -294,7 +295,156 @@ public class ModBlocks {
             () -> new waiting_room(Block.Properties.of()
                     .strength(2.0f)));
 
-    //doors
+
+
+    public static final RegistryObject<Block> china_railway_freight_a = BLOCKS.register("china_railway_freight_a",
+            () -> new china_railway_freight_a(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> china_railway_freight_b = BLOCKS.register("china_railway_freight_b",
+            () -> new china_railway_freight_a(Block.Properties.copy(china_railway_freight_a.get())));
+
+
+    public static final RegistryObject<Block> catenary_end = BLOCKS.register("catenary_end",
+            () -> new catenary_end(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> communication_switching = BLOCKS.register("communication_switching",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> derailer = BLOCKS.register("derailer",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> electrified_zone = BLOCKS.register("electrified_zone",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> fifty_meters_to_buffer_stop = BLOCKS.register("fifty_meters_to_buffer_stop",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> locomotive_stopping_position = BLOCKS.register("locomotive_stopping_position",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> no_entry = BLOCKS.register("no_entry",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> no_thoroughfare = BLOCKS.register("no_thoroughfare",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> non_electrified_zone = BLOCKS.register("non_electrified_zone",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> prepare_to_lower_pantograph = BLOCKS.register("prepare_to_lower_pantograph",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> road_rail_vehicle_coordination = BLOCKS.register("road_rail_vehicle_coordination",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> track_scale = BLOCKS.register("track_scale",
+            () -> new catenary_end(Block.Properties.copy(catenary_end.get())));
+
+    public static final RegistryObject<Block> platform_1 = BLOCKS.register("platform_1",
+            () -> new platform_1(Block.Properties.of()
+                    .strength(2.0f)));
+
+    public static final RegistryObject<Block> platform_1_and_2 = BLOCKS.register("platform_1_and_2",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_1_and_2_left = BLOCKS.register("platform_1_and_2_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_1_and_2_right = BLOCKS.register("platform_1_and_2_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_1_left = BLOCKS.register("platform_1_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_1_right = BLOCKS.register("platform_1_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_2 = BLOCKS.register("platform_2",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_2_and_3 = BLOCKS.register("platform_2_and_3",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_2_and_3_left = BLOCKS.register("platform_2_and_3_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_2_and_3_right = BLOCKS.register("platform_2_and_3_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_3 = BLOCKS.register("platform_3",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_3_and_4 = BLOCKS.register("platform_3_and_4",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_3_and_4_left = BLOCKS.register("platform_3_and_4_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_3_and_4_right = BLOCKS.register("platform_3_and_4_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_4 = BLOCKS.register("platform_4",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_4_and_5 = BLOCKS.register("platform_4_and_5",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_4_and_5_left = BLOCKS.register("platform_4_and_5_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_4_and_5_right = BLOCKS.register("platform_4_and_5_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_5 = BLOCKS.register("platform_5",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_5_and_6 = BLOCKS.register("platform_5_and_6",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_5_and_6_left = BLOCKS.register("platform_5_and_6_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_5_and_6_right = BLOCKS.register("platform_5_and_6_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_6 = BLOCKS.register("platform_6",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_6_and_7 = BLOCKS.register("platform_6_and_7",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_6_and_7_left = BLOCKS.register("platform_6_and_7_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_6_and_7_right = BLOCKS.register("platform_6_and_7_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_7 = BLOCKS.register("platform_7",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_7_and_8 = BLOCKS.register("platform_7_and_8",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_7_and_8_left = BLOCKS.register("platform_7_and_8_left",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_7_and_8_right = BLOCKS.register("platform_7_and_8_right",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> platform_8 = BLOCKS.register("platform_8",
+            () -> new platform_1(Block.Properties.copy(platform_1.get())));
+
+    public static final RegistryObject<Block> drinking_water = BLOCKS.register("drinking_water",
+            () -> new china_railway_freight_a(Block.Properties.copy(china_railway_freight_a.get())));
+
+    public static final RegistryObject<Block> crh_emu_stop = BLOCKS.register("crh_emu_stop",
+            () -> new sign_post(Block.Properties.copy(sign_post.get())));
+
+    public static final RegistryObject<Block> crh_fight_location = BLOCKS.register("crh_fight_location",
+            () -> new sign_post(Block.Properties.copy(sign_post.get())));
+
 
 
 

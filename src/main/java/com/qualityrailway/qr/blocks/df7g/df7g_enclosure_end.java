@@ -19,15 +19,25 @@ public class df7g_enclosure_end extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(
+            0.1, 0.0, 0.1,  // 最小x, y, z
+            0.9, 0.8, 0.9   // 最大x, y, z
+    );
 
-    private static final VoxelShape SHAPE_EAST = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(
+            0.1, 0.0, 0.1,
+            0.9, 0.8, 0.9
+    );
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0, 0, 1, 1, 1);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(
+            0.1, 0.0, 0.1,
+            0.9, 0.8, 0.9
+    );
 
-    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, 0, 1, 1, 1);
-
-
+    private static final VoxelShape SHAPE_WEST = Shapes.box(
+            0.1, 0.0, 0.1,
+            0.9, 0.8, 0.9
+    );
 
     public df7g_enclosure_end(Properties properties) {
         super(properties);

@@ -131,6 +131,55 @@ public class ModCreativeTab {
             event.accept(ModItems.vip);
             event.accept(ModItems.passengers_stopped);
             event.accept(ModItems.waiting_room);
+            event.accept(ModItems.china_railway_freight_a);
+            event.accept(ModItems.china_railway_freight_b);
+            event.accept(ModItems.catenary_end);
+            event.accept(ModItems.communication_switching);
+            event.accept(ModItems.derailer);
+            event.accept(ModItems.electrified_zone);
+            event.accept(ModItems.fifty_meters_to_buffer_stop);
+            event.accept(ModItems.locomotive_stopping_position);
+            event.accept(ModItems.no_entry);
+            event.accept(ModItems.no_thoroughfare);
+            event.accept(ModItems.non_electrified_zone);
+            event.accept(ModItems.prepare_to_lower_pantograph);
+            event.accept(ModItems.road_rail_vehicle_coordination);
+            event.accept(ModItems.track_scale);
+            event.accept(ModItems.platform_1);
+            event.accept(ModItems.platform_1_and_2);
+            event.accept(ModItems.platform_1_and_2_left);
+            event.accept(ModItems.platform_1_and_2_right);
+            event.accept(ModItems.platform_1_left);
+            event.accept(ModItems.platform_1_right);
+            event.accept(ModItems.platform_2);
+            event.accept(ModItems.platform_2_and_3);
+            event.accept(ModItems.platform_2_and_3_left);
+            event.accept(ModItems.platform_2_and_3_right);
+            event.accept(ModItems.platform_3);
+            event.accept(ModItems.platform_3_and_4);
+            event.accept(ModItems.platform_3_and_4_left);
+            event.accept(ModItems.platform_3_and_4_right);
+            event.accept(ModItems.platform_4);
+            event.accept(ModItems.platform_4_and_5);
+            event.accept(ModItems.platform_4_and_5_left);
+            event.accept(ModItems.platform_4_and_5_right);
+            event.accept(ModItems.platform_5);
+            event.accept(ModItems.platform_5_and_6);
+            event.accept(ModItems.platform_5_and_6_left);
+            event.accept(ModItems.platform_5_and_6_right);
+            event.accept(ModItems.platform_6);
+            event.accept(ModItems.platform_6_and_7);
+            event.accept(ModItems.platform_6_and_7_left);
+            event.accept(ModItems.platform_6_and_7_right);
+            event.accept(ModItems.platform_7);
+            event.accept(ModItems.platform_7_and_8);
+            event.accept(ModItems.platform_7_and_8_left);
+            event.accept(ModItems.platform_7_and_8_right);
+            event.accept(ModItems.platform_8);
+            event.accept(ModItems.drinking_water);
+            event.accept(ModItems.crh_emu_stop);
+            event.accept(ModItems.crh_fight_location);
+
         }
     }
 }

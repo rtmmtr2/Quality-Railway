@@ -1,0 +1,24 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "qr:block/signs/7platform",
+		"2": "qr:block/signs/landi2",
+		"particle": "qr:block/signs/7platform"
+	},
+	"elements": [
+		{
+			"from": [-16, 0, 0],
+			"to": [16, 16, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-16, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 2.2357, 16, 12.26057], "texture": "#0"},
+				"east": {"uv": [0.06015, 0, 16, 16], "texture": "#2"},
+				"south": {"uv": [0, 2.1418, 16, 12.1667], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#2"},
+				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#2"}
+			}
+		}
+	]
+}

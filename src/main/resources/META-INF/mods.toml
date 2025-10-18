@@ -17,7 +17,7 @@ issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway/issues" #optional
 # The modid of the mod
 modId="qr" #mandatory
 # The version number of the mod
-version="1.4-release" #mandatory
+version="1.5-release" #mandatory
 # A display name for the mod
 displayName="Quality Railway" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -29,7 +29,7 @@ logoFile="qr.png" #optional
 # A text field displayed in the mod UI
 #credits="" #optional
 # A text field displayed in the mod UI
-authors=["rtmmtr","高名稽gaomingji","Mouzhu","DF4D3218","jackgqj"] #optional
+authors=["rtmmtr","高名稽gaomingji","Mouzhu","DF4D3218","jackgqj","zuaza"] #optional
 # Display Test controls the display for your mod in the server connection screen
 # MATCH_VERSION means that your mod will cause a red X if the versions on client and server differ. This is the default behaviour and should be what you choose if you have server and client elements to your mod.
 # IGNORE_SERVER_VERSION means that your mod will not cause a red X if it's present on the server but not on the client. This is what you should use if you're a server only mod.
@@ -63,12 +63,12 @@ description='''Experience authentic Chinese rail content that seamlessly integra
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.qr]]
-    modId="create"
-    mandatory=true
-    versionRange="[0.5.1.e,0.5.1.j]"
-    ordering="NONE"
-    side="BOTH"
+#[[dependencies.qr]]
+    #modId="create"
+    #mandatory=true
+    #versionRange="[0.5.1.e,0.5.1.j]"
+    #ordering="NONE"
+    #side="BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
