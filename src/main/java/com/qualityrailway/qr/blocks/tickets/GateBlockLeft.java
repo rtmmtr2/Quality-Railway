@@ -17,10 +17,10 @@ import static net.minecraft.world.level.block.state.properties.BlockStatePropert
 public class GateBlockLeft extends Block {
     public static final DirectionProperty FACING = HORIZONTAL_FACING;
 
-    private static final VoxelShape SHAPE_NORTH = Block.box(0.75, 0, -1, 1, 1.3125, 2);
-    private static final VoxelShape SHAPE_SOUTH = Block.box(0, 0, -1, 0.25, 1.3125, 2);
-    private static final VoxelShape SHAPE_EAST = Block.box(-1, 0, 0.75, 2, 1.3125, 1);
-    private static final VoxelShape SHAPE_WEST = Block.box(-1, 0, 0, 2, 1.3125, 0.25);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0.75, 0, -1, 1, 1.3125, 2);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, -1, 0.25, 1.3125, 2);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(-1, 0, 0.75, 2, 1.3125, 1);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(-1, 0, 0, 2, 1.3125, 0.25);
 
 
     public GateBlockLeft(Properties properties) {

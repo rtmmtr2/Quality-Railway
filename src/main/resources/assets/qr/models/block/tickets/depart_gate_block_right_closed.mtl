@@ -1,4 +1,4 @@
 # Made in Blockbench 4.12.6
 newmtl m_e463f441-a9b0-5143-c4bb-59b7b1cfe7db
-map_Kd depart_gate_block_right_closed.png
+map_Kd qr:block/tickets/depart_gate_block_right_closed
 newmtl none

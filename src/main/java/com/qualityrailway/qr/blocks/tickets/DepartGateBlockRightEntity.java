@@ -23,7 +23,7 @@ public class DepartGateBlockRightEntity extends BlockEntity {
 
     // 激活闸机
     public InteractionResult activate(Player player, InteractionHand hand) {
-        if (!level.isClientSide) {
+        if (level != null && !level.isClientSide) {
             if (!isOpen) {
                 openGate();
                 return InteractionResult.CONSUME;
@@ -35,11 +35,15 @@ public class DepartGateBlockRightEntity extends BlockEntity {
     // 开门方法
     private void openGate() {
         this.isOpen = true;
-        this.openTime = level.getGameTime();
+        if (level != null) {
+            this.openTime = level.getGameTime();
+        }
 
         // 更新方块状态
         BlockState newState = getBlockState().setValue(DepartGateBlockRight.OPEN, true);
-        level.setBlock(worldPosition, newState, 3);
+        if (level != null) {
+            level.setBlock(worldPosition, newState, 3);
+        }
 
         setChanged();
     }
@@ -51,13 +55,16 @@ public class DepartGateBlockRightEntity extends BlockEntity {
 
         // 更新方块状态
         BlockState newState = getBlockState().setValue(DepartGateBlockRight.OPEN, false);
-        level.setBlock(worldPosition, newState, 3);
+        if (level != null) {
+            level.setBlock(worldPosition, newState, 3);
+        }
 
         setChanged();
     }
 
     // 每tick更新的逻辑
     public static void tick(Level level, BlockPos pos, BlockState state, DepartGateBlockRightEntity blockEntity) {
+        if (level == null || blockEntity == null) return;
         if (!level.isClientSide && blockEntity.isOpen) {
             // 检查是否到了关门时间
             if (level.getGameTime() - blockEntity.openTime >= CLOSE_DELAY) {
@@ -68,22 +75,26 @@ public class DepartGateBlockRightEntity extends BlockEntity {
 
     // 保存数据到NBT
     @Override
-    public void saveAdditional(CompoundTag tag) {
-        super.saveAdditional(tag);
-        tag.putBoolean("IsOpen", isOpen);
-        tag.putLong(OPEN_TIME_KEY, openTime);
+    public void saveAdditional(CompoundTag nbt) {
+        nbt.putBoolean("IsOpen", isOpen);
+        nbt.putLong(OPEN_TIME_KEY, openTime);
+        super.saveAdditional(nbt);
+
     }
 
     // 从NBT加载数据
     @Override
-    public void load(CompoundTag tag) {
-        super.load(tag);
-        isOpen = tag.getBoolean("IsOpen");
-        openTime = tag.getLong(OPEN_TIME_KEY);
+    public void load(CompoundTag nbt) {
+        super.load(nbt);
+        isOpen = nbt.getBoolean("IsOpen");
+        openTime = nbt.contains(OPEN_TIME_KEY) ? nbt.getLong(OPEN_TIME_KEY) : -1;
     }
 
     // 获取方块状态
     public BlockState getBlockState() {
-        return getLevel().getBlockState(getBlockPos());
+        if (getLevel() != null) {
+            return getLevel().getBlockState(getBlockPos());
+        }
+        return null;
     }
 }
