@@ -2,6 +2,8 @@
 [![Discord](https://img.shields.io/badge/Quality_Railway-Discord-blue?logo=discord&color=darkblue)](https://discord.gg/yKJgPQ5nxW)
 <a href="https://www.curseforge.com/minecraft/mc-mods/quality-railway"><img src="https://cf.way2muchnoise.eu/1310552.svg" alt="CF"></a>
 <a href="https://modrinth.com/mod/quality-railway"><img src="https://img.shields.io/modrinth/dt/quality-railway?logo=modrinth&label=&suffix=%20&style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="Modrinth"></a>
+[![Crowdin Translate](https://img.shields.io/badge/Crowdin-%E6%8F%90%E4%BA%A4%E7%BF%BB%E8%AF%91-blue?logo=crowdin)
+![Crowdin](https://badges.crowdin.net/quality-railway/localized.svg)](https://crowdin.com/project/quality-railway)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/rtmmtr2/Quality-Railway)
 #
 Experience authentic Chinese rail content that seamlessly integrates with major train mods!
