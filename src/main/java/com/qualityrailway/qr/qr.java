@@ -1,31 +1,33 @@
 package com.qualityrailway.qr;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.common.MinecraftForge;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import org.slf4j.Logger;
+
+import org.slf4j.LoggerFactory;
 
 @Mod(qr.MODID)
 public class qr {
     public static final String MODID = "qr";
 
-    public qr() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        // 注册方块，物品，声音等
-        ModBlocks.BLOCKS.register(bus);
-        ModItems.ITEMS.register(bus);
-        ModSounds.SOUNDS.register(bus);
-        MinecraftForge.EVENT_BUS.register(this);
-        // 注册客户端设置事件监听器
-        bus.addListener(this::onClientSetup);
+    public static final Logger LOGGER = LoggerFactory.getLogger(qr.MODID);
 
-        MinecraftForge.EVENT_BUS.register(new EventHandler());
+    public qr(IEventBus modEventBus, ModContainer modContainer) {
+        // 注册方块，物品，声音等
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModSounds.SOUND_EVENTS.register(modEventBus);
+        ModCreativeModeTabs.CREATIVE_MODE_TAB.register(modEventBus);
+
+        modEventBus.addListener(this::onRegisterEvent);
+
+        LOGGER.info("Quality Railway initialized successfully!");
     }
-    public static final Logger LOGGER = LogManager.getLogger();
-    private void onClientSetup(final FMLClientSetupEvent event) {
-        KeyBindings.register(event);
+
+
+    private void onRegisterEvent(net.neoforged.neoforge.registries.RegisterEvent event) {
+
     }
+
 }

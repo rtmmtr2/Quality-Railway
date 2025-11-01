@@ -136,11 +136,11 @@
   "block.qr.crh_emu_stop": "CRH EMU Stop",
   "block.qr.crh_fight_location": "CRH Fight Location",
 
-  "itemGroup.trains": "Trains",
-  "itemGroup.railway_tools": "Railway Tools",
-  "itemGroup.signs": "Railway Signs",
+  "creative_mode_tab.qr.trains": "Trains",
+  "creative_mode_tab.qr.railway_tools": "Railway Tools",
+  "creative_mode_tab.qr.signs": "Railway Signs",
 
   "key.qr.high_horn": "High Horn",
   "key.qr.low_horn": "Low Horn",
-  "category.qr.horns": "Train Horns"
+  "key.category.qr": "Train Horns"
 }

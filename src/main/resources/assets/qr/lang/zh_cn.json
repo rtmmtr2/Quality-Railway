@@ -136,11 +136,11 @@
   "block.qr.crh_fight_location": "CRH 打架位置",
 
 
-  "itemGroup.trains": "铁路车辆",
-  "itemGroup.railway_tools": "铁路工具",
-  "itemGroup.signs": "铁路标志",
+  "creative_mode_tab.qr.trains": "铁路车辆",
+  "creative_mode_tab.qr.railway_tools": "铁路工具",
+  "creative_mode_tab.qr.signs": "铁路标志",
 
   "key.qr.high_horn": "高音风笛",
   "key.qr.low_horn": "低音电笛",
-  "category.qr.horns": "机车鸣笛"
+  "key.category.qr": "机车鸣笛"
 }

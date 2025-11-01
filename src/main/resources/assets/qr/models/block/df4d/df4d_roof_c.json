@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
-  "loader": "forge:obj",
-  "flip-v": true,
+  "loader": "neoforge:obj",
+  "flip_v": true,
   "model": "qr:models/block/df4d/df4d_roof_c.obj",
   "textures": {
     "particle": "qr:block/df4d/df4d_roof_a_1"
