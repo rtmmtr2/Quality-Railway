@@ -5,6 +5,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
+import static com.qualityrailway.qr.qr.LOGGER;
+
 @OnlyIn(Dist.CLIENT)
 public class EventHandler {
 
@@ -19,6 +21,7 @@ public class EventHandler {
                     1.0F,
                     1.0F
             );
+            LOGGER.info("HIGH_HORN_KEY pressed");
         }
 
         if (KeyBindings.LOW_HORN_KEY.isDown()) {
@@ -27,6 +30,7 @@ public class EventHandler {
                     1.0F,
                     1.0F
             );
+            LOGGER.info("LOW_HORN_KEY pressed");
         }
     }
 }
