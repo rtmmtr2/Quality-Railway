@@ -195,7 +195,7 @@ public class ModBlocks {
             () -> new df4d_middle_door(Block.Properties.of(Material.WOOD)));
 
     public static final RegistryObject<Block> df4d_floor_d = BLOCKS.register("df4d_floor_d",
-            () -> new df4d_floor_d(Block.Properties.copy(c70_left_end_board.get())));
+            () -> new df4d_floor_d(Block.Properties.of(Material.STONE).noOcclusion()));
 
 
 
