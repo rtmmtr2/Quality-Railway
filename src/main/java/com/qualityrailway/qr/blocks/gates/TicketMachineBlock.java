@@ -3,7 +3,8 @@ package com.qualityrailway.qr.blocks.gates;
 import com.qualityrailway.qr.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -113,7 +114,7 @@ public class TicketMachineBlock extends Block {
             } else {
 
                 player.displayClientMessage(
-                        new TextComponent("You need 3 GEMS_EMERALD to buy this ticket!"), true
+                        new TranslatableComponent("qr.message.ticket_machine_block").withStyle(style -> style.withColor(ChatFormatting.DARK_GREEN)), true
                 );
                 return InteractionResult.FAIL;
             }

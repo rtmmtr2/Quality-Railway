@@ -139,10 +139,12 @@
   "block.qr.depart_gate_block_right": "进站闸机右侧",
   "block.qr.gate_block_left": "闸机左侧",
   "block.qr.ticket_machine_block": "售票机",
+  "qr.message.ticket_machine_block": "购买一张车票至少需要3个绿宝石",
 
   "item.qr.red_ticket": "红票",
   "item.qr.blue_ticket": "蓝票",
-  "tooltip.qr.red_ticket.description": "手持车票右键通过闸机",
+  "tooltip.qr.red_ticket.description_1": "手持车票右键通过闸机",
+  "tooltip.qr.red_ticket.description_2": "仅在生存模式下会被（出站闸机右侧）回收",
 
   "itemGroup.trains": "铁路车辆",
   "itemGroup.railway_tools": "铁路工具",

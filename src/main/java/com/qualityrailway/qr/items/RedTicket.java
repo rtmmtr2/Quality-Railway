@@ -21,6 +21,7 @@ public class RedTicket extends Item {
         super.appendHoverText(stack, world, tooltip, flag);
 
         // 添加自定义描述文本
-        tooltip.add(new TranslatableComponent("tooltip.qr.red_ticket.description").withStyle(ChatFormatting.BLUE));
+        tooltip.add(new TranslatableComponent("tooltip.qr.red_ticket.description_1").withStyle(ChatFormatting.BLUE));
+        tooltip.add(new TranslatableComponent("tooltip.qr.red_ticket.description_2").withStyle(ChatFormatting.GRAY));
     }
 }
