@@ -110,7 +110,6 @@ public class ArriveGateBlockRight extends Block {
         // 检查玩家手持物品是否有ticket标签
         ItemStack heldItem = player.getItemInHand(hand);
         if (heldItem.is(ModTags.Items.TICKETS)) {
-            System.out.println("Player is holding a ticket.");
             // 检查是否有红石信号输入
             if (world.hasNeighborSignal(pos)) {
                 // 检查闸机是否已经开启

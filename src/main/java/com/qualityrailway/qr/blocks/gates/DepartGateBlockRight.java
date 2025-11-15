@@ -105,7 +105,6 @@ public class DepartGateBlockRight extends Block {
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack heldItem = player.getItemInHand(hand);
         if (heldItem.is(ModTags.Items.TICKETS)) {
-            System.out.println("Player is holding a ticket.");
             if (world.hasNeighborSignal(pos)) {
                     world.setBlock(pos, state.setValue(OPEN, true), 3);
 
