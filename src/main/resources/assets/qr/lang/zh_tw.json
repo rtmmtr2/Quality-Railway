@@ -9,7 +9,6 @@
   "block.qr.gq70_tank_a": "GQ70 罐體 A",
   "block.qr.gq70_tank_b": "GQ70 罐體 B",
   "block.qr.gq70_tank_c": "GQ70 罐體 C",
-
   "block.qr.df7g_cab": "DF7G 駕駛室",
   "block.qr.df7g_cowcatcher_a": "DF7G 前排障器",
   "block.qr.df7g_cowcatcher_b": "DF7G 後排障器",
@@ -26,7 +25,6 @@
   "block.qr.df7g_enclosure_e": "DF7G 機殼 E",
   "block.qr.df7g_enclosure_f": "DF7G 機殼 F",
   "block.qr.df7g_enclosure_end": "DF7G 機殼 尾端",
-
   "block.qr.df4d_cab": "DF4D 駕駛室",
   "block.qr.df4d_chimney_a": "DF4D 煙囪",
   "block.qr.df4d_floor_a": "DF4D 地板 A",
@@ -57,8 +55,6 @@
   "block.qr.df4d_cab_door_b": "DF4D 駕駛室門 B",
   "block.qr.df4d_middle_door": "DF4D 駕機械間門",
   "block.qr.df4d_floor_d": "DF4D 地板 D（把這個墊門底下）",
-
-
   "item.qr.steel_plate": "鋼板",
   "item.qr.qr_item": "QR Item",
   "item.qr.spanner": "Spanner",
@@ -67,7 +63,6 @@
   "block.qr.railway_ballast_slab": "道碴半磚",
   "block.qr.gravel": "沙礫",
   "block.qr.gravel_slab": "沙礫半磚",
-
   "block.qr.ticket_check": "檢票口",
   "block.qr.police": "警務室",
   "block.qr.information": "問訊處",
@@ -99,7 +94,6 @@
   "block.qr.prepare_to_lower_pantograph": "準備降弓",
   "block.qr.road_rail_vehicle_coordination": "道機聯控",
   "block.qr.track_scale": "軌道衡",
-
   "block.qr.platform_1": "月台 1",
   "block.qr.platform_1_and_2": "月台 1-2",
   "block.qr.platform_1_and_2_left": "月台 1-2 向左",
@@ -135,11 +129,19 @@
   "block.qr.crh_emu_stop": "CRH 動車組停車位置",
   "block.qr.crh_fight_location": "CRH 打架位置",
 
+  "block.qr.arrive_gate_block_right": "Arrive Gate Block Right",
+  "block.qr.depart_gate_block_right": "Depart Gate Block Right",
+  "block.qr.gate_block_left": "Gate Block Left",
+  "block.qr.ticket_machine_block": "Ticket Machine Block",
+  "qr.message.ticket_machine_block": "Purchase a ticket requires at least 3 emeralds",
+  "item.qr.red_ticket": "Red Ticket",
+  "item.qr.blue_ticket": "Blue Ticket",
+  "tooltip.qr.red_ticket.description_1": "Hold the ticket in your right hand to pass through the gate",
+  "tooltip.qr.red_ticket.description_2": "Only collected when passing the (Arrive Gate Block Right) in Survival mode",
 
   "itemGroup.trains": "鐵路車輛",
   "itemGroup.railway_tools": "鐵路工具",
   "itemGroup.signs": "鐵路標誌",
-
   "key.qr.high_horn": "高音風笛",
   "key.qr.low_horn": "低音電笛",
   "category.qr.horns": "機車鳴笛"
