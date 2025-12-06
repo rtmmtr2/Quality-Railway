@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.Tags;
 
@@ -31,10 +32,10 @@ import java.util.Random;
 public class TicketMachineBlock extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-    private static final VoxelShape SHAPE_NORTH = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
-    private static final VoxelShape SHAPE_SOUTH = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
-    private static final VoxelShape SHAPE_EAST = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
-    private static final VoxelShape SHAPE_WEST = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.box(0, 0, 0.1875, 1, 1.75, 1);
+    private static final VoxelShape SHAPE_NORTH = Shapes.box(0, 0, 0, 1, 1.75, 0.8125);
+    private static final VoxelShape SHAPE_WEST = Shapes.box(0, 0, 0, 0.8125, 1.75, 1);
+    private static final VoxelShape SHAPE_EAST = Shapes.box(0.1875, 0, 0, 1, 1.75, 1);
 
     public TicketMachineBlock(Properties properties) {
         super(properties);
