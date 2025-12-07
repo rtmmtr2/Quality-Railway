@@ -110,6 +110,12 @@ public class ModCreativeTab {
             event.accept(ModItems.railway_ballast_slab);
             event.accept(ModItems.gravel);
             event.accept(ModItems.gravel_slab);
+            event.accept(ModItems.ArriveGateBlockRight);
+            event.accept(ModItems.DepartGateBlockRight);
+            event.accept(ModItems.GateBlockLeft);
+            event.accept(ModItems.TicketMachineBlock);
+            event.accept(ModItems.RedTicket);
+            event.accept(ModItems.BlueTicket);
 
         }
         // 填充 signs 标签页

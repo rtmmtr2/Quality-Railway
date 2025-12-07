@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip_v": true,
+  "model": "qr:models/block/gates/gate_block_left.obj",
+  "textures": {
+    "particle": "qr:block/gates/gate_block_left"
+  }
+}

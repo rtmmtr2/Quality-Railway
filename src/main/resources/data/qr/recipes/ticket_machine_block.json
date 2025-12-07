@@ -1,0 +1,23 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    " T ",
+    "SRS",
+    " T "
+  ],
+  "key":{
+    "S":{
+      "item":"qr:steel_plate"
+    },
+    "T":{
+      "item":"minecraft:redstone"
+    },
+    "R":{
+      "item":"minecraft:glass_pane"
+    }
+  },
+  "result":{
+    "item":"qr:ticket_machine_block",
+    "count":1
+  }
+}
