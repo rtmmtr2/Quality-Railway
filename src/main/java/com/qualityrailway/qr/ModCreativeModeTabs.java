@@ -89,6 +89,12 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.railway_ballast_slab.get());
                                 output.accept(ModItems.gravel.get());
                                 output.accept(ModItems.gravel_slab.get());
+                                output.accept(ModItems.ArriveGateBlockRight.get());
+                                output.accept(ModItems.DepartGateBlockRight.get());
+                                output.accept(ModItems.GateBlockLeft.get());
+                                output.accept(ModItems.TicketMachineBlock.get());
+                                output.accept(ModItems.RedTicket.get());
+                                output.accept(ModItems.BlueTicket.get());
 
                             }).build());
 

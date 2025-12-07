@@ -417,8 +417,26 @@ public class ModItems {
     public static final Supplier<Item> crh_fight_location = ITEMS.register("crh_fight_location",
             () -> new BlockItem(ModBlocks.crh_fight_location.get(), new Item.Properties()));
 
-//tickets
+    //tickets
+    public static final Supplier<Item> ArriveGateBlockRight = ITEMS.register("arrive_gate_block_right",
+            () -> new BlockItem(ModBlocks.ArriveGateBlockRight.get(), new Item.Properties()));
 
+    public static final Supplier<Item> DepartGateBlockRight = ITEMS.register("depart_gate_block_right",
+            () -> new BlockItem(ModBlocks.DepartGateBlockRight.get(), new Item.Properties()));
+
+    public static final Supplier<Item> GateBlockLeft = ITEMS.register("gate_block_left",
+            () -> new BlockItem(ModBlocks.GateBlockLeft.get(), new Item.Properties()));
+
+    public static final Supplier<Item> TicketMachineBlock = ITEMS.register("ticket_machine_block",
+            () -> new BlockItem(ModBlocks.TicketMachineBlock.get(), new Item.Properties()));
+
+
+    // 注册车票物品，都要添加ticket标签
+    public static final Supplier<Item> RedTicket = ITEMS.register("red_ticket",
+            () -> new RedTicket(new Item.Properties()));
+
+    public static final Supplier<Item> BlueTicket = ITEMS.register("blue_ticket",
+            () -> new RedTicket(new Item.Properties()));
 
 
 }

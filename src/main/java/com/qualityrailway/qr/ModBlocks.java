@@ -1,5 +1,9 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.blocks.gates.ArriveGateBlockRight;
+import com.qualityrailway.qr.blocks.gates.DepartGateBlockRight;
+import com.qualityrailway.qr.blocks.gates.GateBlockLeft;
+import com.qualityrailway.qr.blocks.gates.TicketMachineBlock;
 import net.minecraft.core.registries.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -444,7 +448,20 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> crh_fight_location = BLOCKS.register("crh_fight_location",
             () -> new sign_post(Block.Properties.ofFullCopy(sign_post.get())));
 
+    //Gate blocks
+    public static final DeferredHolder<Block, Block> ArriveGateBlockRight = BLOCKS.register("arrive_gate_block_right",
+            () -> new ArriveGateBlockRight(Block.Properties.of()
+                    .strength(3.0f, 6.0f)
+                    .noOcclusion())); //半透明渲染
 
+    public static final DeferredHolder<Block, Block> DepartGateBlockRight = BLOCKS.register("depart_gate_block_right",
+            () -> new DepartGateBlockRight(Block.Properties.ofFullCopy(ArriveGateBlockRight.get())));
+
+    public static final DeferredHolder<Block, Block> GateBlockLeft = BLOCKS.register("gate_block_left",
+            () -> new GateBlockLeft(Block.Properties.ofFullCopy(ArriveGateBlockRight.get())));
+
+    public static final DeferredHolder<Block, Block> TicketMachineBlock  = BLOCKS.register("ticket_machine_block",
+            () -> new TicketMachineBlock(Block.Properties.ofFullCopy(ArriveGateBlockRight.get())));
 
 
 

@@ -24,7 +24,7 @@ issueTrackerURL="https://github.com/rtmmtr2/Quality-Railway/issues" #optional
 modId="qr" #mandatory
 
 # The version number of the mod
-version="1.5.1-release" #mandatory
+version="1.5.2-release" #mandatory
 
 # A display name for the mod
 displayName="Quality Railway" #mandatory
@@ -42,7 +42,7 @@ logoFile="qr.png" #optional
 #credits="" #optional
 
 # A text field displayed in the mod UI
-authors=["rtmmtr","高名稽gaomingji","Mouzhu","DF4D3218","jackgqj","zuaza"] #optional
+authors=["rtmmtr","高名稽gaomingji","Mouzhu","DF4D3218","jackgqj","zuaza","iktaun","h"] #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''Experience authentic Chinese rail content that seamlessly integrates with major train mods!'''
