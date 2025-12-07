@@ -1,20 +1,23 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    "   ",
-    "TST",
-    "   "
+    " T ",
+    "SRS",
+    " T "
   ],
   "key":{
     "S":{
-      "item":"minecraft:green_dye"
+      "item":"qr:steel_plate"
     },
     "T":{
       "item":"minecraft:redstone"
+    },
+    "R":{
+      "item":"minecraft:glass_pane"
     }
   },
   "result":{
-    "item":"qr:low_horn",
+    "item":"qr:ticket_machine_block",
     "count":1
   }
 }
