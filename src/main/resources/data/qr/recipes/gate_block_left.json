@@ -1,23 +1,23 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
+    "UT ",
     "SSS",
-    "BB ",
-    "BRS"
+    " T "
   ],
   "key":{
     "S":{
       "item":"qr:steel_plate"
     },
-    "B":{
-      "item":"minecraft:light_blue_dye"
+    "T":{
+      "item":"minecraft:redstone"
     },
-    "R":{
-      "item":"minecraft:red_dye"
+    "U":{
+      "item":"minecraft:gray_dye"
     }
   },
   "result":{
-    "item":"qr:df4d_left_board_b",
+    "item":"qr:gate_block_left",
     "count":1
   }
 }

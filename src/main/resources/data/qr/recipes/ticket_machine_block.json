@@ -1,23 +1,23 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    "SSS",
-    "BB ",
-    "BRS"
+    " T ",
+    "SRS",
+    " T "
   ],
   "key":{
     "S":{
       "item":"qr:steel_plate"
     },
-    "B":{
-      "item":"minecraft:light_blue_dye"
+    "T":{
+      "item":"minecraft:redstone"
     },
     "R":{
-      "item":"minecraft:red_dye"
+      "item":"minecraft:glass_pane"
     }
   },
   "result":{
-    "item":"qr:df4d_left_board_b",
+    "item":"qr:ticket_machine_block",
     "count":1
   }
 }

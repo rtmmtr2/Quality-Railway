@@ -1,20 +1,26 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    " G ",
-    "SS ",
-    "   "
+    " T ",
+    "SSS",
+    "UTR"
   ],
   "key":{
     "S":{
       "item":"qr:steel_plate"
     },
-    "G":{
+    "T":{
+      "item":"minecraft:redstone"
+    },
+    "R":{
+      "item":"minecraft:glass_pane"
+    },
+    "U":{
       "item":"minecraft:gray_dye"
     }
   },
   "result":{
-    "item":"qr:df4d_roof_a",
+    "item":"qr:arrive_gate_block_right",
     "count":1
   }
 }

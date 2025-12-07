@@ -2,22 +2,19 @@
   "type":"minecraft:crafting_shaped",
   "pattern":[
     "SSS",
-    "BB ",
-    "BRS"
+    "R R",
+    "S S"
   ],
-  "key":{
+  "key": {
     "S":{
       "item":"qr:steel_plate"
-    },
-    "B":{
-      "item":"minecraft:light_blue_dye"
     },
     "R":{
       "item":"minecraft:red_dye"
     }
   },
   "result":{
-    "item":"qr:df4d_left_board_b",
+    "item":"qr:df4d_radiator_a",
     "count":1
   }
 }

@@ -2,24 +2,18 @@
   "type":"minecraft:crafting_shaped",
   "pattern":[
     "SSS",
-    " SS",
+    " SB",
     "SRS"
   ],
   "key":{
     "S":{
       "item":"qr:steel_plate"
     },
-    "T":{
-      "item":"minecraft:black_dye"
-    },
     "B":{
       "item":"minecraft:light_blue_dye"
     },
     "R":{
       "item":"minecraft:red_dye"
-    },
-    "G":{
-      "item":"minecraft:gray_dye"
     }
   },
   "result":{

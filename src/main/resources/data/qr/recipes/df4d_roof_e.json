@@ -1,20 +1,20 @@
 {
   "type":"minecraft:crafting_shaped",
   "pattern":[
-    "TS ",
-    "SSS",
-    " S "
+    "GG ",
+    "SS ",
+    "   "
   ],
   "key":{
     "S":{
       "item":"qr:steel_plate"
     },
-    "T":{
-      "item":"minecraft:black_dye"
+    "G":{
+      "item":"minecraft:gray_dye"
     }
   },
   "result":{
-    "item":"qr:c70_floor",
+    "item":"qr:df4d_roof_e",
     "count":1
   }
 }
