@@ -256,15 +256,15 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> second_approach_section_sign = BLOCKS.register("second_approach_section_sign",
-            () -> new second_approach_section_sign(Block.Properties.of()
+            () -> new first_approach_section_sign(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> third_approach_section_sign = BLOCKS.register("third_approach_section_sign",
-            () -> new third_approach_section_sign(Block.Properties.of()
+            () -> new first_approach_section_sign(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> dual_pantograph_prohibited_sign = BLOCKS.register("dual_pantograph_prohibited_sign",
-            () -> new dual_pantograph_prohibited_sign(Block.Properties.of()
+            () -> new first_approach_section_sign(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> automatic_tickets = BLOCKS.register("automatic_tickets",
@@ -272,30 +272,30 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> entrance = BLOCKS.register("entrance",
-            () -> new entrance(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> exit = BLOCKS.register("exit",
-            () -> new exit(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> railway_tickets = BLOCKS.register("railway_tickets",
-            () -> new railway_tickets(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> shopping = BLOCKS.register("shopping",
-            () -> new shopping(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> vip = BLOCKS.register("vip",
-            () -> new vip(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
 
     public static final DeferredHolder<Block, Block> passengers_stopped = BLOCKS.register("passengers_stopped",
-            () -> new passengers_stopped(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
     public static final DeferredHolder<Block, Block> waiting_room = BLOCKS.register("waiting_room",
-            () -> new waiting_room(Block.Properties.of()
+            () -> new automatic_tickets(Block.Properties.of()
                     .strength(2.0f)));
 
 
