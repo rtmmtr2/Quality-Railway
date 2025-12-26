@@ -254,47 +254,38 @@ public class ModBlocks {
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> second_approach_section_sign = BLOCKS.register("second_approach_section_sign",
-            () -> new second_approach_section_sign(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new first_approach_section_sign(Block.Properties.copy(first_approach_section_sign.get())));
 
     public static final RegistryObject<Block> third_approach_section_sign = BLOCKS.register("third_approach_section_sign",
-            () -> new third_approach_section_sign(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new first_approach_section_sign(Block.Properties.copy(first_approach_section_sign.get())));
 
     public static final RegistryObject<Block> dual_pantograph_prohibited_sign = BLOCKS.register("dual_pantograph_prohibited_sign",
-            () -> new dual_pantograph_prohibited_sign(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new first_approach_section_sign(Block.Properties.copy(first_approach_section_sign.get())));
 
     public static final RegistryObject<Block> automatic_tickets = BLOCKS.register("automatic_tickets",
             () -> new automatic_tickets(Block.Properties.of(Material.STONE)
                     .strength(2.0f)));
 
     public static final RegistryObject<Block> entrance = BLOCKS.register("entrance",
-            () -> new entrance(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
 
     public static final RegistryObject<Block> exit = BLOCKS.register("exit",
-            () -> new exit(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
 
     public static final RegistryObject<Block> railway_tickets = BLOCKS.register("railway_tickets",
-            () -> new railway_tickets(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
 
     public static final RegistryObject<Block> shopping = BLOCKS.register("shopping",
-            () -> new shopping(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
 
     public static final RegistryObject<Block> vip = BLOCKS.register("vip",
-            () -> new vip(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
 
     public static final RegistryObject<Block> passengers_stopped = BLOCKS.register("passengers_stopped",
-            () -> new passengers_stopped(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
+
     public static final RegistryObject<Block> waiting_room = BLOCKS.register("waiting_room",
-            () -> new waiting_room(Block.Properties.of(Material.STONE)
-                    .strength(2.0f)));
+            () -> new automatic_tickets(Block.Properties.copy(automatic_tickets.get())));
 
 
 
