@@ -1,0 +1,14 @@
+{
+  "parent": "block/cube_all",
+  "loader": "forge:obj",
+  "flip-v": true,
+  "model": "qr:models/block/doors/df4d_cab_door_a.obj",
+  "textures": {
+    "particle": "qr:block/doors/df4d_cab_door_a_6",
+    "0": "qr:block/doors/df4d_cab_door_a_6",
+    "1": "qr:block/doors/df4d_cab_door_a_top_1",
+    "2": "qr:block/doors/df4d_cab_door_a_top_2",
+    "3": "qr:block/doors/df4d_cab_door_a_top_3",
+    "4": "qr:block/doors/df4d_cab_door_a_top_4"
+  }
+}

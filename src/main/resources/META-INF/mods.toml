@@ -66,9 +66,9 @@ versionRange="[1.18,1.19)"
 ordering="NONE"
 side="BOTH"
 
-#[[dependencies.qr]]
-#modId="create"
-#mandatory=true
-#versionRange="[0.5.1.e,0.5.1.i]"
-#ordering="NONE"
-#side="BOTH"
+[[dependencies.qr]]
+modId="create"
+mandatory=true
+versionRange="[0.5.1.e,0.5.1.i]"
+ordering="NONE"
+side="BOTH"
