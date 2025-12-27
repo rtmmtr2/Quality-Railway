@@ -437,8 +437,9 @@ public static final RegistryObject<Item> ArriveGateBlockRight = ITEMS.register("
 
     public static final RegistryObject<Item> BlueTicket = ITEMS.register("blue_ticket",
             () -> new RedTicket(new Item.Properties().tab(ModCreativeTab.railway_tools)));
-
-
+//door
+    public static final RegistryObject<Item> TRAIN_DOOR = ITEMS.register("train_door",
+            () -> new BlockItem(ModBlocks.TRAIN_DOOR.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
 }
 

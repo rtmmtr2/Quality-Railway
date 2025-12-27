@@ -1,5 +1,7 @@
 package com.qualityrailway.qr;
 
+import com.simibubi.create.AllInteractionBehaviours;
+import com.simibubi.create.content.contraptions.behaviour.MovingInteractionBehaviour;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,7 +15,8 @@ import com.qualityrailway.qr.blocks.gq70.*;
 import com.qualityrailway.qr.blocks.df7g.*;
 import com.qualityrailway.qr.blocks.df4d.*;
 import com.qualityrailway.qr.blocks.gates.*;
-
+import com.qualityrailway.qr.blocks.doors.*;
+import com.qualityrailway.qr.interaction.*;
 import net.minecraft.world.level.block.Block;
 
 import net.minecraft.world.level.block.SoundType;
@@ -450,7 +453,17 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TicketMachineBlock  = BLOCKS.register("ticket_machine_block",
             () -> new TicketMachineBlock(Block.Properties.copy(ArriveGateBlockRight.get())));
+//door
+    public static final RegistryObject<Block> TRAIN_DOOR =
+            BLOCKS.register("train_door",
+                    () -> new TrainDoorBlock(Block.Properties.of(Material.METAL)
+                                    .strength(2.0f, 6.0f)
+                                    .noOcclusion()));
 
+    public static void registerInteractionBehaviours() {
+        MovingInteractionBehaviour trainDoorInteraction = new TrainDoorInteraction();
+        AllInteractionBehaviours.registerBehaviour(TRAIN_DOOR.get(), trainDoorInteraction);
+    }
 
 
 }
