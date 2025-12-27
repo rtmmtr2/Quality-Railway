@@ -1,5 +1,9 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.blocks.doors.TrainDoorBlock;
+import com.qualityrailway.qr.interaction.TrainDoorInteraction;
+import com.simibubi.create.AllInteractionBehaviours;
+import com.simibubi.create.content.contraptions.behaviour.MovingInteractionBehaviour;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
@@ -460,6 +464,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> TicketMachineBlock  = BLOCKS.register("ticket_machine_block",
             () -> new TicketMachineBlock(Block.Properties.copy(ArriveGateBlockRight.get())));
 
+    //door
+    public static final RegistryObject<Block> TRAIN_DOOR =
+            BLOCKS.register("train_door",
+                    () -> new TrainDoorBlock(Block.Properties.of()
+                            .strength(2.0f, 6.0f)
+                            .noOcclusion()));
 
+    public static void registerInteractionBehaviours() {
+        MovingInteractionBehaviour trainDoorInteraction = new TrainDoorInteraction();
+        AllInteractionBehaviours.registerBehaviour(TRAIN_DOOR.get(), trainDoorInteraction);
+    }
 
 }

@@ -106,11 +106,11 @@ public class DepartGateBlockRight extends Block {
         ItemStack heldItem = player.getItemInHand(hand);
         if (heldItem.is(ModTags.Items.TICKETS)) {
             if (world.hasNeighborSignal(pos)) {
-                    world.setBlock(pos, state.setValue(OPEN, true), 3);
+                world.setBlock(pos, state.setValue(OPEN, true), 3);
 
-                    world.playSound(null, pos, SoundEvents.IRON_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F);
+                world.playSound(null, pos, SoundEvents.IRON_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F);
 
-                    return InteractionResult.SUCCESS;
+                return InteractionResult.SUCCESS;
             } else {
                 world.playSound(null, pos, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 1.0F, 0.5F);
                 return InteractionResult.FAIL;

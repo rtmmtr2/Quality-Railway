@@ -438,7 +438,9 @@ public class ModItems {
     public static final RegistryObject<Item> BlueTicket = ITEMS.register("blue_ticket",
             () -> new RedTicket(new Item.Properties()));
 
-
+    //door
+    public static final RegistryObject<Item> TRAIN_DOOR = ITEMS.register("train_door",
+            () -> new BlockItem(ModBlocks.TRAIN_DOOR.get(), new Item.Properties()));
 
 }
 

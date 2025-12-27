@@ -63,12 +63,12 @@ description='''Experience authentic Chinese rail content that seamlessly integra
     ordering="NONE"
     side="BOTH"
 
-#[[dependencies.qr]]
-    #modId="create"
-    #mandatory=true
-    #versionRange="[0.5.1.e,0.5.1.j]"
-    #ordering="NONE"
-    #side="BOTH"
+[[dependencies.qr]]
+    modId="create"
+    mandatory=true
+    versionRange="[0.5.1.e,0.5.1.j]"
+    ordering="NONE"
+    side="BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
