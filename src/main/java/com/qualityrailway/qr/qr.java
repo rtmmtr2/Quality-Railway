@@ -21,6 +21,7 @@ public class qr {
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModSounds.SOUNDS.register(bus);
+        ModBlockEntities.BLOCK_ENTITIES.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
         // 注册双端设置事件监听器
         bus.addListener(this::onClientSetup);
@@ -37,6 +38,11 @@ public class qr {
         LOGGER.info("Client setup complete");
     }
     private void onCommonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ModBlocks.registerInteractionBehaviours();
+            LOGGER.info("Registered train door interaction behaviours");
+        });
+
         LOGGER.info("Common setup complete");
     }
 }
