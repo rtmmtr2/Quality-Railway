@@ -3,6 +3,7 @@ package com.qualityrailway.qr;
 import com.qualityrailway.qr.items.*;
 
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -440,6 +441,11 @@ public static final RegistryObject<Item> ArriveGateBlockRight = ITEMS.register("
 //door
     public static final RegistryObject<Item> TRAIN_DOOR = ITEMS.register("train_door",
             () -> new BlockItem(ModBlocks.TRAIN_DOOR.get(), new Item.Properties().tab(ModCreativeTab.trains)));
+
+    public static final RegistryObject<Item> ADVANCED_SIGN =
+            ITEMS.register("advanced_sign",
+                    () -> new BlockItem(ModBlocks.ADVANCED_SIGN.get(),
+                            new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
 }
 

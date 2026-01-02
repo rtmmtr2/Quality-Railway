@@ -1,6 +1,6 @@
 package com.qualityrailway.qr;
 
-import com.qualityrailway.qr.blockentity.TrainDoorBlockEntity;
+import com.qualityrailway.qr.blockentity.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,4 +16,11 @@ public class ModBlockEntities {
                             TrainDoorBlockEntity::new,
                             ModBlocks.TRAIN_DOOR.get()
                     ).build(null));
+
+    public static final RegistryObject<BlockEntityType<AdvancedSignBlockEntity>> ADVANCED_SIGN =
+            BLOCK_ENTITIES.register("advanced_sign",
+                    () -> BlockEntityType.Builder.of(AdvancedSignBlockEntity::new,
+                            ModBlocks.ADVANCED_SIGN.get()).build(null));
+
+
 }

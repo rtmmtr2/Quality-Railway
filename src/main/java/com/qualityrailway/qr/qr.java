@@ -1,4 +1,12 @@
 package com.qualityrailway.qr;
+import com.qualityrailway.qr.blockentity.AdvancedSignBlockEntity;
+import com.qualityrailway.qr.renderer.*;
+import com.qualityrailway.qr.screen.*;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.core.BlockPos;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -9,6 +17,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.intellij.lang.annotations.Identifier;
 
 
 @Mod(qr.MODID)
@@ -22,6 +31,7 @@ public class qr {
         ModItems.ITEMS.register(bus);
         ModSounds.SOUNDS.register(bus);
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
+        ModMenuTypes.MENUS.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
         // 注册双端设置事件监听器
         bus.addListener(this::onClientSetup);
@@ -35,6 +45,16 @@ public class qr {
 
     private void onClientSetup(final FMLClientSetupEvent event) {
         KeyBindings.register(event);
+        event.enqueueWork(() -> {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ArriveGateBlockRight.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_SIGN.get(), RenderType.translucent());
+            MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
+
+            // 注册方块实体渲染器
+            BlockEntityRenderers.register(ModBlockEntities.ADVANCED_SIGN.get(),
+                    AdvancedSignRenderer::new);
+        });
         LOGGER.info("Client setup complete");
     }
     private void onCommonSetup(final FMLCommonSetupEvent event) {

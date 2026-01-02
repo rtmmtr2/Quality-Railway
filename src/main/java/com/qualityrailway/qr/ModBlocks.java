@@ -1,5 +1,6 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.blocks.tools.AdvancedSignBlock;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.content.contraptions.behaviour.MovingInteractionBehaviour;
 import net.minecraft.world.level.block.*;
@@ -459,6 +460,12 @@ public class ModBlocks {
                     () -> new TrainDoorBlock(Block.Properties.of(Material.METAL)
                                     .strength(2.0f, 6.0f)
                                     .noOcclusion()));
+
+    public static final RegistryObject<Block> ADVANCED_SIGN =
+            BLOCKS.register("advanced_sign",
+                    () -> new AdvancedSignBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                            .strength(1.0f, 3.0f)
+                            .noOcclusion()));
 
     public static void registerInteractionBehaviours() {
         MovingInteractionBehaviour trainDoorInteraction = new TrainDoorInteraction();
