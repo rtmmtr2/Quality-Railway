@@ -31,13 +31,12 @@ public class AdvancedSignRenderer implements BlockEntityRenderer<AdvancedSignBlo
         // 根据方块方向调整位置
         Direction facing = blockEntity.getBlockState().getValue(AdvancedSignBlock.FACING);
         
-        // 移动到方块中心
-        poseStack.translate(0.5, 0.5, 0.5);
+        // 移动到方块中心(60大小)
+        poseStack.translate(0.5, 0.5625, 0.5625);
         
         // 根据面向旋转整个坐标系
         float rotation = -facing.toYRot();
         poseStack.mulPose(com.mojang.math.Vector3f.YP.rotationDegrees(rotation));
-
 
         poseStack.translate(0.0, 1.0, -0.49); // 向后移动到碰撞箱内部
         
@@ -46,8 +45,8 @@ public class AdvancedSignRenderer implements BlockEntityRenderer<AdvancedSignBlo
         
         // 计算偏移（转换为像素坐标）
         float pixelScale = 0.0625f; // 1像素 = 0.0625块
-        float offsetX = blockEntity.getTextX() * pixelScale * 0.5f;
-        float offsetY = -blockEntity.getTextY() * pixelScale * 0.5f; // Y轴翻转
+        float offsetX = blockEntity.getTextX() * pixelScale * 0.5f;  // 使用float
+        float offsetY = -blockEntity.getTextY() * pixelScale * 0.5f; // Y轴翻转，使用float
 
         // 将文字旋转到告示牌平面（X轴旋转180度）
         poseStack.mulPose(com.mojang.math.Vector3f.XP.rotationDegrees(180.0f));

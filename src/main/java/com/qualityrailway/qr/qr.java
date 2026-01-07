@@ -1,5 +1,6 @@
 package com.qualityrailway.qr;
 import com.qualityrailway.qr.blockentity.AdvancedSignBlockEntity;
+import com.qualityrailway.qr.network.*;
 import com.qualityrailway.qr.renderer.*;
 import com.qualityrailway.qr.screen.*;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -50,7 +51,6 @@ public class qr {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_SIGN.get(), RenderType.translucent());
             MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
-
             // 注册方块实体渲染器
             BlockEntityRenderers.register(ModBlockEntities.ADVANCED_SIGN.get(),
                     AdvancedSignRenderer::new);
@@ -59,6 +59,7 @@ public class qr {
     }
     private void onCommonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            ModNetwork.register();
             ModBlocks.registerInteractionBehaviours();
             LOGGER.info("Registered train door interaction behaviours");
         });

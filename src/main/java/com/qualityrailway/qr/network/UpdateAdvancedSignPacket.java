@@ -14,12 +14,12 @@ public class UpdateAdvancedSignPacket {
     
     private final BlockPos pos;
     private final String text;
-    private final int textX;
-    private final int textY;
+    private final float textX;  // 改为float
+    private final float textY;  // 改为float
     private final int textSize;
     private final String colorHex;
     
-    public UpdateAdvancedSignPacket(BlockPos pos, String text, int textX, int textY, int textSize, String colorHex) {
+    public UpdateAdvancedSignPacket(BlockPos pos, String text, float textX, float textY, int textSize, String colorHex) {
         this.pos = pos;
         this.text = text;
         this.textX = textX;
@@ -32,8 +32,8 @@ public class UpdateAdvancedSignPacket {
         return new UpdateAdvancedSignPacket(
             buf.readBlockPos(),
             buf.readUtf(256),
-            buf.readInt(),
-            buf.readInt(),
+            buf.readFloat(),  // 改为readFloat
+            buf.readFloat(),  // 改为readFloat
             buf.readInt(),
             buf.readUtf(10)
         );
@@ -42,8 +42,8 @@ public class UpdateAdvancedSignPacket {
     public void encode(FriendlyByteBuf buf) {
         buf.writeBlockPos(pos);
         buf.writeUtf(text, 256);
-        buf.writeInt(textX);
-        buf.writeInt(textY);
+        buf.writeFloat(textX);  // 改为writeFloat
+        buf.writeFloat(textY);  // 改为writeFloat
         buf.writeInt(textSize);
         buf.writeUtf(colorHex, 10);
     }

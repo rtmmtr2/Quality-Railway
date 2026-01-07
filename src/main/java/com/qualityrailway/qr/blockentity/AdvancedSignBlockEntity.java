@@ -4,6 +4,7 @@ import com.qualityrailway.qr.ModBlockEntities;
 import com.qualityrailway.qr.screen.AdvancedSignMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.FloatTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
@@ -16,15 +17,19 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 public class AdvancedSignBlockEntity extends BlockEntity implements MenuProvider {
     
+    private static final Logger LOGGER = LogManager.getLogger();
+
     // 默认值
-    private String text = "Hello, World!";
-    private int textX = 0;  // 水平偏移 (-100 到 100)
-    private int textY = 0;  // 垂直偏移 (-100 到 100)
-    private int textSize = 50;  // 字体大小 (1 到 100)
+    private String text = "文";
+    private float textX = 0.0f;  // 水平偏移 (-100 到 100)，支持小数
+    private float textY = 0.0f;  // 垂直偏移 (-100 到 100)，支持小数
+    private int textSize = 60;  // 字体大小 (1 到 100)
     private String colorHex = "#FFFFFF";  // 16进制颜色
     
     public AdvancedSignBlockEntity(BlockPos pos, BlockState state) {
@@ -43,21 +48,21 @@ public class AdvancedSignBlockEntity extends BlockEntity implements MenuProvider
         return text;
     }
     
-    public void setTextX(int textX) {
-        this.textX = Math.max(-100, Math.min(100, textX));
+    public void setTextX(float textX) {
+        this.textX = Math.max(-100.0f, Math.min(100.0f, textX));
         setChanged();
     }
     
-    public int getTextX() {
+    public float getTextX() {
         return textX;
     }
     
-    public void setTextY(int textY) {
-        this.textY = Math.max(-100, Math.min(100, textY));
+    public void setTextY(float textY) {
+        this.textY = Math.max(-100.0f, Math.min(100.0f, textY));
         setChanged();
     }
     
-    public int getTextY() {
+    public float getTextY() {
         return textY;
     }
     
@@ -97,33 +102,41 @@ public class AdvancedSignBlockEntity extends BlockEntity implements MenuProvider
             return 0xFFFFFFFF; // 白色作为默认
         }
     }
-    
+
     @Override
     protected void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
         tag.putString("Text", text);
-        tag.putInt("TextX", textX);
-        tag.putInt("TextY", textY);
+        tag.putFloat("TextX", textX);  // 改为putFloat
+        tag.putFloat("TextY", textY);  // 改为putFloat
         tag.putInt("TextSize", textSize);
         tag.putString("ColorHex", colorHex);
+
+        // 调试日志
+        LOGGER.info("高级告示牌保存数据: text={}, X={}, Y={}, size={}, color={}",
+            text, textX, textY, textSize, colorHex);
     }
     
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
         text = tag.getString("Text");
-        textX = tag.getInt("TextX");
-        textY = tag.getInt("TextY");
+        textX = tag.getFloat("TextX");  // 改为getFloat
+        textY = tag.getFloat("TextY");  // 改为getFloat
         textSize = tag.getInt("TextSize");
         colorHex = tag.getString("ColorHex");
+
+        // 调试日志
+        LOGGER.info("高级告示牌加载数据: text={}, X={}, Y={}, size={}, color={}",
+            text, textX, textY, textSize, colorHex);
     }
     
     @Override
     public CompoundTag getUpdateTag() {
         CompoundTag tag = super.getUpdateTag();
         tag.putString("Text", text);
-        tag.putInt("TextX", textX);
-        tag.putInt("TextY", textY);
+        tag.putFloat("TextX", textX);  // 改为putFloat
+        tag.putFloat("TextY", textY);  // 改为putFloat
         tag.putInt("TextSize", textSize);
         tag.putString("ColorHex", colorHex);
         return tag;
@@ -137,7 +150,7 @@ public class AdvancedSignBlockEntity extends BlockEntity implements MenuProvider
     
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("qr.text.advanced_sign.title");
+        return new TranslatableComponent("qr.screen.advanced_sign.title");
     }
     
     @Nullable
