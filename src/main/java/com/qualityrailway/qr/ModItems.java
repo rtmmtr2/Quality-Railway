@@ -442,6 +442,10 @@ public static final RegistryObject<Item> ArriveGateBlockRight = ITEMS.register("
     public static final RegistryObject<Item> TRAIN_DOOR = ITEMS.register("train_door",
             () -> new BlockItem(ModBlocks.TRAIN_DOOR.get(), new Item.Properties().tab(ModCreativeTab.trains)));
 
+    public static final RegistryObject<Item> TRAIN_SEAT = ITEMS.register("train_seat",
+            () -> new BlockItem(ModBlocks.TRAIN_SEAT.get(),
+                    new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
     public static final RegistryObject<Item> ADVANCED_SIGN =
             ITEMS.register("advanced_sign",
                     () -> new BlockItem(ModBlocks.ADVANCED_SIGN.get(),

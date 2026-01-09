@@ -2,6 +2,7 @@ package com.qualityrailway.qr;
 
 import com.qualityrailway.qr.blocks.tools.AdvancedSignBlock;
 import com.simibubi.create.AllInteractionBehaviours;
+import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovingInteractionBehaviour;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -461,6 +462,11 @@ public class ModBlocks {
                                     .strength(2.0f, 6.0f)
                                     .noOcclusion()));
 
+    public static final RegistryObject<Block> TRAIN_SEAT = BLOCKS.register("train_seat",
+            () -> new CustomTrainSeatBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(1.5f)
+                    .noOcclusion()));
+
     public static final RegistryObject<Block> ADVANCED_SIGN =
             BLOCKS.register("advanced_sign",
                     () -> new AdvancedSignBlock(BlockBehaviour.Properties.of(Material.WOOD)
@@ -470,6 +476,9 @@ public class ModBlocks {
     public static void registerInteractionBehaviours() {
         MovingInteractionBehaviour trainDoorInteraction = new TrainDoorInteraction();
         AllInteractionBehaviours.registerBehaviour(TRAIN_DOOR.get(), trainDoorInteraction);
+
+        MovingInteractionBehaviour seatInteraction = new SeatInteractionBehaviour();
+        AllInteractionBehaviours.registerBehaviour(TRAIN_SEAT.get(), seatInteraction);
     }
 
 

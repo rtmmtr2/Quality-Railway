@@ -1,8 +1,6 @@
 package com.qualityrailway.qr.screen;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.components.AbstractSliderButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -11,7 +9,7 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.player.Inventory;
 import org.lwjgl.glfw.GLFW;
-import com.qualityrailway.qr.network.ModNetwork;
+import com.qualityrailway.qr.ModNetwork;
 import com.qualityrailway.qr.network.UpdateAdvancedSignPacket;
 
 public class AdvancedSignScreen extends AbstractContainerScreen<AdvancedSignMenu> {

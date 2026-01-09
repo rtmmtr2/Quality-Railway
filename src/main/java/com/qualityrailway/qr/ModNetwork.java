@@ -1,6 +1,6 @@
-package com.qualityrailway.qr.network;
+package com.qualityrailway.qr;
 
-import com.qualityrailway.qr.qr;
+import com.qualityrailway.qr.network.UpdateAdvancedSignPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;

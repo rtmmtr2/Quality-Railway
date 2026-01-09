@@ -20,6 +20,12 @@ public class KeyBindings {
             "category.qr.horns"
     );
 
+    public static final KeyMapping TOGGLE_CTCS_KEY = new KeyMapping(
+            "key.qr.toggle_ctcs",
+            GLFW.GLFW_KEY_C,
+            "category.qr.ctcs"
+    );
+
     public static void register(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             net.minecraft.client.Minecraft.getInstance().options.keyMappings =
@@ -31,6 +37,11 @@ public class KeyBindings {
                     org.apache.commons.lang3.ArrayUtils.add(
                             net.minecraft.client.Minecraft.getInstance().options.keyMappings,
                             LOW_HORN_KEY
+                    );
+            net.minecraft.client.Minecraft.getInstance().options.keyMappings =
+                    org.apache.commons.lang3.ArrayUtils.add(
+                            net.minecraft.client.Minecraft.getInstance().options.keyMappings,
+                            TOGGLE_CTCS_KEY
                     );
         });
     }

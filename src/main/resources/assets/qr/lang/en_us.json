@@ -161,6 +161,16 @@
   "qr.screen.advanced_sign.save": "Save",
   "qr.screen.advanced_sign.cancel": "Cancel",
 
+
+  "key.qr.toggle_ctcs": "Toggle CTCS",
+  "category.qr.ctcs": "Quality Railway CTCS",
+  "gui.qr.ctcs.speed": "Speed: %.1f km/h",
+  "config.qr.ctcs.enabled": "Enable CTCS",
+  "config.qr.ctcs.autoShow": "Auto Show When Driving",
+  "config.qr.ctcs.guiX": "CTCS X Position",
+  "config.qr.ctcs.guiY": "CTCS Y Position",
+  "config.qr.ctcs.scale": "CTCS Scale",
+
   "itemGroup.trains": "Trains",
   "itemGroup.railway_tools": "Railway Tools",
   "itemGroup.signs": "Railway Signs",

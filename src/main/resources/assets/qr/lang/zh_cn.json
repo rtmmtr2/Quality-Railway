@@ -161,6 +161,15 @@
   "qr.screen.advanced_sign.save": "保存",
   "qr.screen.advanced_sign.cancel": "取消",
 
+  "key.qr.toggle_ctcs": "切换CTCS界面",
+  "category.qr.ctcs": "品质铁路CTCS",
+  "gui.qr.ctcs.speed": "速度: %.1f km/h",
+  "config.qr.ctcs.enabled": "启用CTCS",
+  "config.qr.ctcs.autoShow": "驾驶时自动显示",
+  "config.qr.ctcs.guiX": "CTCS X轴位置",
+  "config.qr.ctcs.guiY": "CTCS Y轴位置",
+  "config.qr.ctcs.scale": "CTCS缩放比例",
+
   "itemGroup.trains": "铁路车辆",
   "itemGroup.railway_tools": "铁路工具",
   "itemGroup.signs": "铁路标志",
