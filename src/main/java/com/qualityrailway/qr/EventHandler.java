@@ -6,21 +6,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.lwjgl.glfw.GLFW;
 
 @OnlyIn(Dist.CLIENT)
 public class EventHandler {
-
-    private CTCSOverlay ctcsOverlay;
-    private boolean ctcsInitialized = false;
-
-    private CTCSOverlay getCTCSUI() {
-        if (!ctcsInitialized) {
-            ctcsOverlay = new CTCSOverlay();
-            ctcsInitialized = true;
-        }
-        return ctcsOverlay;
-    }
 
     @SubscribeEvent
     public void onKeyInput(InputEvent.KeyInputEvent event) {
@@ -47,19 +35,9 @@ public class EventHandler {
             qr.LOGGER.debug("LOW_HORN_KEY pressed");
         }
 
-        // CTRL+C 切换CTCS界面显示
-        if (event.getKey() == GLFW.GLFW_KEY_C &&
-            (event.getModifiers() & GLFW.GLFW_MOD_CONTROL) != 0) {
-            CTCSOverlay overlay = getCTCSUI();
-            overlay.toggleVisibility();
-            qr.LOGGER.info("CTCS interface toggled (now visible: " + overlay.isVisible() + ")");
-        }
-
-        // CTRL+SHIFT+C 禁用/启用CTCS
-        if (event.getKey() == GLFW.GLFW_KEY_C &&
-            (event.getModifiers() & (GLFW.GLFW_MOD_CONTROL | GLFW.GLFW_MOD_SHIFT)) ==
-            (GLFW.GLFW_MOD_CONTROL | GLFW.GLFW_MOD_SHIFT)) {
-            CTCSOverlay overlay = getCTCSUI();
+        // 禁用/启用CTCS
+        if (KeyBindings.ENABLE_DISABLE_CTCS_KEY.isDown()) {
+            CTCSOverlay overlay = CTCSOverlay.getInstance();
             boolean newEnabledState = !overlay.isEnabled();
             overlay.setEnabled(newEnabledState);
             qr.LOGGER.info("CTCS interface " + (newEnabledState ? "enabled" : "disabled"));

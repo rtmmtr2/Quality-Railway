@@ -45,16 +45,13 @@ public class qr {
         bus.addListener(this::onClientSetup);
         bus.addListener(this::onCommonSetup);
 
-        // 只在客户端环境下注册EventHandler
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
-            MinecraftForge.EVENT_BUS.register(new EventHandler());
-        });
-
         LOGGER.info("Quality Railway initialized successfully!");
     }
 
     private void onClientSetup(final FMLClientSetupEvent event) {
         KeyBindings.register(event);
+        // 注册事件处理器
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ArriveGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
@@ -64,8 +61,8 @@ public class qr {
             BlockEntityRenderers.register(ModBlockEntities.ADVANCED_SIGN.get(),
                     AdvancedSignRenderer::new);
 
-            // 注册CTCS界面
-            MinecraftForge.EVENT_BUS.register(new CTCSOverlay());
+            // 注册CTCS界面 - 使用单例
+            MinecraftForge.EVENT_BUS.register(CTCSOverlay.getInstance());
         });
         LOGGER.info("Client setup complete");
     }

@@ -9,42 +9,49 @@ import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import com.qualityrailway.qr.qr;
 
 public class CTCSOverlay {
     @SuppressWarnings("removal")
     private static final ResourceLocation DIAL_TEXTURE = new ResourceLocation("qr", "textures/ctcs/ctcs.png");
     @SuppressWarnings("removal")
     private static final ResourceLocation NEEDLE_TEXTURE = new ResourceLocation("qr", "textures/ctcs/ctcs_hand.png");
+    //get scale
+    static int scale = CTCSCLientConfig.SCALE.get().intValue();
 
-    // 表盘和指针的尺寸（根据您的纹理）
-    private static final int DIAL_WIDTH = 535;  // 表盘宽度
-    private static final int DIAL_HEIGHT = 394; // 表盘高度
-    private static final int NEEDLE_WIDTH = 49; // 指针宽度
-    private static final int NEEDLE_HEIGHT = 119; // 指针高度
+    // 表盘和指针的尺寸，除以scale缩放
+    private static final int DIAL_WIDTH = 535/scale;  // 表盘宽度
+    private static final int DIAL_HEIGHT = 394/scale; // 表盘高度
+    private static final int NEEDLE_WIDTH = 49/scale; // 指针宽度
+    private static final int NEEDLE_HEIGHT = 119/scale; // 指针高度
 
-    // 表盘中心点（从纹理左上角计算）
-    private static final int DIAL_CENTER_X = 158; // 从左往右第158像素
-    private static final int DIAL_CENTER_Y = 155; // 从上往下第155像素
+    // 表盘中心点
+    private static final int DIAL_CENTER_X = 158/scale; // 从左往右第158像素
+    private static final int DIAL_CENTER_Y = 155/scale; // 从上往下第155像素
 
-    // 指针轴心点（从指针纹理左上角计算）
-    private static final int NEEDLE_PIVOT_X = 24; // 从左往右第24像素
-    private static final int NEEDLE_PIVOT_Y = 94; // 从上往下第94像素
+    // 指针轴心点
+    private static final int NEEDLE_PIVOT_X = 24/scale; // 从左往右第24像素
+    private static final int NEEDLE_PIVOT_Y = 94/scale; // 从上往下第94像素
 
     private boolean isVisible = false;
     private boolean isEnabled = true;
 
+    private static CTCSOverlay instance;
+
     /**
-     * 切换CTCS界面显示状态
+     * 获取CTCSOverlay的单例实例
      */
-    public void toggleVisibility() {
-        isVisible = !isVisible;
+    public static CTCSOverlay getInstance() {
+        if (instance == null) {
+            instance = new CTCSOverlay();
+        }
+        return instance;
     }
 
     /**
-     * 设置CTCS界面显示状态
+     * 私有构造函数，确保单例模式
      */
-    public void setVisible(boolean visible) {
-        isVisible = visible;
+    private CTCSOverlay() {
     }
 
     /**
@@ -52,6 +59,7 @@ public class CTCSOverlay {
      */
     public void setEnabled(boolean enabled) {
         isEnabled = enabled;
+        qr.LOGGER.debug("CTCS enabled set to: " + isEnabled);
     }
 
     /**
@@ -59,13 +67,6 @@ public class CTCSOverlay {
      */
     public boolean isEnabled() {
         return isEnabled;
-    }
-
-    /**
-     * 获取CTCS界面可见状态
-     */
-    public boolean isVisible() {
-        return isVisible;
     }
 
     @SubscribeEvent
@@ -100,20 +101,18 @@ public class CTCSOverlay {
 
         PoseStack poseStack = event.getMatrixStack();
         int screenWidth = mc.getWindow().getGuiScaledWidth();
-        int screenHeight = mc.getWindow().getGuiScaledHeight();
 
         // 计算GUI位置（右上角）
         int guiX = CTCSCLientConfig.GUI_X.get();
         int guiY = CTCSCLientConfig.GUI_Y.get();
-        // 修复类型转换：使用floatValue()将Double转换为float
-        float scale = CTCSCLientConfig.SCALE.get().floatValue();
+
 
         // 如果使用默认位置（-1），则计算右上角位置
         if (guiX == -1) {
-            guiX = screenWidth - (int)(DIAL_WIDTH * scale) - 10; // 右边留10像素边距
+            guiX = screenWidth - DIAL_WIDTH - 10; // 右边留10像素边距
         }
         if (guiY == -1) {
-            guiX = screenHeight - (int)(DIAL_HEIGHT * scale) - 10;guiY = 10; // 顶部留10像素边距
+            guiY = 10; // 顶部留10像素边距
         }
 
         // 获取当前速度
@@ -123,22 +122,21 @@ public class CTCSOverlay {
         float rotationDegrees = CTCSUtils.calculateNeedleRotation(speedKmh);
 
         // 渲染表盘
-        renderDial(poseStack, guiX, guiY, scale);
+        renderDial(poseStack, guiX, guiY);
 
         // 渲染指针
-        renderNeedle(poseStack, guiX, guiY, scale, rotationDegrees);
+        renderNeedle(poseStack, guiX, guiY, rotationDegrees);
 
         // 渲染速度文本
-        renderSpeedText(poseStack, guiX, guiY, scale, speedKmh);
+        renderSpeedText(poseStack, guiX, guiY, speedKmh);
     }
 
     /**
      * 渲染表盘
      */
-    private void renderDial(PoseStack poseStack, int x, int y, float scale) {
+    private void renderDial(PoseStack poseStack, int x, int y) {
         poseStack.pushPose();
         poseStack.translate(x, y, 0);
-        poseStack.scale(scale, scale, 1.0f);
 
         RenderSystem.setShaderTexture(0, DIAL_TEXTURE);
         GuiComponent.blit(poseStack, 0, 0, 0, 0, DIAL_WIDTH, DIAL_HEIGHT, DIAL_WIDTH, DIAL_HEIGHT);
@@ -147,29 +145,12 @@ public class CTCSOverlay {
     }
 
     /**
-     * 渲染指针 - 使用精确的坐标计算
+     * 渲染指针 - 移除缩放计算，简化坐标计算
      */
-    private void renderNeedle(PoseStack poseStack, int x, int y, float scale, float rotationDegrees) {
-        // 计算缩放后的值
-        float scaledWidth = NEEDLE_WIDTH * scale;
-        float scaledHeight = NEEDLE_HEIGHT * scale;
-
-        // 确保最小尺寸
-        if (scaledWidth < 1.0f) scaledWidth = 1.0f;
-        if (scaledHeight < 1.0f) scaledHeight = 1.0f;
-
-        // 计算表盘中心在屏幕上的位置
-        float dialCenterX = x + (DIAL_CENTER_X * scale);
-        float dialCenterY = y + (DIAL_CENTER_Y * scale);
-
-        // 计算指针轴心点在指针纹理中的相对位置
-        float pivotRelX = NEEDLE_PIVOT_X / (float)NEEDLE_WIDTH;
-        float pivotRelY = NEEDLE_PIVOT_Y / (float)NEEDLE_HEIGHT;
-
-        // 计算指针应该渲染的位置（使轴心点与表盘中心对齐）
-        // 指针左上角位置 = 表盘中心 - (轴心点相对位置 * 指针缩放后尺寸)
-        float needleLeftX = dialCenterX - (pivotRelX * scaledWidth);
-        float needleTopY = dialCenterY - (pivotRelY * scaledHeight);
+    private void renderNeedle(PoseStack poseStack, int x, int y, float rotationDegrees) {
+        // 表盘中心在屏幕上的绝对位置
+        int dialCenterX = x + DIAL_CENTER_X;
+        int dialCenterY = y + DIAL_CENTER_Y;
 
         poseStack.pushPose();
 
@@ -180,34 +161,22 @@ public class CTCSOverlay {
         // 禁用深度测试，确保指针在表盘上方
         RenderSystem.disableDepthTest();
 
-        // 移动到指针位置
-        poseStack.translate(needleLeftX, needleTopY, 200);
+        // 移动到表盘中心
+        poseStack.translate(dialCenterX, dialCenterY, 200);
 
-        // 计算旋转中心（相对于指针左上角）
-        float rotationCenterX = pivotRelX * scaledWidth;
-        float rotationCenterY = pivotRelY * scaledHeight;
+        // 旋转指针
+        poseStack.mulPose(Vector3f.ZP.rotationDegrees(rotationDegrees));
 
-        // 如果需要旋转，执行旋转操作
-        if (Math.abs(rotationDegrees) > 0.001f) {
-            // 移动到旋转中心
-            poseStack.translate(rotationCenterX, rotationCenterY, 0);
-            // 旋转
-            poseStack.mulPose(Vector3f.ZP.rotationDegrees(rotationDegrees));
-            // 移回
-            poseStack.translate(-rotationCenterX, -rotationCenterY, 0);
-        }
+        // 调整指针轴心点偏移（将指针的轴心点移动到原点）
+        poseStack.translate(-NEEDLE_PIVOT_X, -NEEDLE_PIVOT_Y, 0);
 
         // 渲染指针
         RenderSystem.setShaderTexture(0, NEEDLE_TEXTURE);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
-        // 确保渲染尺寸至少为1像素
-        int renderWidth = Math.max(1, Math.round(scaledWidth));
-        int renderHeight = Math.max(1, Math.round(scaledHeight));
-
         GuiComponent.blit(poseStack, 0, 0,
                         0, 0,
-                        renderWidth, renderHeight,
+                        NEEDLE_WIDTH, NEEDLE_HEIGHT,
                         NEEDLE_WIDTH, NEEDLE_HEIGHT);
 
         // 恢复渲染状态
@@ -218,14 +187,14 @@ public class CTCSOverlay {
     /**
      * 渲染速度文本
      */
-    private void renderSpeedText(PoseStack poseStack, int x, int y, float scale, float speedKmh) {
+    private void renderSpeedText(PoseStack poseStack, int x, int y, float speedKmh) {
         Minecraft mc = Minecraft.getInstance();
         String speedText = String.format("%.1f km/h", speedKmh);
 
         // 计算文本位置（表盘下方居中）
         int textWidth = mc.font.width(speedText);
-        int textX = x + (int)((DIAL_WIDTH * scale) / 2) - (textWidth / 2);
-        int textY = y + (int)(DIAL_HEIGHT * scale) + 5;
+        int textX = x + (DIAL_WIDTH / 2) - (textWidth / 2);
+        int textY = y + DIAL_HEIGHT + 5;
 
         // 渲染带阴影的文本
         poseStack.pushPose();

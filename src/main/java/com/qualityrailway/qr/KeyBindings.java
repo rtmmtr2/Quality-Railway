@@ -20,8 +20,9 @@ public class KeyBindings {
             "category.qr.horns"
     );
 
-    public static final KeyMapping TOGGLE_CTCS_KEY = new KeyMapping(
-            "key.qr.toggle_ctcs",
+    // 启用/禁用CTCS功能
+    public static final KeyMapping ENABLE_DISABLE_CTCS_KEY = new KeyMapping(
+            "key.qr.enable_disable_ctcs",
             GLFW.GLFW_KEY_C,
             "category.qr.ctcs"
     );
@@ -29,19 +30,11 @@ public class KeyBindings {
     public static void register(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             net.minecraft.client.Minecraft.getInstance().options.keyMappings =
-                    org.apache.commons.lang3.ArrayUtils.add(
+                    org.apache.commons.lang3.ArrayUtils.addAll(
                             net.minecraft.client.Minecraft.getInstance().options.keyMappings,
-                            HIGH_HORN_KEY
-                    );
-            net.minecraft.client.Minecraft.getInstance().options.keyMappings =
-                    org.apache.commons.lang3.ArrayUtils.add(
-                            net.minecraft.client.Minecraft.getInstance().options.keyMappings,
-                            LOW_HORN_KEY
-                    );
-            net.minecraft.client.Minecraft.getInstance().options.keyMappings =
-                    org.apache.commons.lang3.ArrayUtils.add(
-                            net.minecraft.client.Minecraft.getInstance().options.keyMappings,
-                            TOGGLE_CTCS_KEY
+                            HIGH_HORN_KEY,
+                            LOW_HORN_KEY,
+                            ENABLE_DISABLE_CTCS_KEY
                     );
         });
     }

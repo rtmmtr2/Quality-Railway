@@ -161,8 +161,7 @@
   "qr.screen.advanced_sign.save": "Save",
   "qr.screen.advanced_sign.cancel": "Cancel",
 
-
-  "key.qr.toggle_ctcs": "Toggle CTCS",
+  "key.qr.enable_disable_ctcs": "Enable/Disable CTCS",
   "category.qr.ctcs": "Quality Railway CTCS",
   "gui.qr.ctcs.speed": "Speed: %.1f km/h",
   "config.qr.ctcs.enabled": "Enable CTCS",

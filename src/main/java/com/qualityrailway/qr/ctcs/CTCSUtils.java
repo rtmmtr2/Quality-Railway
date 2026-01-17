@@ -47,7 +47,7 @@ public class CTCSUtils {
      * 160km/h = 165度
      * 线性关系：角度 = (速度 - 80) * (155/80)
      *
-     * 修正：指针整体向逆时针偏转了5度，需要顺时针修正5度
+     *
      */
     public static float calculateNeedleRotation(float speedKmh) {
         // 新的线性关系：从(-155, 0)到(155, 160)
@@ -62,8 +62,8 @@ public class CTCSUtils {
         // 计算基础角度
         float rotation = -155.0f + (clampedSpeed * 310.0f / 160.0f);
 
-        // 修正指针偏转：整体逆时针偏转10度，需要顺时针修正10度
-        rotation += 10.0f;
+        // 修正指针偏转：需要顺时针修正7度
+        rotation += 7.0f;
 
         return rotation;
     }
