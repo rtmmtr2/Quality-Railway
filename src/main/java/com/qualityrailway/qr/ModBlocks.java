@@ -1,5 +1,6 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.blocks.signals.ChinaHighspeedSignalBlock;
 import com.qualityrailway.qr.blocks.tools.AdvancedSignBlock;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
@@ -472,6 +473,13 @@ public class ModBlocks {
                     () -> new AdvancedSignBlock(BlockBehaviour.Properties.of(Material.WOOD)
                             .strength(1.0f, 3.0f)
                             .noOcclusion()));
+
+    public static final RegistryObject<Block> CHINA_HIGHSPEED_SIGNAL = BLOCKS.register("china_highspeed_signal",
+            () -> new ChinaHighspeedSignalBlock(Block.Properties.of(Material.METAL)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+                    .lightLevel(state -> state.getValue(ChinaHighspeedSignalBlock.LIT) ? 7 : 0)));
 
     public static void registerInteractionBehaviours() {
         MovingInteractionBehaviour trainDoorInteraction = new TrainDoorInteraction();

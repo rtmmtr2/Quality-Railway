@@ -57,9 +57,13 @@ public class qr {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_SIGN.get(), RenderType.translucent());
             MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHINA_HIGHSPEED_SIGNAL.get(), RenderType.translucent());
             // 注册方块实体渲染器
             BlockEntityRenderers.register(ModBlockEntities.ADVANCED_SIGN.get(),
                     AdvancedSignRenderer::new);
+
+            BlockEntityRenderers.register(ModBlockEntities.CHINA_HIGHSPEED_SIGNAL.get(),
+                    ChinaHighspeedSignalRenderer::new);
 
             // 注册CTCS界面 - 使用单例
             MinecraftForge.EVENT_BUS.register(CTCSOverlay.getInstance());

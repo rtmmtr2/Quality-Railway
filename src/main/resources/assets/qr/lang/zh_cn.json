@@ -164,11 +164,7 @@
   "key.qr.enable_disable_ctcs": "启用/禁用CTCS",
   "category.qr.ctcs": "品质铁路CTCS",
   "gui.qr.ctcs.speed": "速度: %.1f km/h",
-  "config.qr.ctcs.enabled": "启用CTCS",
-  "config.qr.ctcs.autoShow": "驾驶时自动显示",
-  "config.qr.ctcs.guiX": "CTCS X轴位置",
-  "config.qr.ctcs.guiY": "CTCS Y轴位置",
-  "config.qr.ctcs.scale": "CTCS缩放比例",
+
 
   "itemGroup.trains": "铁路车辆",
   "itemGroup.railway_tools": "铁路工具",

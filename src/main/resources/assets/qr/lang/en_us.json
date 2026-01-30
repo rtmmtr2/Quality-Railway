@@ -164,11 +164,7 @@
   "key.qr.enable_disable_ctcs": "Enable/Disable CTCS",
   "category.qr.ctcs": "Quality Railway CTCS",
   "gui.qr.ctcs.speed": "Speed: %.1f km/h",
-  "config.qr.ctcs.enabled": "Enable CTCS",
-  "config.qr.ctcs.autoShow": "Auto Show When Driving",
-  "config.qr.ctcs.guiX": "CTCS X Position",
-  "config.qr.ctcs.guiY": "CTCS Y Position",
-  "config.qr.ctcs.scale": "CTCS Scale",
+
 
   "itemGroup.trains": "Trains",
   "itemGroup.railway_tools": "Railway Tools",
