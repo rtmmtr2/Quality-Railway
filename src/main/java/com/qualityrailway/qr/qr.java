@@ -67,6 +67,9 @@ public class qr {
 
             // 注册CTCS界面 - 使用单例
             MinecraftForge.EVENT_BUS.register(CTCSOverlay.getInstance());
+
+            // 注册轨道目标渲染器
+            MinecraftForge.EVENT_BUS.register(com.qualityrailway.qr.renderer.TrackTargetingRenderer.class);
         });
         LOGGER.info("Client setup complete");
     }
