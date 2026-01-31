@@ -6,6 +6,7 @@ import com.simibubi.create.content.trains.signal.SignalEdgeGroup;
 import com.simibubi.create.foundation.utility.Couple;
 import com.simibubi.create.foundation.utility.Iterate;
 import com.simibubi.create.foundation.utility.Pair;
+
 import java.util.*;
 
 public class ChinaHighspeedSignalPropagator {
@@ -78,9 +79,9 @@ public class ChinaHighspeedSignalPropagator {
     }
 
     private static void walkSignals(TrackGraph graph, ChinaHighspeedSignalBoundary signal, boolean front,
-                                    java.util.function.Predicate<Pair<TrackNode, ChinaHighspeedSignalBoundary>> boundaryCallback,
-                                    com.google.common.base.Predicate<EdgeData> nonBoundaryCallback,
-                                    boolean forCollection) {
+                                   java.util.function.Predicate<Pair<TrackNode, ChinaHighspeedSignalBoundary>> boundaryCallback,
+                                   com.google.common.base.Predicate<EdgeData> nonBoundaryCallback,
+                                   boolean forCollection) {
         // Implementation similar to SignalPropagator
         // This is a simplified version - you may need to adapt from Create's SignalPropagator
     }

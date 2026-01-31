@@ -8,19 +8,35 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class AdvancedSignRenderer implements BlockEntityRenderer<AdvancedSignBlockEntity> {
     
+    private static final Logger LOGGER = LogManager.getLogger(AdvancedSignRenderer.class);
     private final Font font;
     
     public AdvancedSignRenderer(BlockEntityRendererProvider.Context context) {
         this.font = context.getFont();
+        LOGGER.info("AdvancedSignRenderer 创建完成");
     }
     
     @Override
     public void render(AdvancedSignBlockEntity blockEntity, float partialTick, PoseStack poseStack,
                       MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
-        
+        // 第12行：添加保护性检查
+        if (blockEntity == null) {
+            LOGGER.warn("AdvancedSignRenderer 接收到 null 方块实体");
+            return;
+        }
+
+        // 额外的类型安全检查
+        if (!(blockEntity instanceof AdvancedSignBlockEntity)) {
+            LOGGER.error("AdvancedSignRenderer 接收到错误类型的方块实体: {}，期望: AdvancedSignBlockEntity",
+                        blockEntity.getClass().getName());
+            return;
+        }
+
         String text = blockEntity.getText();
         if (text == null || text.isEmpty()) {
             return;

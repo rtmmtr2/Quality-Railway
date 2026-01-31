@@ -446,10 +446,13 @@ public static final RegistryObject<Item> ArriveGateBlockRight = ITEMS.register("
             () -> new BlockItem(ModBlocks.TRAIN_SEAT.get(),
                     new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
-    public static final RegistryObject<Item> ADVANCED_SIGN =
-            ITEMS.register("advanced_sign",
+    public static final RegistryObject<Item> ADVANCED_SIGN = ITEMS.register("advanced_sign",
                     () -> new BlockItem(ModBlocks.ADVANCED_SIGN.get(),
                             new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
+    public static final RegistryObject<Item> CHINA_HIGHSPEED_SIGNAL = ITEMS.register("china_highspeed_signal",
+            () -> new BlockItem(ModBlocks.CHINA_HIGHSPEED_SIGNAL.get(),
+                    new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
 }
 

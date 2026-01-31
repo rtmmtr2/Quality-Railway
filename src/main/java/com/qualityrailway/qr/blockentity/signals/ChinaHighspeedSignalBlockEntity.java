@@ -1,10 +1,10 @@
 package com.qualityrailway.qr.blockentity.signals;
 
+import com.qualityrailway.qr.ModBlockEntities;
 import com.qualityrailway.qr.blocks.signals.ChinaHighspeedSignalBlock;
 import com.qualityrailway.qr.signals.SignalStates;
 import com.qualityrailway.qr.signals.SignalTypes;
 import com.qualityrailway.qr.boundary.ChinaHighspeedSignalBoundary;
-import com.qualityrailway.qr.boundary.ChinaHighspeedSignalBoundary.OverlayState;
 import com.simibubi.create.content.contraptions.StructureTransform;
 import com.simibubi.create.content.trains.graph.EdgePointType;
 import com.simibubi.create.content.trains.signal.SignalBlockEntity;
@@ -13,21 +13,18 @@ import com.simibubi.create.content.trains.track.TrackTargetingBehaviour;
 import com.simibubi.create.foundation.utility.NBTHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
 public class ChinaHighspeedSignalBlockEntity extends SignalBlockEntity {
 
-    private SignalStates customState;
-    private OverlayState customOverlay;
+    private SignalStates customState = SignalStates.INVALID;
+    private SignalBlockEntity.OverlayState customOverlay = SignalBlockEntity.OverlayState.SKIP;
     private String signalModel = "default";
 
-    public ChinaHighspeedSignalBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
-        super(type, pos, state);
-        this.customState = SignalStates.INVALID;
-        this.customOverlay = OverlayState.SKIP;
+    public ChinaHighspeedSignalBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.CHINA_HIGHSPEED_SIGNAL.get(), pos, state);
     }
 
     @Override
@@ -42,10 +39,11 @@ public class ChinaHighspeedSignalBlockEntity extends SignalBlockEntity {
     protected void read(CompoundTag tag, boolean clientPacket) {
         super.read(tag, clientPacket);
         customState = NBTHelper.readEnum(tag, "CustomState", SignalStates.class);
-        customOverlay = NBTHelper.readEnum(tag, "CustomOverlay", OverlayState.class);
+        customOverlay = NBTHelper.readEnum(tag, "CustomOverlay", SignalBlockEntity.OverlayState.class);
         signalModel = tag.getString("SignalModel");
-        if (signalModel.isEmpty()) signalModel = "default";
-        invalidateRenderBoundingBox();
+        if (signalModel.isEmpty()) {
+            signalModel = "default";
+        }
     }
 
     public ChinaHighspeedSignalBoundary getCustomSignal() {
@@ -57,7 +55,7 @@ public class ChinaHighspeedSignalBlockEntity extends SignalBlockEntity {
         return customState;
     }
 
-    public OverlayState getCustomOverlay() {
+    public SignalBlockEntity.OverlayState getCustomOverlay() {
         return customOverlay;
     }
 
@@ -72,7 +70,6 @@ public class ChinaHighspeedSignalBlockEntity extends SignalBlockEntity {
 
     @Override
     public void addBehaviours(List<com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour> behaviours) {
-        // 创建自定义的TrackTargetingBehaviour来返回ChinaHighspeedSignalBoundary
         edgePoint = new TrackTargetingBehaviour<SignalBoundary>(this, EdgePointType.SIGNAL) {
             @Override
             public SignalBoundary createEdgePoint() {
@@ -85,55 +82,74 @@ public class ChinaHighspeedSignalBlockEntity extends SignalBlockEntity {
     @Override
     public void tick() {
         super.tick();
-        if (level.isClientSide)
+        if (level.isClientSide) {
             return;
+        }
 
         ChinaHighspeedSignalBoundary boundary = getCustomSignal();
         if (boundary == null) {
-            setCustomState(SignalStates.INVALID);
-            setCustomOverlay(OverlayState.RENDER);
+            customState = SignalStates.INVALID;
+            customOverlay = SignalBlockEntity.OverlayState.RENDER;
+            // 更新BlockState到红灯
+            ChinaHighspeedSignalBlock.updateLightState(level, worldPosition, customState);
             return;
         }
 
         BlockState blockState = getBlockState();
 
-        blockState.getOptionalValue(ChinaHighspeedSignalBlock.POWERED).ifPresent(powered -> {
-            boolean lastReportedPower = getReportedPower();
-            if (lastReportedPower == powered)
-                return;
+        // 检查红石信号变化
+        boolean powered = blockState.getValue(ChinaHighspeedSignalBlock.POWERED);
+        boolean lastReportedPower = getReportedPower();
+        if (lastReportedPower != powered) {
             boundary.updateBlockEntityPower(this);
             notifyUpdate();
-        });
+        }
 
-        blockState.getOptionalValue(ChinaHighspeedSignalBlock.TYPE)
-                .ifPresent(stateType -> {
-                    SignalTypes targetType = boundary.getCustomTypeFor(worldPosition);
-                    if (stateType != targetType) {
-                        level.setBlock(worldPosition, blockState.setValue(ChinaHighspeedSignalBlock.TYPE, targetType), 3);
-                        refreshBlockState();
-                    }
-                });
+        // 检查信号类型是否需要更新
+        SignalTypes currentType = blockState.getValue(ChinaHighspeedSignalBlock.TYPE);
+        SignalTypes targetType = boundary.getCustomTypeFor(worldPosition);
+        if (currentType != targetType) {
+            level.setBlock(worldPosition, blockState.setValue(ChinaHighspeedSignalBlock.TYPE, targetType), 3);
+        }
 
-        setCustomState(boundary.getCustomStateFor(worldPosition));
-        setCustomOverlay(boundary.getCustomOverlayFor(worldPosition));
+        // 获取中国高铁信号状态
+        SignalStates newState = boundary.getCustomStateFor(worldPosition);
+        if (customState != newState) {
+            customState = newState;
+            // 更新BlockState中的灯光状态
+            ChinaHighspeedSignalBlock.updateLightState(level, worldPosition, customState);
+            notifyUpdate();
+        }
+
+        // 获取覆盖状态
+        SignalBlockEntity.OverlayState overlay = boundary.getOverlayFor(worldPosition);
+        if (customOverlay != overlay) {
+            customOverlay = overlay;
+            notifyUpdate();
+        }
     }
 
     public void setCustomState(SignalStates state) {
-        if (this.customState == state)
+        if (this.customState == state) {
             return;
+        }
         this.customState = state;
+        ChinaHighspeedSignalBlock.updateLightState(level, worldPosition, state);
         notifyUpdate();
     }
 
-    public void setCustomOverlay(OverlayState overlay) {
-        if (this.customOverlay == overlay)
+    public void setCustomOverlay(SignalBlockEntity.OverlayState overlay) {
+        if (this.customOverlay == overlay) {
             return;
+        }
         this.customOverlay = overlay;
         notifyUpdate();
     }
 
     @Override
     public void transform(StructureTransform transform) {
-        edgePoint.transform(transform);
+        if (edgePoint != null) {
+            edgePoint.transform(transform);
+        }
     }
 }

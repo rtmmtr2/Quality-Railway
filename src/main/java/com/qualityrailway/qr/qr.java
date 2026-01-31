@@ -56,8 +56,8 @@ public class qr {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ArriveGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_SIGN.get(), RenderType.translucent());
-            MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHINA_HIGHSPEED_SIGNAL.get(), RenderType.translucent());
+            MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
             // 注册方块实体渲染器
             BlockEntityRenderers.register(ModBlockEntities.ADVANCED_SIGN.get(),
                     AdvancedSignRenderer::new);

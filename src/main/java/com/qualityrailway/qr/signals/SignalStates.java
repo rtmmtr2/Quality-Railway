@@ -23,7 +23,7 @@ public enum SignalStates implements StringRepresentable {
     }
 
     public boolean isRedLight(float renderTime) {
-        return this == RED || this == INVALID && renderTime % 40 < 3;
+        return this == RED || (this == INVALID && renderTime % 40 < 3);
     }
 
     public boolean isYellowLight(float renderTime) {

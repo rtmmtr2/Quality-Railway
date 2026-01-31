@@ -1,6 +1,5 @@
 package com.qualityrailway.qr.blocks.signals;
 
-import com.qualityrailway.qr.boundary.ChinaHighspeedSignalBoundary;
 import com.qualityrailway.qr.signals.SignalTypes;
 import com.qualityrailway.qr.blockentity.signals.ChinaHighspeedSignalBlockEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
@@ -22,37 +21,36 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nullable;
 import java.util.Random;
 
 public class ChinaHighspeedSignalBlock extends Block implements IBE<ChinaHighspeedSignalBlockEntity>, IWrenchable {
 
+    private static final Logger LOGGER = LogManager.getLogger(ChinaHighspeedSignalBlock.class);
+
     public static final EnumProperty<SignalTypes> TYPE = EnumProperty.create("type", SignalTypes.class);
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
+    // 灯光状态属性（0-5对应不同的灯光组合）
+    public static final IntegerProperty LIGHT_STATE = IntegerProperty.create("light_state", 0, 5);
+
     public ChinaHighspeedSignalBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState()
+        this.registerDefaultState(this.stateDefinition.any()
                 .setValue(TYPE, SignalTypes.CHINA_HIGHSPEED_SIGNAL)
                 .setValue(POWERED, false)
-                .setValue(LIT, true));
-    }
-
-    @Override
-    public Class<ChinaHighspeedSignalBlockEntity> getBlockEntityClass() {
-        return ChinaHighspeedSignalBlockEntity.class;
+                .setValue(LIT, true)
+                .setValue(LIGHT_STATE, 0));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        super.createBlockStateDefinition(builder.add(TYPE, POWERED, LIT));
-    }
-
-    @Override
-    public boolean shouldCheckWeakPower(BlockState state, LevelReader world, BlockPos pos, Direction side) {
-        return false;
+        builder.add(TYPE, POWERED, LIT, LIGHT_STATE);
     }
 
     @Nullable
@@ -60,16 +58,19 @@ public class ChinaHighspeedSignalBlock extends Block implements IBE<ChinaHighspe
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
                 .setValue(POWERED, context.getLevel().hasNeighborSignal(context.getClickedPos()))
-                .setValue(LIT, true);
+                .setValue(LIT, true)
+                .setValue(LIGHT_STATE, 0);
     }
 
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
-        if (level.isClientSide)
+        if (level.isClientSide) {
             return;
+        }
         boolean powered = state.getValue(POWERED);
-        if (powered == level.hasNeighborSignal(pos))
+        if (powered == level.hasNeighborSignal(pos)) {
             return;
+        }
         if (powered) {
             level.scheduleTick(pos, this, 4);
         } else {
@@ -79,13 +80,14 @@ public class ChinaHighspeedSignalBlock extends Block implements IBE<ChinaHighspe
 
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
-        if (state.getValue(POWERED) && !level.hasNeighborSignal(pos))
+        if (state.getValue(POWERED) && !level.hasNeighborSignal(pos)) {
             level.setBlock(pos, state.cycle(POWERED), 2);
+        }
     }
 
     @Override
-    public void onRemove(BlockState state, Level worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-        IBE.onRemove(state, worldIn, pos, newState);
+    public Class<ChinaHighspeedSignalBlockEntity> getBlockEntityClass() {
+        return ChinaHighspeedSignalBlockEntity.class;
     }
 
     @Override
@@ -94,24 +96,8 @@ public class ChinaHighspeedSignalBlock extends Block implements IBE<ChinaHighspe
     }
 
     @Override
-    public InteractionResult onWrenched(BlockState state, UseOnContext context) {
-        Level level = context.getLevel();
-        BlockPos pos = context.getClickedPos();
-        if (level.isClientSide)
-            return InteractionResult.SUCCESS;
-
-        withBlockEntityDo(level, pos, ste -> {
-            ChinaHighspeedSignalBoundary signal = ste.getSignal();
-            Player player = context.getPlayer();
-            if (signal != null) {
-                signal.cycleSignalType(pos);
-                if (player != null)
-                    player.displayClientMessage(Lang.translateDirect("track_signal.mode_change." +
-                            signal.getTypeFor(pos).getSerializedName()), true);
-            } else if (player != null)
-                player.displayClientMessage(Lang.translateDirect("track_signal.cannot_change_mode"), true);
-        });
-        return InteractionResult.SUCCESS;
+    public boolean shouldCheckWeakPower(BlockState state, LevelReader world, BlockPos pos, Direction side) {
+        return false;
     }
 
     @Override
@@ -122,8 +108,79 @@ public class ChinaHighspeedSignalBlock extends Block implements IBE<ChinaHighspe
     @Override
     public int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
         return getBlockEntityOptional(level, pos)
-                .filter(ChinaHighspeedSignalBlockEntity::isPowered)
-                .map($ -> 15)
+                .map(ChinaHighspeedSignalBlockEntity::isPowered)
+                .map(powered -> powered ? 15 : 0)
                 .orElse(0);
+    }
+
+    @Override
+    public InteractionResult onWrenched(BlockState state, UseOnContext context) {
+        Level level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        Player player = context.getPlayer();
+
+        if (level.isClientSide) {
+            return InteractionResult.SUCCESS;
+        }
+
+        withBlockEntityDo(level, pos, be -> {
+            if (be != null) {
+                SignalTypes currentType = state.getValue(TYPE);
+                SignalTypes[] values = SignalTypes.values();
+                int nextIndex = (currentType.ordinal() + 1) % values.length;
+                SignalTypes newType = values[nextIndex];
+
+                level.setBlock(pos, state.setValue(TYPE, newType), 3);
+
+                if (player != null) {
+                    player.displayClientMessage(
+                        Lang.translateDirect("track_signal.mode_change." + newType.getSerializedName()),
+                        true
+                    );
+                }
+            }
+        });
+
+        return InteractionResult.SUCCESS;
+    }
+
+    // 根据SignalStates获取对应的BlockState值
+    public static int getLightStateFromSignalState(com.qualityrailway.qr.signals.SignalStates state) {
+        switch (state) {
+            case RED:
+                return 0; // 红灯
+            case YELLOW:
+                return 1; // 黄灯
+            case GREEN:
+                return 2; // 绿灯
+            case GREEN_YELLOW:
+                return 3; // 绿黄灯
+            case YELLOW_YELLOW:
+                return 4; // 双黄灯
+            case WHITE:
+                return 5; // 白灯
+            case INVALID:
+            default:
+                return 0; // 无效时显示红灯
+        }
+    }
+
+    // 更新BlockState中的灯光状态（可以被SignalBoundary调用）
+    public static void updateLightState(Level level, BlockPos pos, com.qualityrailway.qr.signals.SignalStates state) {
+        if (level == null || level.isClientSide) {
+            return;
+        }
+
+        BlockState currentState = level.getBlockState(pos);
+        if (currentState.hasProperty(LIGHT_STATE)) {
+            int newLightState = getLightStateFromSignalState(state);
+            int currentLightState = currentState.getValue(LIGHT_STATE);
+
+            if (newLightState != currentLightState) {
+                level.setBlock(pos, currentState.setValue(LIGHT_STATE, newLightState), 3);
+                LOGGER.debug("更新信号机灯光状态: {} -> {} 在位置 {}",
+                    currentLightState, newLightState, pos);
+            }
+        }
     }
 }

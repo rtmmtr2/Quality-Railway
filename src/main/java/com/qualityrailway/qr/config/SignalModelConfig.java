@@ -52,15 +52,28 @@ public class SignalModelConfig extends SimplePreparableReloadListener<Map<String
         String path = "signal_models";
 
         for (ResourceLocation resourceLocation : resourceManager.listResources(path,
-                loc -> loc.getPath().endsWith(".json"))) {
+                loc -> {
+                    // 使用 toString() 然后检查后缀
+                    String pathStr = loc.toString();
+                    return pathStr.endsWith(".json") || pathStr.contains(".json");
+                })) {
             try {
                 Resource resource = resourceManager.getResource(resourceLocation);
                 try (InputStream inputStream = resource.getInputStream();
                      BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
 
                     JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
-                    // 修复 getPath() 调用 - 使用字符串操作提取模型名称
-                    String fullPath = resourceLocation.getPath(); // 这是正确的方法名
+                    
+                    // 备选：使用 toString() 并移除命名空间
+                    String fullString = resourceLocation.toString();
+                    // ResourceLocation 的 toString() 格式为 "namespace:path"
+                    String fullPath;
+                    if (fullString.contains(":")) {
+                        fullPath = fullString.substring(fullString.indexOf(':') + 1);
+                    } else {
+                        fullPath = fullString;
+                    }
+                    
                     String modelName = extractModelName(fullPath, path);
                     configs.put(modelName, json);
 

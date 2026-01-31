@@ -5,10 +5,7 @@ import com.qualityrailway.qr.signals.SignalStates;
 import com.qualityrailway.qr.signals.SignalTypes;
 import com.google.common.base.Objects;
 import com.simibubi.create.Create;
-import com.simibubi.create.content.trains.graph.DimensionPalette;
-import com.simibubi.create.content.trains.graph.EdgePointType;
-import com.simibubi.create.content.trains.graph.TrackGraph;
-import com.simibubi.create.content.trains.graph.TrackNode;
+import com.simibubi.create.content.trains.graph.*;
 import com.simibubi.create.content.trains.signal.SignalEdgeGroup;
 import com.simibubi.create.foundation.utility.Couple;
 import com.simibubi.create.foundation.utility.Iterate;
@@ -18,8 +15,14 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import com.qualityrailway.qr.blocks.signals.ChinaHighspeedSignalBlock;
+import net.minecraftforge.server.ServerLifecycleHooks;
 
 import java.util.*;
 import java.util.Map.Entry;
@@ -39,6 +42,9 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
     private Couple<Map<UUID, Boolean>> chainedSignals;
     private Map<UUID, List<UUID>> rearSignalGroupsCache;
 
+    // 缓存维度信息
+    private ResourceKey<Level> cachedDimension;
+
     public ChinaHighspeedSignalBoundary() {
         blockEntities = Couple.create(HashMap::new);
         chainedSignals = Couple.create(null, null);
@@ -47,6 +53,7 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
         types = Couple.create(() -> SignalTypes.CHINA_HIGHSPEED_SIGNAL);
         cachedStates = Couple.create(() -> SignalStates.INVALID);
         rearSignalGroupsCache = new HashMap<>();
+        cachedDimension = null; // 初始化为null
     }
 
     public void setGroup(boolean primary, UUID groupId) {
@@ -101,6 +108,7 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
 
     @Override
     public void blockEntityAdded(BlockEntity blockEntity, boolean front) {
+        // 首先调用父类方法
         Map<BlockPos, Boolean> blockEntitiesOnSide = blockEntities.get(front);
         if (blockEntitiesOnSide.isEmpty())
             blockEntity.getBlockState()
@@ -108,6 +116,11 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
                     .ifPresent(type -> types.set(front, type));
         blockEntitiesOnSide.put(blockEntity.getBlockPos(),
                 blockEntity instanceof ChinaHighspeedSignalBlockEntity ste && ste.getReportedPower());
+
+        // 保存维度信息
+        if (blockEntity.getLevel() != null) {
+            cachedDimension = blockEntity.getLevel().dimension();
+        }
     }
 
     public void updateBlockEntityPower(ChinaHighspeedSignalBlockEntity blockEntity) {
@@ -144,7 +157,7 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
         return !blockEntities.get(isPrimary(side)).isEmpty();
     }
 
-    // Renamed methods to avoid conflicts
+    // 重命名方法以避免冲突
     public OverlayState getCustomOverlayFor(BlockPos blockEntity) {
         for (boolean first : Iterate.trueAndFalse) {
             Map<BlockPos, Boolean> set = blockEntities.get(first);
@@ -157,17 +170,42 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
         return OverlayState.SKIP;
     }
 
-    // Renamed methods to avoid conflicts
+    public com.simibubi.create.content.trains.signal.SignalBlockEntity.OverlayState getOverlayFor(BlockPos blockEntity) {
+        OverlayState customOverlay = getCustomOverlayFor(blockEntity);
+        // 将我们的OverlayState转换为Create的OverlayState
+        switch (customOverlay) {
+            case RENDER:
+                return com.simibubi.create.content.trains.signal.SignalBlockEntity.OverlayState.RENDER;
+            case SKIP:
+                return com.simibubi.create.content.trains.signal.SignalBlockEntity.OverlayState.SKIP;
+            case DUAL:
+                return com.simibubi.create.content.trains.signal.SignalBlockEntity.OverlayState.DUAL;
+            default:
+                return com.simibubi.create.content.trains.signal.SignalBlockEntity.OverlayState.SKIP;
+        }
+    }
+
+    // 重命名方法以避免冲突
     public SignalTypes getCustomTypeFor(BlockPos blockEntity) {
         return types.get(blockEntities.getFirst().containsKey(blockEntity));
     }
 
-    // Renamed methods to avoid conflicts
+    // 重命名方法以避免冲突
     public SignalStates getCustomStateFor(BlockPos blockEntity) {
         for (boolean first : Iterate.trueAndFalse) {
             Map<BlockPos, Boolean> set = blockEntities.get(first);
             if (set.containsKey(blockEntity))
                 return cachedStates.get(first);
+        }
+        return SignalStates.INVALID;
+    }
+
+    // 添加辅助方法供方块实体查询状态
+    public SignalStates getStateForBlockEntity(BlockPos pos) {
+        for (boolean first : Iterate.trueAndFalse) {
+            if (blockEntities.get(first).containsKey(pos)) {
+                return cachedStates.get(first);
+            }
         }
         return SignalStates.INVALID;
     }
@@ -190,6 +228,14 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
     }
 
     private void tickState(TrackGraph graph) {
+        // 如果还没有缓存维度，尝试从 graph 获取
+        if (cachedDimension == null) {
+            cachedDimension = getGraphDimension(graph);
+            if (cachedDimension == null) {
+                return; // 无法获取维度，跳过更新
+            }
+        }
+
         for (boolean current : Iterate.trueAndFalse) {
             Map<BlockPos, Boolean> set = blockEntities.get(current);
             if (set.isEmpty())
@@ -211,12 +257,55 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
             }
 
             boolean occupiedUnlessBySelf = forcedRed || signalEdgeGroup.isOccupiedUnless(this);
+            SignalStates finalState;
             if (occupiedUnlessBySelf) {
-                cachedStates.set(current, SignalStates.RED);
+                finalState = SignalStates.RED;
             } else {
-                cachedStates.set(current, resolveChinaHighspeedSignal(graph, current));
+                finalState = resolveChinaHighspeedSignal(graph, current);
+            }
+
+            // 缓存状态
+            cachedStates.set(current, finalState);
+
+            // 更新方块状态
+            updateBlockStatesForSet(set, finalState);
+        }
+    }
+
+    private void updateBlockStatesForSet(Map<BlockPos, Boolean> set, SignalStates state) {
+        if (cachedDimension == null) {
+            return;
+        }
+
+        // 获取服务器实例
+        MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+        if (server == null) {
+            // 可能是客户端或单机游戏的客户端，不更新方块状态
+            return;
+        }
+
+        // 获取对应的维度
+        ServerLevel level = server.getLevel(cachedDimension);
+        if (level == null) {
+            return;
+        }
+
+        for (BlockPos pos : set.keySet()) {
+            if (level.isLoaded(pos)) {
+                ChinaHighspeedSignalBlock.updateLightState(level, pos, state);
             }
         }
+    }
+
+    private ResourceKey<Level> getGraphDimension(TrackGraph graph) {
+        // 使用公共方法 getNodes() 获取节点位置
+        Set<TrackNodeLocation> nodeLocations = graph.getNodes();
+        if (nodeLocations.isEmpty()) {
+            return null;
+        }
+        // 获取第一个节点的维度
+        TrackNodeLocation firstLocation = nodeLocations.iterator().next();
+        return firstLocation.dimension;
     }
 
     private SignalStates resolveChinaHighspeedSignal(TrackGraph graph, boolean side) {
@@ -466,15 +555,6 @@ public class ChinaHighspeedSignalBoundary extends com.simibubi.create.content.tr
             types.set(i == 1, NBTHelper.readEnum(nbt, "Type" + i, SignalTypes.class));
         for (int i = 1; i <= 2; i++)
             cachedStates.set(i == 1, NBTHelper.readEnum(nbt, "State" + i, SignalStates.class));
-    }
-
-    @Override
-    public void read(FriendlyByteBuf buffer, DimensionPalette dimensions) {
-        super.read(buffer, dimensions);
-        for (int i = 1; i <= 2; i++) {
-            if (buffer.readBoolean())
-                groups.set(i == 1, buffer.readUUID());
-        }
     }
 
     @Override
