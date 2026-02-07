@@ -450,9 +450,8 @@ public static final RegistryObject<Item> ArriveGateBlockRight = ITEMS.register("
                     () -> new BlockItem(ModBlocks.ADVANCED_SIGN.get(),
                             new Item.Properties().tab(ModCreativeTab.railway_tools)));
 
-    public static final RegistryObject<Item> CHINA_HIGHSPEED_SIGNAL = ITEMS.register("china_highspeed_signal",
-            () -> new ChinaHighspeedSignalItem(ModBlocks.CHINA_HIGHSPEED_SIGNAL.get(),
-                    new Item.Properties().tab(ModCreativeTab.railway_tools)));
+
+
 }
 
 

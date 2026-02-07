@@ -1,6 +1,7 @@
 package com.qualityrailway.qr;
 
 import com.qualityrailway.qr.ctcs.CTCSOverlay;
+import com.qualityrailway.qr.ctcs.SignalUpdateHandler;
 import com.qualityrailway.qr.renderer.*;
 import com.qualityrailway.qr.screen.*;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -56,20 +57,18 @@ public class qr {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ArriveGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_SIGN.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHINA_HIGHSPEED_SIGNAL.get(), RenderType.translucent());
             MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
             // 注册方块实体渲染器
             BlockEntityRenderers.register(ModBlockEntities.ADVANCED_SIGN.get(),
                     AdvancedSignRenderer::new);
 
-            BlockEntityRenderers.register(ModBlockEntities.CHINA_HIGHSPEED_SIGNAL.get(),
-                    ChinaHighspeedSignalRenderer::new);
 
             // 注册CTCS界面 - 使用单例
             MinecraftForge.EVENT_BUS.register(CTCSOverlay.getInstance());
 
-            // 注册轨道目标渲染器
-            MinecraftForge.EVENT_BUS.register(com.qualityrailway.qr.renderer.TrackTargetingRenderer.class);
+            // 注册信号状态更新处理器
+            MinecraftForge.EVENT_BUS.register(SignalUpdateHandler.class);
+
         });
         LOGGER.info("Client setup complete");
     }

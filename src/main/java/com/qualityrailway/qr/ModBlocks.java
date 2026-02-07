@@ -1,12 +1,12 @@
 package com.qualityrailway.qr;
 
-import com.qualityrailway.qr.blocks.signals.ChinaHighspeedSignalBlock;
 import com.qualityrailway.qr.blocks.tools.AdvancedSignBlock;
 import com.simibubi.create.AllInteractionBehaviours;
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovingInteractionBehaviour;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -23,6 +23,7 @@ import com.qualityrailway.qr.interaction.*;
 import net.minecraft.world.level.block.Block;
 
 import net.minecraft.world.level.block.SoundType;
+import org.lwjgl.system.CallbackI;
 
 
 public class ModBlocks {
@@ -474,12 +475,7 @@ public class ModBlocks {
                             .strength(1.0f, 3.0f)
                             .noOcclusion()));
 
-    public static final RegistryObject<Block> CHINA_HIGHSPEED_SIGNAL = BLOCKS.register("china_highspeed_signal",
-            () -> new ChinaHighspeedSignalBlock(Block.Properties.of(Material.METAL)
-                    .strength(2.0F, 6.0F)
-                    .sound(SoundType.METAL)
-                    .noOcclusion()
-                    .lightLevel(state -> state.getValue(ChinaHighspeedSignalBlock.LIT) ? 7 : 0)));
+
 
     public static void registerInteractionBehaviours() {
         MovingInteractionBehaviour trainDoorInteraction = new TrainDoorInteraction();
