@@ -8,12 +8,20 @@ import com.simibubi.create.content.trains.signal.SignalBoundary;
 import com.simibubi.create.content.trains.graph.EdgePointType;
 import com.simibubi.create.content.trains.entity.TravellingPoint;
 import com.simibubi.create.content.trains.signal.SignalBlockEntity;
+import com.simibubi.create.content.trains.signal.SignalBlock.SignalType;
 import net.minecraft.util.Mth;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.nbt.CompoundTag;
 import org.apache.commons.lang3.mutable.MutableDouble;
 import org.apache.commons.lang3.mutable.MutableObject;
 import com.qualityrailway.qr.qr;
+import com.simibubi.create.foundation.utility.Couple;
 
 import javax.annotation.Nullable;
+import java.util.Map;
+import java.util.Iterator;
 
 public class CTCSUtils {
 
@@ -159,21 +167,54 @@ public class CTCSUtils {
                 // 确定接近方向
                 boolean isPrimary = signal.isPrimary(searchPoint.node1);
 
-                // 获取信号状态
+                qr.LOGGER.info("CTCSUtils: 找到信号边界 - ID: " + signal.getId() +
+                              ", 接近方向: " + (isPrimary ? "主方向" : "次方向"));
+
+                // 按照原版逻辑获取信号状态
                 SignalBlockEntity.SignalState state = signal.cachedStates.get(isPrimary);
+
+                qr.LOGGER.info("CTCSUtils: 从cachedStates获取状态: " + state);
 
                 // 检查是否强制红信号
                 if (signal.isForcedRed(isPrimary)) {
                     state = SignalBlockEntity.SignalState.RED;
+                    qr.LOGGER.info("CTCSUtils: 强制红信号，状态设置为RED");
                 }
 
+                // 获取信号类型
+                SignalType signalType = signal.types.get(isPrimary);
+
+                // 输出详细的信号机信息
+                qr.LOGGER.info("CTCSUtils: 信号机详细信息:");
+                qr.LOGGER.info("  - 信号机ID: " + signal.getId());
+                qr.LOGGER.info("  - 信号类型: " + signalType);
+                qr.LOGGER.info("  - 接近方向(isPrimary): " + isPrimary);
+                qr.LOGGER.info("  - cachedStates内容: " + signal.cachedStates);
+                qr.LOGGER.info("  - 最终状态: " + state);
+                qr.LOGGER.info("  - 距离: " + distance + "米");
+
+                // 如果状态为INVALID，尝试检查原因
+                if (state == SignalBlockEntity.SignalState.INVALID) {
+                    qr.LOGGER.info("CTCSUtils: 状态为INVALID，检查可能原因:");
+                    qr.LOGGER.info("  - blockEntities是否为空: " +
+                                  (signal.blockEntities.getFirst().isEmpty() && signal.blockEntities.getSecond().isEmpty()));
+
+                    // 尝试获取信号机位置进行进一步调试
+                    BlockPos signalPos = null;
+                    Map<BlockPos, Boolean> blockEntitiesOnSide = signal.blockEntities.get(isPrimary);
+                    if (blockEntitiesOnSide != null && !blockEntitiesOnSide.isEmpty()) {
+                        Iterator<BlockPos> iterator = blockEntitiesOnSide.keySet().iterator();
+                        if (iterator.hasNext()) {
+                            signalPos = iterator.next();
+                            qr.LOGGER.info("  - 信号机位置: " + signalPos);
+                        }
+                    }
+                }
+
+                // 记录找到的信号状态和距离
                 foundSignal.setValue(state);
                 signalDistance.setValue(distance);
 
-                qr.LOGGER.info("CTCSUtils: 找到信号机！状态=" + state +
-                              ", 距离=" + distance +
-                              ", isPrimary=" + isPrimary +
-                              ", 信号机ID=" + signal.getId());
                 return true; // 找到第一个信号后停止搜索
             }
             return false;
