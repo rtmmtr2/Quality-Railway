@@ -1,0 +1,23 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "SRR",
+    " T ",
+    "SSS"
+  ],
+  "key":{
+    "S":{
+      "item":"qr:steel_plate"
+    },
+    "R":{
+      "item":"minecraft:red_dye"
+    },
+    "T":{
+      "item":"minecraft:gray_dye"
+    }
+  },
+  "result":{
+    "item":"qr:df7g_floor_e",
+    "count":1
+  }
+}

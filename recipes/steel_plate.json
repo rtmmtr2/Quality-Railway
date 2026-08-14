@@ -1,0 +1,17 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    " S ",
+    "SSS",
+    " S "
+  ],
+  "key":{
+    "S":{
+      "item":"minecraft:iron_ingot"
+    }
+  },
+    "result":{
+        "item":"qr:steel_plate",
+        "count":1
+    }
+}
