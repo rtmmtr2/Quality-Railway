@@ -1,0 +1,10 @@
+# Made in Blockbench 5.1.6
+newmtl m_933881b7-fa04-7712-7fb2-ccc2eb763468
+map_Kd qr:block/track/standard/30kg/tie_formal/tie
+newmtl m_ac254da9-a380-37a4-2caf-1c7fb76949eb
+map_Kd qr:block/track/standard/30kg/tie_formal/segment_a
+newmtl m_1456f82e-7123-a53a-6b2f-c7e036ea5f7a
+map_Kd qr:block/track/standard/30kg/tie_formal/tie
+newmtl m_75cd9b76-e228-6f03-7fab-a71971b1b92d
+map_Kd qr:block/track/standard/30kg/tie_formal/segment
+newmtl none
