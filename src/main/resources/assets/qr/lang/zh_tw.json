@@ -129,6 +129,14 @@
   "block.qr.crh_emu_stop": "CRH 動車組停車位置",
   "block.qr.crh_fight_location": "CRH 打架位置",
 
+  "block.qr.track_standard_38kg": "中國鐵路 38kg/m 標準軌(1435mm)",
+  "block.qr.track_standard_43kg": "中國鐵路 43kg/m 標準軌(1435mm)",
+  "item.qr.incomplete_track_standard_38kg": "中國鐵路 38kg/m 標準軌(1435mm,半成品)",
+  "item.qr.incomplete_track_standard_43kg": "中國鐵路 43kg/m 標準軌(1435mm,半成品)",
+  "item.qr.segment_38kg": "38kg/m鋼軌",
+  "item.qr.segment_43kg": "43kg/m鋼軌",
+  "item.qr.concrete_tie": "混凝土枕木(標準)",
+
   "block.qr.arrive_gate_block_right": "出站閘機右側",
   "block.qr.depart_gate_block_right": "進站閘機右側",
   "block.qr.gate_block_left": "閘機左側",
@@ -140,9 +148,11 @@
   "tooltip.qr.red_ticket.description_2": "僅在生存模式下會被（出站閘機右側）回收",
 
 
-"itemGroup.trains": "鐵路車輛",
-  "itemGroup.railway_tools": "鐵路工具",
-  "itemGroup.signs": "鐵路標誌",
+  "itemGroup.qr.trains": "鐵路車輛",
+  "itemGroup.qr.railway_tools": "鐵路工具",
+  "itemGroup.qr.signs": "鐵路標誌",
+  "itemGroup.qr.tracks": "鐵路鐵轨",
+
   "key.qr.high_horn": "高音風笛",
   "key.qr.low_horn": "低音電笛",
   "category.qr.horns": "機車鳴笛"

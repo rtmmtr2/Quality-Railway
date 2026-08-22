@@ -1,0 +1,10 @@
+{
+	"loader": "forge:obj",
+	"model": "qr:models/block/track/standard/38kg/tie_formal/cross_ortho.obj",
+	"flip_v": true,
+	"shade_quads":true,
+	"textures": {
+      "m_7ee258cf-7969-cc86-30df-8d48c0dc3c63": "qr:block/track/standard/38kg/tie_formal/cross_ortho",
+      "particle": "qr:block/track/standard/38kg/tie_formal/ascending"
+    }
+}

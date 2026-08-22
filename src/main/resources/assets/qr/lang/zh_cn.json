@@ -135,6 +135,14 @@
   "block.qr.crh_emu_stop": "CRH 动车组停车位置",
   "block.qr.crh_fight_location": "CRH 打架位置",
 
+  "block.qr.track_standard_38kg": "中国铁路 38kg/m 标准轨(1435mm)",
+  "block.qr.track_standard_43kg": "中国铁路 43kg/m 标准轨(1435mm)",
+  "item.qr.incomplete_track_standard_38kg": "中国铁路 38kg/m 标准轨(1435mm,半成品)",
+  "item.qr.incomplete_track_standard_43kg": "中国铁路 43kg/m 标准轨(1435mm,半成品)",
+  "item.qr.segment_38kg": "38kg/m钢轨",
+  "item.qr.segment_43kg": "43kg/m钢轨",
+  "item.qr.concrete_tie": "混凝土枕木(标准)",
+
   "block.qr.arrive_gate_block_right": "出站闸机右侧",
   "block.qr.depart_gate_block_right": "进站闸机右侧",
   "block.qr.gate_block_left": "闸机左侧",
@@ -146,29 +154,10 @@
   "tooltip.qr.red_ticket.description_1": "手持车票右键通过闸机",
   "tooltip.qr.red_ticket.description_2": "仅在生存模式下会被（出站闸机右侧）回收",
 
-  "block.qr.advanced_sign": "高级告示牌",
-  "qr.screen.advanced_sign.title": "高级告示牌编辑",
-  "qr.screen.advanced_sign.text": "输入文字",
-  "qr.screen.advanced_sign.text_label": "文字内容:",
-  "qr.screen.advanced_sign.position": "位置:",
-  "qr.screen.advanced_sign.pos_x": "X偏移",
-  "qr.screen.advanced_sign.pos_y": "Y偏移",
-  "qr.screen.advanced_sign.size": "大小",
-  "qr.screen.advanced_sign.size_label": "字体大小:",
-  "qr.screen.advanced_sign.color": "颜色 (#RRGGBB)",
-  "qr.screen.advanced_sign.color_label": "文字颜色:",
-  "qr.screen.advanced_sign.adjust": "快速调整:",
-  "qr.screen.advanced_sign.save": "保存",
-  "qr.screen.advanced_sign.cancel": "取消",
-
-  "key.qr.enable_disable_ctcs": "启用/禁用CTCS",
-  "category.qr.ctcs": "品质铁路CTCS",
-  "gui.qr.ctcs.speed": "速度: %.1f km/h",
-
-
-  "itemGroup.trains": "铁路车辆",
-  "itemGroup.railway_tools": "铁路工具",
-  "itemGroup.signs": "铁路标志",
+  "itemGroup.qr.trains": "铁路车辆",
+  "itemGroup.qr.railway_tools": "铁路工具",
+  "itemGroup.qr.signs": "铁路标志",
+  "itemGroup.qr.tracks": "铁路轨道",
 
   "key.qr.high_horn": "高音风笛",
   "key.qr.low_horn": "低音电笛",

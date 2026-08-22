@@ -145,9 +145,9 @@
   "tooltip.qr.red_ticket.description_1": "Ticket in der Hand haltend, rechstklick an Schranke benutzen",
   "tooltip.qr.red_ticket.description_2": "Nur im Überlebensmodus (rechte Ausgangsschranke) einsammelbar",
 
-  "itemGroup.trains": "Schienenfahrzeuge",
-  "itemGroup.railway_tools": "Bahnwerkzeuge",
-  "itemGroup.signs": "Bahnschilder",
+  "itemGroup.qr.trains": "Schienenfahrzeuge",
+  "itemGroup.qr.railway_tools": "Bahnwerkzeuge",
+  "itemGroup.qr.signs": "Bahnschilder",
 
   "key.qr.high_horn": "Hohe Hupe",
   "key.qr.low_horn": "Tiefe Hupe",

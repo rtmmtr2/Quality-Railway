@@ -19,8 +19,8 @@ import static com.qualityrailway.qr.register.QRRegistrate.REGISTRATE;
 
 public class AllTracks {
 
-    public static final BlockEntry<TrackBlock> TRACK_STANDARD_30KG =
-            REGISTRATE.block("track_standard_30kg", p -> new TrackBlock(p, AllTrackMaterial_30KG.TRACK_30KG))
+    public static final BlockEntry<TrackBlock> TRACK_STANDARD_38KG =
+            REGISTRATE.block("track_standard_38kg", p -> new TrackBlock(p, AllTrackMaterial.TRACK_38KG))
                     .initialProperties(SharedProperties::stone)
                     .properties(p -> p.mapColor(MapColor.METAL)
                             .strength(0.8F)
@@ -34,7 +34,28 @@ public class AllTracks {
                     .tag(AllTags.AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
                     .tag(AllTags.AllBlockTags.TRACKS.tag)
                     .tag(AllTags.AllBlockTags.GIRDABLE_TRACKS.tag)
-                    .lang("30kg Standard Track")
+                    .lang("38kg Standard Track")
+                    .item(TrackBlockItem::new)  // ✅ 使用自定义物品类
+                    .model((c, p) -> p.generated(c, new ResourceLocation(MODID, "item/track_standard_30kg")))
+                    .tag(AllTags.AllItemTags.TRACKS.tag)
+                    .build()
+                    .register();
+    public static final BlockEntry<TrackBlock> TRACK_STANDARD_43KG =
+            REGISTRATE.block("track_standard_43kg", p -> new TrackBlock(p, AllTrackMaterial.TRACK_43KG))
+                    .initialProperties(SharedProperties::stone)
+                    .properties(p -> p.mapColor(MapColor.METAL)
+                            .strength(0.8F)
+                            .sound(SoundType.METAL)
+                            .noOcclusion()
+                            .forceSolidOn())
+                    .addLayer(() -> RenderType::cutoutMipped)
+                    .transform(TagGen.pickaxeOnly())
+                    .onRegister(CreateRegistrate.blockModel(() -> TrackModel::new))
+                    .blockstate(new TrackBlockStateGenerator()::generate)
+                    .tag(AllTags.AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
+                    .tag(AllTags.AllBlockTags.TRACKS.tag)
+                    .tag(AllTags.AllBlockTags.GIRDABLE_TRACKS.tag)
+                    .lang("43kg Standard Track")
                     .item(TrackBlockItem::new)  // ✅ 使用自定义物品类
                     .model((c, p) -> p.generated(c, new ResourceLocation(MODID, "item/track_standard_30kg")))
                     .tag(AllTags.AllItemTags.TRACKS.tag)

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0":"qr:item/track/standard/43kg/track_standard_43kg"
+  }
+}

@@ -3,14 +3,11 @@ package com.qualityrailway.qr.items;
 import com.qualityrailway.qr.blocks.ModBlocks;
 
 import com.qualityrailway.qr.qr;
-import com.simibubi.create.content.trains.track.TrackBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import static com.qualityrailway.qr.blocks.track.AllTracks.TRACK_STANDARD_30KG;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -451,9 +448,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> CONCRETE_TIE = ITEMS.register("concrete_tie",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SEGMENT_30KG = ITEMS.register("segment_30kg",
+    public static final RegistryObject<Item> SEGMENT_38KG = ITEMS.register("segment_38kg",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> INCOMPLETE_TRACK_STANDARD_30KG = ITEMS.register("incomplete_track_standard_30kg",
+    public static final RegistryObject<Item> INCOMPLETE_TRACK_STANDARD_38KG = ITEMS.register("incomplete_track_standard_38kg",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> SEGMENT_43KG = ITEMS.register("segment_43kg",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INCOMPLETE_TRACK_STANDARD_43KG = ITEMS.register("incomplete_track_standard_43kg",
             () -> new Item(new Item.Properties()));
 }
 

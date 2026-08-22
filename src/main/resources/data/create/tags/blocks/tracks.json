@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "qr:track_standard_30kg"
+    "qr:track_standard_38kg",
+    "qr:track_standard_43kg"
   ]
 }

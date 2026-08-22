@@ -37,7 +37,8 @@ public class ModCreativeTab {
                     .build();
             TRACKS = CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.qr.tracks"))
-                    .icon(() -> new ItemStack(AllTracks.TRACK_STANDARD_30KG.get()))
+                    .icon(() -> new ItemStack(AllTracks.TRACK_STANDARD_38KG.get()))
+                    .icon(() -> new ItemStack(AllTracks.TRACK_STANDARD_43KG.get()))
                     .build();
 
             // 注册到游戏
@@ -198,9 +199,11 @@ public class ModCreativeTab {
         }
 
         else if (event.getTab() == TRACKS){
-            event.accept(ModItems.SEGMENT_30KG);
+            event.accept(ModItems.SEGMENT_38KG);
+            event.accept(ModItems.SEGMENT_43KG);
             event.accept(ModItems.CONCRETE_TIE);
-            event.accept(AllTracks.TRACK_STANDARD_30KG.asStack());
+            event.accept(AllTracks.TRACK_STANDARD_38KG.asStack());
+            event.accept(AllTracks.TRACK_STANDARD_43KG.asStack());
         }
     }
 }

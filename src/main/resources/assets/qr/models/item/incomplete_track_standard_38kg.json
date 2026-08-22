@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "qr:item/track/standard/38kg/incomplete_track_standard_38kg"
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"loader": "forge:obj",
+	"model": "qr:models/block/track/standard/38kg/tie_formal/segment_right.obj",
+	"flip_v": true,
+	"shade_quads":true,
+	"textures": {
+		"particle": "qr:block/track/standard/38kg/tie_formal/ascending",
+		"m_999a9fbd-8a3f-809f-3c18-ceaab469bdb9": "qr:block/track/standard/38kg/tie_formal/segment_e"
+	}
+}

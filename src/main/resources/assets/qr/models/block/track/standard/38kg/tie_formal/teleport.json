@@ -1,0 +1,12 @@
+{
+	"loader": "forge:obj",
+	"model": "qr:models/block/track/standard/38kg/tie_formal/teleport.obj",
+	"flip_v": true,
+	"shade_quads":true,
+	"textures": {
+		"particle": "qr:block/track/standard/388kg/tie_formal/ascending",
+		"m_0e249259-c7d6-6318-9a0c-78a27ee2279e": "qr:block/track/standard/38kg/tie_formal/tie",
+		"m_9921e85c-3d85-4990-9906-db3056661ea3": "qr:block/track/standard/38kg/tie_formal/segment",
+		"m_9aa5e0b2-25c8-6c8f-2e1a-03d831c4af87": "qr:block/track/standard/38kg/tie_formal/teleport"
+	}
+}
