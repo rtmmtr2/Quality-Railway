@@ -42,7 +42,7 @@ public class HXD3CBackwardBogeyRenderer extends BogeyRenderer {
             wheels[i]
                     .translate(0, 0, -0.125)
                     .translate(0, WHEEL_Y_OFFSET, -WHEEL_Z[i])
-                    .rotateX(-wheelAngle)
+                    .rotateX(wheelAngle)
                     .render(ms, light, vb);
         }
     }
