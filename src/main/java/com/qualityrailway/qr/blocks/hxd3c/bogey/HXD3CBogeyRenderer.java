@@ -18,7 +18,7 @@ public class HXD3CBogeyRenderer extends BogeyRenderer {
             new PartialModel(new ResourceLocation("qr", "block/hxd3c/common/bogey/hxd3c_bogey_wheel"));
 
     // 轮对 Z 轴位置（正向：前→后）
-    private static final double[] WHEEL_Z = { -2.25, 0.0, 2.0 };
+    private static final double[] WHEEL_Z = { -2, 0.0, 2.25 };
     private static final float WHEEL_Y_OFFSET = 0.96875f; // 轮径 1250mm → 半径 0.625 格
 
     @Override
@@ -41,7 +41,6 @@ public class HXD3CBogeyRenderer extends BogeyRenderer {
         // 轮对：Z 轴位置 + Y 轴向上抬半径 + 旋转
         for (int i = 0; i < 3; i++) {
             wheels[i]
-                    .translate(0, 0, -0.125)
                     .translate(0, WHEEL_Y_OFFSET, WHEEL_Z[i])
                     .rotateX(wheelAngle)
                     .render(ms, light, vb);
