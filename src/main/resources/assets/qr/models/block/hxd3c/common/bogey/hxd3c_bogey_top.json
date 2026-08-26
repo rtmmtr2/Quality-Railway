@@ -1,0 +1,10 @@
+{
+  "loader": "forge:obj",
+  "model": "qr:models/block/hxd3c/common/bogey/hxd3c_bogey_top.obj",
+  "flip_v": true,
+  "shade_quads":true,
+  "textures": {
+    "particle": "qr:block/hxd3c/common/bogey/top",
+    "m_db3178e2-4690-8402-d5f5-4f5a1a2a8f97": "qr:block/hxd3c/common/bogey/top"
+  }
+}

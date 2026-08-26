@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x,waterlogged=false": {
+      "model": "qr:block/hxd3c/common/bogey/hxd3c_bogey_top"
+    },
+    "axis=x,waterlogged=true": {
+      "model": "qr:block/hxd3c/common/bogey/hxd3c_bogey_top"
+    },
+    "axis=z,waterlogged=false": {
+      "model": "qr:block/hxd3c/common/bogey/hxd3c_bogey_top"
+    },
+    "axis=z,waterlogged=true": {
+      "model": "qr:block/hxd3c/common/bogey/hxd3c_bogey_top"
+    }
+  }
+}

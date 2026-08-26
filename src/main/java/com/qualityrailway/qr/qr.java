@@ -1,5 +1,7 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.blocks.hxd3c.bogey.AllBlockEntities;
+import com.qualityrailway.qr.blocks.hxd3c.bogey.AllCustomBogeyStyles;
 import com.qualityrailway.qr.register.QRRegistrate;
 import com.qualityrailway.qr.event.EventHandler;
 import com.qualityrailway.qr.blocks.ModBlocks;
@@ -31,6 +33,8 @@ public class qr {
         ModItems.ITEMS.register(bus);
         ModSounds.SOUNDS.register(bus);
         AllTracks.register();
+        AllCustomBogeyStyles.register();
+        AllBlockEntities.register();
         QRRegistrate.REGISTRATE.getClass();
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
