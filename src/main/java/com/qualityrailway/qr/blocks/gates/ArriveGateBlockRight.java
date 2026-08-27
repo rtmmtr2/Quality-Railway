@@ -135,7 +135,7 @@ public class ArriveGateBlockRight extends Block {
                 }
             } else {
                 // 无红石信号，闸机无法开启
-                world.playSound(null, pos, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 1.0F, 0.5F);
+                world.playSound(null, pos, SoundEvents.NOTE_BLOCK_BASS, SoundSource.BLOCKS, 1.0F, 0.5F);
                 return InteractionResult.FAIL;
             }
         }

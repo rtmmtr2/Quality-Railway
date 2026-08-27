@@ -1,7 +1,10 @@
 package com.qualityrailway.qr.blocks.doors;
 
-import com.qualityrailway.qr.blockentity.ModBlockEntities;
+import com.qualityrailway.qr.ModBlockEntities;
 import com.qualityrailway.qr.blockentity.TrainDoorBlockEntity;
+import com.simibubi.create.content.contraptions.Contraption;
+import com.simibubi.create.content.contraptions.behaviour.MovementContext;
+import com.simibubi.create.content.contraptions.behaviour.SimpleBlockMovingInteraction;
 import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,14 +34,17 @@ public class TrainDoorBlock extends BaseEntityBlock implements IBE<TrainDoorBloc
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
 
-    protected static final VoxelShape NORTH_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape SOUTH_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape EAST_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape WEST_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    protected static final VoxelShape OPEN_NORTH_SHAPE = Block.box(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
-    protected static final VoxelShape OPEN_SOUTH_SHAPE = Block.box(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
-    protected static final VoxelShape OPEN_EAST_SHAPE = Block.box(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
-    protected static final VoxelShape OPEN_WEST_SHAPE = Block.box(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
+
+    protected static final VoxelShape SOUTH_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 32.0, 2.0);
+    protected static final VoxelShape NORTH_SHAPE = Block.box(0.0, 0.0, 14.0, 16.0, 32.0, 16.0);
+    protected static final VoxelShape WEST_SHAPE = Block.box(14.0, 0.0, 0.0, 16.0, 32.0, 16.0);
+    protected static final VoxelShape EAST_SHAPE = Block.box(0.0, 0.0, 0.0, 2.0, 32.0, 16.0);
+
+
+    protected static final VoxelShape OPEN_SOUTH_SHAPE = Block.box(14.0, 0.0, 0.0, 16.0, 32.0, 16.0);
+    protected static final VoxelShape OPEN_NORTH_SHAPE = Block.box(0.0, 0.0, 0.0, 2.0, 32.0, 16.0);
+    protected static final VoxelShape OPEN_WEST_SHAPE = Block.box(0.0, 0.0, 14.0, 16.0, 32.0, 16.0);
+    protected static final VoxelShape OPEN_EAST_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 32.0, 2.0);
 
     public TrainDoorBlock(Properties properties) {
         super(properties);

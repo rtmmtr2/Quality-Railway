@@ -1,7 +1,0 @@
-{
-  "parent": "qr:block/track/standard/30kg/tie_formal/obj_track",
-  "loader": "forge:obj",
-  "render_type": "cutout_mipped",
-  "flip_v": true,
-  "model": "qr:models/block/track/standard/30kg/tie_formal/vacuum.obj"
-}

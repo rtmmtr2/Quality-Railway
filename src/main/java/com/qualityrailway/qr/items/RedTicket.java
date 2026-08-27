@@ -1,8 +1,8 @@
-// java
 package com.qualityrailway.qr.items;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -15,13 +15,13 @@ public class RedTicket extends Item {
     public RedTicket(Properties properties) {
         super(properties);
     }
-
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world,
                                 List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, world, tooltip, flag);
 
-        tooltip.add(Component.translatable("tooltip.qr.red_ticket.description_1").withStyle(ChatFormatting.BLUE));
-        tooltip.add(Component.translatable("tooltip.qr.red_ticket.description_2").withStyle(ChatFormatting.GRAY));
+        // 添加自定义描述文本
+        tooltip.add(new TranslatableComponent("tooltip.qr.red_ticket.description_1").withStyle(ChatFormatting.BLUE));
+        tooltip.add(new TranslatableComponent("tooltip.qr.red_ticket.description_2").withStyle(ChatFormatting.GRAY));
     }
 }

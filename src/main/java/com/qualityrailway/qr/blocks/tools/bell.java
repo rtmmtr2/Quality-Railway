@@ -1,5 +1,5 @@
 package com.qualityrailway.qr.blocks.tools;
-import com.qualityrailway.qr.sound.ModSounds;
+import com.qualityrailway.qr.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.BlockGetter;

@@ -1,11 +1,10 @@
-// java
 package com.qualityrailway.qr.blocks.gates;
 
-import com.qualityrailway.qr.items.ModItems;
+import com.qualityrailway.qr.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -26,7 +25,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.Tags;
-import net.minecraft.util.RandomSource;
+
+import java.util.Random;
+
 
 public class TicketMachineBlock extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -92,7 +93,7 @@ public class TicketMachineBlock extends Block {
                 }
 
 
-                RandomSource random = level.getRandom();
+                Random random = level.getRandom();
                 ItemStack ticket;
                 if (random.nextBoolean()) {
                     ticket = new ItemStack(ModItems.RedTicket.get());
@@ -114,7 +115,7 @@ public class TicketMachineBlock extends Block {
             } else {
 
                 player.displayClientMessage(
-                        Component.translatable("qr.message.ticket_machine_block").withStyle(ChatFormatting.DARK_GREEN), true
+                        new TranslatableComponent("qr.message.ticket_machine_block").withStyle(style -> style.withColor(ChatFormatting.DARK_GREEN)), true
                 );
                 return InteractionResult.FAIL;
             }

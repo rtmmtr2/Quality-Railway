@@ -1,7 +1,14 @@
 {
 	"type":"minecraft:crafting_shaped",
-	"pattern":{
-			"item":"qr:gravel"
+	"pattern":[
+		"   ",
+		"S S",
+		"   "
+	],
+	"key":{
+		"S":{
+			"item":"minecraft:cobblestone"
+		}
 	},
 	"result":{
 		"item":"qr:railway_ballast",

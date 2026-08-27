@@ -1,5 +1,6 @@
 package com.qualityrailway.qr.blockentity;
 
+import com.qualityrailway.qr.ModBlockEntities;
 import com.qualityrailway.qr.blocks.doors.TrainDoorBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
