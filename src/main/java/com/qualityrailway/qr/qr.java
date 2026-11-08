@@ -54,8 +54,8 @@ public class qr {
         // 注册事件处理器
         MinecraftForge.EVENT_BUS.register(new EventHandler());
         event.enqueueWork(() -> {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ArriveGateBlockRight.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DepartGateBlockRight.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARRIVE_GATE_BLOCK_RIGHT.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DEPART_GATE_BLOCK_RIGHT.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ADVANCED_SIGN.get(), RenderType.translucent());
             MenuScreens.register(ModMenuTypes.ADVANCED_SIGN_MENU.get(), AdvancedSignScreen::new);
             // 注册方块实体渲染器

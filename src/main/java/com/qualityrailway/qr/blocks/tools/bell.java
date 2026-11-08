@@ -47,7 +47,7 @@ public class bell extends Block {
                 level.playSound(
                         null,                   // 无特定触发玩家
                         pos,                    // 声音源位置
-                        ModSounds.bell.get(), // 使用注册的声音事件
+                        ModSounds.BELL.get(), // 使用注册的声音事件
                         SoundSource.BLOCKS,     // 归类为方块声音
                         2.0F,                   // 音量设置
                         1.0F                    // 保持正常音高

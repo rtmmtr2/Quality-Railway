@@ -14,7 +14,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     protected void addTags() {
         // 将两种车票添加到ticket标签中
         tag(ModTags.Items.TICKETS)
-                .add(ModItems.RedTicket.get())
-                .add(ModItems.BlueTicket.get());
+                .add(ModItems.RED_TICKET.get())
+                .add(ModItems.BLUE_TICKET.get());
     }
 }

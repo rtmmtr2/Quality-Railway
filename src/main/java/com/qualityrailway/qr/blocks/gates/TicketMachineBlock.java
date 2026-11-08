@@ -96,9 +96,9 @@ public class TicketMachineBlock extends Block {
                 Random random = level.getRandom();
                 ItemStack ticket;
                 if (random.nextBoolean()) {
-                    ticket = new ItemStack(ModItems.RedTicket.get());
+                    ticket = new ItemStack(ModItems.RED_TICKET.get());
                 } else {
-                    ticket = new ItemStack(ModItems.BlueTicket.get());
+                    ticket = new ItemStack(ModItems.BLUE_TICKET.get());
                 }
 
 

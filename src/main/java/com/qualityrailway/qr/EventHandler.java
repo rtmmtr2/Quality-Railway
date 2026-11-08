@@ -18,7 +18,7 @@ public class EventHandler {
         // 高音喇叭
         if (KeyBindings.HIGH_HORN_KEY.isDown()) {
             minecraft.player.playSound(
-                    ModSounds.high_horn.get(),
+                    ModSounds.HIGH_HORN.get(),
                     1.0F,
                     1.0F
             );
@@ -28,7 +28,7 @@ public class EventHandler {
         // 低音喇叭
         if (KeyBindings.LOW_HORN_KEY.isDown()) {
             minecraft.player.playSound(
-                    ModSounds.low_horn.get(),
+                    ModSounds.LOW_HORN.get(),
                     1.0F,
                     1.0F
             );

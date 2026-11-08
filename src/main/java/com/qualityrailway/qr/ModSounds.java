@@ -10,12 +10,12 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, qr.MODID);
 
-    public static final RegistryObject<SoundEvent> high_horn = SOUNDS.register("high_horn",
+    public static final RegistryObject<SoundEvent> HIGH_HORN = SOUNDS.register("high_horn",
             () -> new SoundEvent(ResourceLocation.parse(qr.MODID + ":high_horn")));
 
-    public static final RegistryObject<SoundEvent> low_horn = SOUNDS.register("low_horn",
+    public static final RegistryObject<SoundEvent> LOW_HORN = SOUNDS.register("low_horn",
             () -> new SoundEvent(ResourceLocation.parse(qr.MODID + ":low_horn")));
 
-    public static final RegistryObject<SoundEvent> bell = SOUNDS.register("bell",
+    public static final RegistryObject<SoundEvent> BELL = SOUNDS.register("bell",
             () -> new SoundEvent(ResourceLocation.parse(qr.MODID + ":bell")));
 }
