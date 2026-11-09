@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "qr:china_railway_freight_b"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "qr:blocks/china_railway_freight_b"
+}

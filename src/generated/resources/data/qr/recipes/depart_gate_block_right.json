@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "R": {
+      "item": "minecraft:glass_pane"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    },
+    "T": {
+      "item": "minecraft:redstone"
+    },
+    "U": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "pattern": [
+    "UTR",
+    "SSS",
+    " T "
+  ],
+  "result": {
+    "item": "qr:depart_gate_block_right"
+  },
+  "show_notification": true
+}

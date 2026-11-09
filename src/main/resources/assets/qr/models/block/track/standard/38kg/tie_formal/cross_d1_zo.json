@@ -1,0 +1,10 @@
+{
+	"loader": "forge:obj",
+	"model": "qr:models/block/track/standard/38kg/tie_formal/cross_d1_zo.obj",
+	"flip_v": true,
+	"shade_quads":true,
+	"textures": {
+		"particle": "qr:block/track/standard/38kg/tie_formal/ascending",
+		"m_c13891e9-7d46-7d1f-1453-1585ea54cdbe": "qr:block/track/standard/38kg/tie_formal/cross_d1_zo"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "qr:block/df4d/df4d_right_board_f",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "qr:block/df4d/df4d_right_board_f",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/df4d/df4d_right_board_f"
+    },
+    "facing=west": {
+      "model": "qr:block/df4d/df4d_right_board_f",
+      "y": 90
+    }
+  }
+}

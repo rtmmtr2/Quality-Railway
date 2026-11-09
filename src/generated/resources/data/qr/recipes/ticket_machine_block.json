@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "R": {
+      "item": "minecraft:glass_pane"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    },
+    "T": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    " T ",
+    "SRS",
+    " T "
+  ],
+  "result": {
+    "item": "qr:ticket_machine_block"
+  },
+  "show_notification": true
+}

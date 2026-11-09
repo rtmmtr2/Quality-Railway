@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "qr:block/gates/ticket_machine_block",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "qr:block/gates/ticket_machine_block",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/gates/ticket_machine_block"
+    },
+    "facing=west": {
+      "model": "qr:block/gates/ticket_machine_block",
+      "y": 90
+    }
+  }
+}

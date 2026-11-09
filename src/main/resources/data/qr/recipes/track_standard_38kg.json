@@ -1,0 +1,17 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": { "item": "qr:concrete_tie" },
+  "transitionalItem": { "item": "qr:incomplete_track_standard_38kg" },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "qr:incomplete_track_standard_38kg" },
+        { "item": "qr:segment_38kg" }
+      ],
+      "results": [ { "item": "qr:incomplete_track_standard_38kg" } ]
+    }
+  ],
+  "results": [ { "item": "qr:track_standard_38kg" } ],
+  "loops": 2
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "qr:fifty_meters_to_buffer_stop"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "qr:blocks/fifty_meters_to_buffer_stop"
+}

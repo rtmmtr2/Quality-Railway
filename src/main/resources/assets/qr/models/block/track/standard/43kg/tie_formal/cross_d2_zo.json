@@ -1,0 +1,13 @@
+{
+	"loader": "forge:obj",
+	"ambientocclusion": false,
+	"flip_v": true,
+	"render_type": "cutout_mipped",
+	"model": "qr:models/block/track/standard/43kg/tie_formal/cross_d2_zo.obj",
+	"textures": {
+		"m_dae657d5-acd2-08bd-ddf2-707bb3be7709": "qr:block/track/standard/43kg/tie_formal/segment_43kg_a",
+		"m_79b41a40-cbbf-3f70-898c-8fdd869d2cb6": "qr:block/track/standard/43kg/tie_formal/segment_43kg",
+		"m_0c2126a2-0cbd-890d-a2d9-866fdf946ec2": "qr:block/track/standard/43kg/tie_formal/tie",
+		"particle": "qr:block/track/standard/43kg/tie_formal/segment_43kg"
+	}
+}

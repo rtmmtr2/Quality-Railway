@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    }
+  },
+  "pattern": [
+    "SRS",
+    "RSR",
+    "S S"
+  ],
+  "result": {
+    "item": "qr:df7g_cowcatcher_b"
+  },
+  "show_notification": true
+}

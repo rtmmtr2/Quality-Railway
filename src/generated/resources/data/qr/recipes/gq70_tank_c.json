@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    },
+    "T": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "R T"
+  ],
+  "result": {
+    "item": "qr:gq70_tank_c"
+  },
+  "show_notification": true
+}

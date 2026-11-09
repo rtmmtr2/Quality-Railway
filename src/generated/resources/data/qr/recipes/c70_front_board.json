@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "qr:steel_plate"
+    },
+    "T": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SSS",
+    "TST"
+  ],
+  "result": {
+    "item": "qr:c70_front_board"
+  },
+  "show_notification": true
+}

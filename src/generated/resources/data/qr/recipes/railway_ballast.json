@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "qr:gravel"
+    }
+  ],
+  "result": {
+    "item": "qr:railway_ballast"
+  }
+}

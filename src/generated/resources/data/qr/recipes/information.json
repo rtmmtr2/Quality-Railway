@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:oak_planks"
+    },
+    "S": {
+      "item": "minecraft:black_dye"
+    },
+    "T": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    " T ",
+    "SSS",
+    " R "
+  ],
+  "result": {
+    "item": "qr:information"
+  },
+  "show_notification": true
+}

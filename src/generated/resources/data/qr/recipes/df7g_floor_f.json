@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    },
+    "T": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " T ",
+    "SRR"
+  ],
+  "result": {
+    "item": "qr:df7g_floor_f"
+  },
+  "show_notification": true
+}

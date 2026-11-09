@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "S": {
+      "item": "qr:steel_plate"
+    },
+    "T": {
+      "item": "minecraft:redstone"
+    },
+    "U": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "pattern": [
+    "UT ",
+    "SSS",
+    " T "
+  ],
+  "result": {
+    "item": "qr:gate_block_left"
+  },
+  "show_notification": true
+}

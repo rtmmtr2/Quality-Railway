@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    }
+  },
+  "pattern": [
+    "S S",
+    "BBS",
+    "RRB"
+  ],
+  "result": {
+    "item": "qr:df4d_cab_door_b"
+  },
+  "show_notification": true
+}

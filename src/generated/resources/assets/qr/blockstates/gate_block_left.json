@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "qr:block/gates/gate_block_left",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "qr:block/gates/gate_block_left",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/gates/gate_block_left"
+    },
+    "facing=west": {
+      "model": "qr:block/gates/gate_block_left",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "qr:block/catenary/pole/h_beam",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "qr:block/catenary/pole/h_beam",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/catenary/pole/h_beam"
+    },
+    "facing=west": {
+      "model": "qr:block/catenary/pole/h_beam",
+      "y": 90
+    }
+  }
+}

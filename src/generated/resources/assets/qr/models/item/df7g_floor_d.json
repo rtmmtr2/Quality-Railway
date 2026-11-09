@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "qr:item/df7g/df7g_floor_d"
+  }
+}

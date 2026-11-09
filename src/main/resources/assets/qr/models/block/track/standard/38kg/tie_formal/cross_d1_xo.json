@@ -1,0 +1,13 @@
+{
+	"loader": "forge:obj",
+	"model": "qr:models/block/track/standard/38kg/tie_formal/cross_d1_xo.obj",
+	"flip_v": true,
+	"shade_quads":true,
+	"textures": {
+		"particle": "qr:block/track/standard/30kg/tie_formal/ascending",
+		"m_079e12ea-9d37-4e8b-ab4e-49a1962113c2": "qr:block/track/standard/38kg/tie_formal/tie",
+		"m_2a1a4bfb-f227-f70c-3d80-e6b683d86a4e": "qr:block/track/standard/38kg/tie_formal/tie_b",
+		"m_e6e2c364-285f-bc4c-d030-628ccea8941b": "qr:block/track/standard/38kg/tie_formal/segment_a",
+		"m_398cbbbc-f75d-b924-7ff2-e6a64a3f4b16": "qr:block/track/standard/38kg/tie_formal/segment"
+	}
+}

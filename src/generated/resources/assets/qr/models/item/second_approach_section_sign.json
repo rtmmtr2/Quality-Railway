@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "qr:item/signs/second_approach_section_sign"
+  }
+}

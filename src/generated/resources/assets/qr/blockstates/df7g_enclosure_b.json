@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "qr:block/df7g/df7g_enclosure_b",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "qr:block/df7g/df7g_enclosure_b",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "qr:block/df7g/df7g_enclosure_b"
+    },
+    "facing=west": {
+      "model": "qr:block/df7g/df7g_enclosure_b",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+	"loader": "forge:obj",
+	"ambientocclusion": false,
+	"flip_v": true,
+	"render_type": "cutout_mipped",
+	"model": "qr:models/block/track/standard/43kg/tie_formal/segment_left.obj",
+	"textures": {
+		"m_e7975b59-3322-8525-7129-7d731fe4e51d": "qr:block/track/standard/43kg/tie_formal/segment_43kg_c",
+		"particle": "qr:block/track/standard/43kg/tie_formal/segment_43kg"
+	}
+}

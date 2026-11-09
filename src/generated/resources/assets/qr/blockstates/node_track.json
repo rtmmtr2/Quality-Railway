@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "qr:block/track/node_track"
+    }
+  }
+}

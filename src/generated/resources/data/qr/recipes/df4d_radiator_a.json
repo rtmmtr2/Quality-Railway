@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "qr:steel_plate"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "R R",
+    "S S"
+  ],
+  "result": {
+    "item": "qr:df4d_radiator_a"
+  },
+  "show_notification": true
+}

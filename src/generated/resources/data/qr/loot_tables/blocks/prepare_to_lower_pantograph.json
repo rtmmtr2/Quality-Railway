@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "qr:prepare_to_lower_pantograph"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "qr:blocks/prepare_to_lower_pantograph"
+}
