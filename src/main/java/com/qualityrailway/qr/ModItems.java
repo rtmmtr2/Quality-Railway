@@ -449,4 +449,16 @@ public class ModItems {
     public static final RegistryObject<Item> ADVANCED_SIGN = ITEMS.register("advanced_sign",
             () -> new BlockItem(ModBlocks.ADVANCED_SIGN.get(),
                     new Item.Properties().tab(ModCreativeTab.RAILWAY_TOOLS)));
+
+    public static final RegistryObject<Item> CONCRETE_TIE = ITEMS.register("concrete_tie",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TRACKS)));
+    public static final RegistryObject<Item> SEGMENT_38KG = ITEMS.register("segment_38kg",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TRACKS)));
+    public static final RegistryObject<Item> INCOMPLETE_TRACK_STANDARD_38KG = ITEMS.register("incomplete_track_standard_38kg",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> SEGMENT_43KG = ITEMS.register("segment_43kg",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TRACKS)));
+    public static final RegistryObject<Item> INCOMPLETE_TRACK_STANDARD_43KG = ITEMS.register("incomplete_track_standard_43kg",
+            () -> new Item(new Item.Properties()));
 }

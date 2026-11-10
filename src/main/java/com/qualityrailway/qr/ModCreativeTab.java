@@ -1,5 +1,6 @@
 package com.qualityrailway.qr;
 
+import com.qualityrailway.qr.track.AllTracks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.TranslatableComponent; // 导入 TranslatableComponent
@@ -15,7 +16,7 @@ public class ModCreativeTab {
         @Override
         public TranslatableComponent getDisplayName() {
 
-            return new TranslatableComponent("itemGroup.trains");
+            return new TranslatableComponent("itemGroup.qr.trains");
         }
     };
     public static final CreativeModeTab RAILWAY_TOOLS = new CreativeModeTab("railway_tools") {
@@ -28,7 +29,7 @@ public class ModCreativeTab {
         @Override
         public TranslatableComponent getDisplayName() {
 
-            return new TranslatableComponent("itemGroup.railway_tools");
+            return new TranslatableComponent("itemGroup.qr.railway_tools");
         }
     };
     public static final CreativeModeTab SIGNS = new CreativeModeTab("signs") {
@@ -41,7 +42,20 @@ public class ModCreativeTab {
         @Override
         public TranslatableComponent getDisplayName() {
 
-            return new TranslatableComponent("itemGroup.signs");
+            return new TranslatableComponent("itemGroup.qr.signs");
+        }
+    };
+    public static final CreativeModeTab TRACKS = new CreativeModeTab("tracks") {
+        @Override
+        public ItemStack makeIcon() {
+
+            return new ItemStack(AllTracks.TRACK_STANDARD_38KG.get());
+        }
+
+        @Override
+        public TranslatableComponent getDisplayName() {
+
+            return new TranslatableComponent("itemGroup.qr.tracks");
         }
     };
 
